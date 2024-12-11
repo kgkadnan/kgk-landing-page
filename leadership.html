@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" class="v2primary">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KGK - Leadership</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="__className_d65c78">
+    <!-- header -->
+    <header
+        class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0 space-mobile">
+        <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
+            <!-- Navigation Section -->
+            <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
+                <a href="index.html" class="flex gap-5 mr-6">
+                    <img src="static/images/kgklogo-svg.png" alt="KGK logo" class="cursor-pointer" loading="lazy"
+                        width="36" height="48" decoding="async" />
+                </a>
+                <div class="first-li flex w-full justify-between">
+                    <ul class="flex list-none items-center space-x-4">
+                        <!-- Home -->
+                        <li class="menu-item">
+                            <a href="index.html"
+                                class="inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <div class="relative inline-block text-left margin-0 menu-li menu-item">
+                            <button type="button"
+                                class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
+                                id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown()">
+                                <span>About Us</span>
+                                <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <div id="dropdown-menu"
+                                class="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden"
+                                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+                                style="min-width: 150px;">
+                                <div class="flex flex-col !rounded-[8px] border-[1px] border-neutral200" role="none">
+                                    <li>
+                                        <a href="our-story.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Our Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="leadership.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Leadership
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Links -->
+                        <li class="menu-item">
+                            <a href="traceability.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Traceability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="sustainability.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Sustainability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact-us.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Buttons Section -->
+                    <div class="flex gap-4 auth-btns">
+                        <button
+                            class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                            Login
+                        </button>
+                        <button
+                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
+                            Register
+                        </button>
+                    </div>
+                </div>
+                <div class="homeburg">
+                    <img src="static/images/menu.png" class="menu-sign" width="25" height="25" alt="" />
+                    <img src="static/images/close.png" class="close-sign" width="25" height="25" alt="" />
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- heading animation section -->
+    <section class="flex flex-col gap-4 top-heading">
+        <div
+            class="min-h-[800px] flex justify-center xl:px-[112px] lg:px-[32px] bg-animated-gradient bg-[length:200%_200%] bg-no-repeat animate-gradient blur-bottom">
+            <div class="flex items-center justify-center">
+                <div
+                    class="top-heading-panel space-mobile flex flex-wrap flex-col gap-14 pt-[160px] pb-[80px] flex-wrap min-h-[160px] justify-between items-center max">
+                    <div class="text-neutral900 text-[96px] font-bold text-center leading-[80px]">
+                        <h1 class="h1title" data-aos="fade-right" data-aos-easing="ease-in-bounce"
+                            data-aos-duration="2000">Meet KGK Leadership</h1>
+                    </div>
+                    <div data-aos="fade-left" data-aos-easing="ease-in-bounce" data-aos-duration="2000"
+                        class="flex flex-col gap-3 items-center">
+                        <p class="text-neutral800 text-lRegular w-[800px] text-center">
+                            Our team is the backbone of our success. Get to know the talented individuals who helped
+                            make KGK Diamonds what it is today.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- heading animation section -->
+
+    <!-- leadership -->
+    <div class="flexjustify-center main-content">
+        <div class="flex flex-col items-center">
+            <div class="flex flex-col gap-2 cursor-pointer xl:px-[112px] lg:px-[42px] profile-one">
+                <div class="flex flex-col w-fit items-center cardOneMain">
+                    <img alt="Navrattan Kothari" loading="lazy" width="374" height="375" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/navrattan.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Navrattan Kothari</div>
+                    <p class="text-neutral500 text-lRegular">Patriarch (International)</p>
+                </div>
+            </div>
+            <div
+                class="xl:px-[112px] lg:px-[42px] py-[64px]  flex flex-wrap  justify-center w-full gap-[60px] profile-two">
+                <div class="flex flex-col gap-2 cursor-pointer w-fit items-center cardTwoMain">
+                    <img alt="Sandeep Kothari" loading="lazy" width="375" height="361" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/sandeep.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Sandeep Kothari</div>
+                    <p class="text-neutral500 text-lRegular ">Group Managing Director (International)</p>
+                </div>
+                <div class="flex flex-col gap-2 cursor-pointer w-fit items-center cardThreeMain">
+                    <img alt="Sanjay Kothari" loading="lazy" width="375" height="375" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/sanjay.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Sanjay Kothari</div>
+                    <p class="text-neutral500 text-lRegular ">Vice Chairman (International)</p>
+                </div>
+            </div>
+            <div class="xl:px-[112px] lg:px-[42px] flex flex-wrap justify-center w-full gap-[60px] profile-three">
+                <div class="flex flex-col gap-2 cursor-pointer pb-[64px] w-fit items-center cardFourMain">
+                    <img alt="Hasmukh Ramani" loading="lazy" width="375" height="375" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/hasmukh.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Hasmukh Ramani</div>
+                    <p class="text-neutral500 text-lRegular">Chief Commercial Officer (International)</p>
+                </div>
+                <div class="flex flex-col gap-2 cursor-pointer pb-[64px] w-fit items-center cardFiveMain">
+                    <img alt="Mr. Sunil Agrawal" loading="lazy" width="375" height="375" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/sunil.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Mr. Sunil Agrawal</div>
+                    <p class="text-neutral500 text-lRegular">Chief Financial Officer (EMEA)</p>
+                </div>
+                <div class="flex flex-col gap-2 cursor-pointer pb-[64px] w-fit items-center cardSixMain">
+                    <img alt="Nitin Dhadda" loading="lazy" width="375" height="365" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/nitin.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Nitin Dhadda</div>
+                    <p class="text-neutral500 text-lRegular">Chief Manufacturing Officer (India)</p>
+                </div>
+                <div class="flex flex-col gap-2 cursor-pointer pb-[64px] w-fit items-center cardSevenMain">
+                    <img alt="Dinesh Kothari" loading="lazy" width="375" height="375" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/dinesh.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Dinesh Kothari</div>
+                    <p class="text-neutral500 text-lRegular">Chief Trading Officer (India)</p>
+                </div>
+                <div class="flex flex-col gap-2 cursor-pointer pb-[64px] w-fit items-center cardEightMain">
+                    <img alt="Amit Ghiya" loading="lazy" width="374" height="350" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/amit.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Amit Ghiya</div>
+                    <p class="text-neutral500 text-lRegular">Chief Financial Officer (India)</p>
+                </div>
+                <div class="flex flex-col gap-2 cursor-pointer pb-[64px] w-fit items-center cardNineMain">
+                    <img alt="Sonu Kothari" loading="lazy" width="375" height="375" decoding="async" data-nimg="1"
+                        class="rounded-[8px] bg-[#D9D9D9] h-[375px] w-[375px] object-cover"
+                        src="static/images/leadership/sonu.png">
+                    <div class="text-neutral900 font-semiBold text-[20px] mt-2">Sonu Kothari</div>
+                    <p class="text-neutral500 text-lRegular">Partner (USA)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flexjustify-center details-content">
+        <div class="flex justify-center card-one card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/navrattan.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Navrattan Kothari
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Patriarch (International)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Mr. Navrattan Kothari has managed KGK since 1962. Under his
+                    astute guidance KGK has evolved into a modern multinational that operates to world-class
+                    standards with state-of-the-art infrastructure. His leadership has enabled KGK to innovate and
+                    expand into numerous markets and achieve global growth and recognition. Mr. Kothari has built a
+                    company that is inspired by life and humanity, which places the highest value on trust,
+                    integrity, ethics and corporate responsibility. As Patriarch, Mr. Kothari steers the company and
+                    enlightens and inspires our team worldwide with his insights, experience and acumen.</div><a
+                    href="https://www.linkedin.com/in/navrattan-kothari" target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/navrattan-kothari" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-two card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/sandeep.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Sandeep Kothari
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Group Managing Director (International)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Sandeep joined the group in 1990 with a clear vision: to make
+                    KGK the largest diamond manufacturing company in the world. Driven by this goal, he played a pivotal
+                    role in expanding manufacturing into producer nations, setting a new standard in the industry. This
+                    strategic move had far-reaching effects, influencing both manufacturing and retail, and shaping a
+                    new narrative for the sector. Over his career, Sandeep has transformed KGK Diamonds from a
+                    500-person company into a globally reputed enterprise with 14,000 employees worldwide.</div><a
+                    href="https://www.linkedin.com/in/sandeep-kothari-475a5314" target="_blank"> <img class="linked-web"
+                        alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/sandeep-kothari-475a5314" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-three card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/sanjay.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Sanjay Kothari
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Vice Chairman (International)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Based in Hong Kong, Sanjay is driving the group’s growth as we
+                    expand into new markets. He focuses on overseeing the jewellery business, including the luxury brand
+                    Entice, and several jewellery sales offices across East Asia, including Japan, China, and Bangkok.
+                    Additionally, he leads the development of the group’s real estate ventures, which include numerous
+                    large-scale projects across India. His work has been instrumental in establishing and expanding
+                    these key verticals.</div><a href="https://www.linkedin.com/in/sanjay-kothari-kgk/" target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/sanjay-kothari-kgk/" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-four card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/hasmukh.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Hasmukh Ramani
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Chief Commercial Officer (International)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Mr. Hasmukh Ramani, Chief Commercial Officer of KGK
+                    International, brings over two decades of experience to the organization. He oversees the entire
+                    international sales of polished diamonds for KGK globally. His extensive expertise and leadership
+                    have been instrumental in driving the group's international sales strategy and growth. Based on his
+                    profound understanding of the diamond industry, Mr. Ramani continues to lead KGK’s commercial
+                    operations towards new heights.</div><a href="https://www.linkedin.com/in/hasmukh-ramani-0a082867"
+                    target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/hasmukh-ramani-0a082867" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-five card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/sunil.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Mr. Sunil Agrawal
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Chief Financial Officer (EMEA)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Mr. Sunil Agrawal, CFO for KGK Group’s EMEA region, brings over
+                    two decades of expertise and dedication to the organization. A distinguished Chartered Accountant,
+                    he has played a crucial role in crafting KGK Group's global financial strategy. His accomplishments
+                    include securing financing from international banks and successfully issuing bonds (Securitization
+                    Notes) in the USA market. He also oversees new business development, business expansion and
+                    compliance in the EMEA region. Based in Dubai, Mr. Agrawal values professional excellence and family
+                    time, enjoying travel and moments with loved ones.</div><a
+                    href="https://www.linkedin.com/in/sunil-agrawal-5b50b352/" target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/sunil-agrawal-5b50b352/" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-six card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/nitin.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Nitin Dhadda
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Chief Manufacturing Officer (India)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Mr. Nitin Dhadda is the Chief Manufacturing Officer - Executive
+                    Management at KGK Diamonds (I) Pvt. Ltd. in Surat, bringing over two decades of extensive experience
+                    and dedication since joining the company in 1993. As a distinguished expert in manufacturing, he has
+                    played a crucial role in overseeing production processes, quality control, supply chain management,
+                    facility operations, and general administration. At the forefront of adopting new technologies, he
+                    significantly contributes to product excellence and efficiency, enhancing production capabilities
+                    and maintaining the highest quality standards in KGK Diamonds' offerings. Residing in Surat, India,
+                    Mr. Dhadda is dedicated to achieving professional excellence and driving continuous growth within
+                    the organization.</div><a href="https://www.linkedin.com/in/nitin-kumar-dhadda-15682881/"
+                    target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/nitin-kumar-dhadda-15682881/" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-seven card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/dinesh.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Dinesh Kothari
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Chief Trading Officer (India)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Mr. Dinesh Kothari is the Chief Trading/Commercial Officer at
+                    KGK Diamonds (I) Pvt. Ltd. in Mumbai, bringing over three decades of experience since joining in
+                    1993. He oversees sales operations, commercial strategy, market expansion, and client relationships.
+                    His strategic leadership has been crucial in exploring new markets, driving sales performance, and
+                    fostering sustainable development. By adopting innovative approaches, he significantly enhances
+                    client relationships and sales efficiency, boosting the company's market reach and maintaining the
+                    highest standards for KGK Diamonds.</div><a
+                    href="https://www.linkedin.com/in/dinesh-kothari-b007421b/" target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/dinesh-kothari-b007421b/" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-eight card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/amit.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Amit Ghiya
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Chief Financial Officer (India)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Mr. Amit Ghiya is the Chief Financial Officer - Executive
+                    Management at KGK Diamonds (I) Pvt. Ltd. in Mumbai, bringing over two and half decades of extensive
+                    experience and dedication since joining the company in August 1999. As a distinguished Chartered
+                    Accountant, he has played a crucial role in overseeing banking, finance, legal and statutory
+                    compliance, property management, corporate structuring, and general administration. Residing in
+                    Mumbai, Mr. Ghiya is dedicated to achieving professional excellence and driving continuous growth
+                    within the organization. His strategic insights and leadership have been instrumental in navigating
+                    complex financial landscapes and fostering sustainable development for KGK Diamonds.</div><a
+                    href="https://www.linkedin.com/in/amit-ghiya-66b15a102/" target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/amit-ghiya-66b15a102/" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center card-nine card-profile-details">
+            <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
+                <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
+                        decoding="async" data-nimg="1" class="rounded-[8px] bg-[#D9D9D9]"
+                        src="static/images/leadership/sonu.png">
+                    <div class="border-b-[2px] border-neutral900 w-full">
+                        <div class="text-neutral900 font-semiBold text-[20px] mt-2 ">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Sonu Kothari
+                            </p>
+                        </div>
+                        <div class="text-neutral500 text-lRegular">
+                            <p class="reveal-type break-words whitespace-normal">
+                                Partner (USA)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-neutral800 text-[20px]">Mr. Sonu Kothari, a managing partner of Belgium Diamonds a KGK
+                    Group Company , has been a pivotal force in the NY diamond and jewelry industry since 1998, bringing
+                    a wealth of experience and entrepreneurial acumen to the company. After graduating from Stuyvesant
+                    High School .Mr. Kothari immersed himself in the diamond trade, moving to India to master rough
+                    diamond sorting, diamond manufacturing, polished diamond assorting as well as jewelry manufacturing.
+                    His hands-on training across China and India provided him with a comprehensive understanding of the
+                    industry, knowledge he now applies to the day-to-day operations of KGK Group. Belgium Diamonds</div>
+                <a href="https://www.linkedin.com/in/sonu-kothari-514241262/" target="_blank">
+                    <img class="linked-web" alt="Linkedin" loading="lazy" width="24" height="24" decoding="async"
+                        data-nimg="1" src="static/images/linkedin.png"></a>
+                <div class="btngroup">
+                    <a href="https://www.linkedin.com/in/sonu-kothari-514241262/" target="_blank"
+                        class="visit-linkedin gap-2 inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                        <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                            src="static/images/linkedin.png">
+                        Visit LinkedIn
+                    </a>
+                    <button
+                        class="backHome inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[150px] h-[44px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
+                        Back to Team</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- leadership -->
+
+
+    <!-- footer -->
+    <footer style="z-index: 100;">
+        <div
+            class="space-mobile registered-yet flex w-full xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] justify-between items-center py-4">
+            <div class="flex flex-col gap-2">
+                <p class="text-neutral900 text-[30px] font-bold">Haven't registered yet?</p>
+                <p class="text-neutral700 text-headingS">Elevate Your Diamond Buying Experience with KGK
+                    Diamonds!<!-- --></p>
+            </div>
+            <div class="mb-[-30px]"><img alt="register now" loading="lazy" width="276" height="92" decoding="async"
+                    data-nimg="1" class="cursor-pointer" style="color: transparent;"
+                    src="static/images/register-now.278c05b2.png" /></div>
+        </div>
+
+        <div class="globe-mobile">
+            <img alt="KGK Globe presence" width="250" height="258" src="static/images/globe-mobile.png" />
+        </div>
+
+        <div class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main">
+            <div class="footer-glob w-[30%] flex flex-col gap-8"><img alt="KGK Globe presence" loading="lazy"
+                    width="250" height="258" decoding="async" data-nimg="1" style="color: transparent;"
+                    src="static/images/newletter-globe.png" /></div>
+            <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
+                <img alt="KGK logo" loading="lazy" width="36" height="48" decoding="async" data-nimg="1"
+                    class="ml-2 h-[48px] w-[36px]" style="color: transparent;" src="static/images/kgklogo-svg.png" />
+                <div class="flex justify-end relative -top-14 h-1">
+                    <div class="badgew">
+                        <div class="badgew__front">
+                            <div class="badgew__icon">
+                                <img src="static/images/offset-website.svg"
+                                    alt="Tree-Nation - CO2 neutral website badge" />
+                            </div>
+                            <div class="badgew__text">
+                                <h1 class="offset-badge__title">
+                                    <span class="offset-badge__title--blue">Net Zero</span><br />
+                                    Website
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="badgew__back">
+                            <a href="https://tree-nation.com/profile/impact/kgk-diamonds-i-pvt-ltd#co2"
+                                id="forest-link-website" class="forest-link" target="_blank">
+                                <h2 class="forest-link__title">
+                                    Visit our Forest
+                                    <span class="forest-link__tree-nation">on tree-nation.com</span>
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between footer-li">
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Company</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="/v3/about-us/our-story"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">About
+                                    us</a></div>
+                            <div class="flex"><a href="/v3/about-us/leadership"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Leadership</a>
+                            </div>
+                            <div class="flex"><a href="/v3/sustainability"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Sustainability</a>
+                            </div>
+                            <div class="flex"><a href="/v3/traceability"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Traceability</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Resources</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="blog.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Blog</a>
+                            </div>
+                            <p class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2">Legal</p>
+                            <div class="flex this-mobile mt-2"><a href="/terms-and-conditions"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
+                                    &amp; Conditions</a></div>
+                            <div class="flex this-mobile"><a href="/privacy-policy"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
+                                    Policy</a></div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col not-mobile">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Legal</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="/terms-and-conditions"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
+                                    &amp; Conditions</a></div>
+                            <div class="flex"><a href="/privacy-policy"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
+                                    Policy</a></div>
+                        </div>
+                    </div>
+                    <div class="w-[45%] flex flex-col gap-4">
+                        <p class="text-[#667085] text-mMedium font-semiBold">Contact us</p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#475467] text-lRegular">DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse,
+                                Bandra Kurla Complex, Bandra East, Mumbai - 400051</p>
+                            <a href="tel:+91-9892421286" class="flex gap-1 items-center">
+                                <div class="flex items-center"><img alt="Phone" loading="lazy" width="24" height="24"
+                                        decoding="async" data-nimg="1" style="color: transparent;"
+                                        src="static/images/phone.png" /></div>
+
+                                <img alt="Phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    style="color: transparent;" src="static/images/india-1.png" />
+                                <p class="text-neutral600 text-lRegular">+91-9892421286</p>
+                            </a>
+                            <div class="flex gap-1 items-center">
+                                <a href="mailto:ajay.ghiya@kgkmail.com" class="flex gap-1 items-center">
+                                    <div class="flex items-center"><img alt="Mail" loading="lazy" width="24" height="24"
+                                            decoding="async" data-nimg="1" style="color: transparent;"
+                                            src="static/images/mail.png" /></div>
+
+                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com<!-- --></p>
+                                </a>
+                                <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
+                                    class="cursor-pointer" style="color: transparent;" src="static/images/copy.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12">
+            <p class="text-neutral500">
+                Copyright ©
+                <!-- -->2024<!-- -->
+                KGK Diamonds. All rights reserved.
+            </p>
+            <div class="flex gap-8">
+                <a href="https://www.linkedin.com/company/kgk-group/mycompany/" target="_blank">
+                    <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        style="color: transparent;" src="static/images/linkedin.png" />
+                </a>
+
+                <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank"> <img alt="Instagram"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/insta.png" /></a>
+
+                <a href="https://www.facebook.com/KGKgroup.officialpage/" target="_blank"><img alt="Facebook"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/facebook.png" /></a>
+                <a href="https://x.com/kgk_group" target="_blank"> <img alt="Twitter" loading="lazy" width="24"
+                        height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/twitter.png" /></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/js/custom.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.querySelectorAll('.cardOneMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-one', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardTwoMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-two', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardThreeMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-three', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardFourMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-four', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardFiveMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-five', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardSixMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-six', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardSevenMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-seven', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardEightMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-eight', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.cardNineMain').forEach(card => {
+            card.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-nine', 'top-heading'].forEach(cls =>
+                    document.querySelector(`.${cls}`).classList.add('active')
+                );
+            });
+        });
+
+        document.querySelectorAll('.backHome').forEach(button => {
+            button.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                ['main-content', 'card-one', 'card-two', 'card-three', 'card-four', 'card-five', 'card-six', 'card-seven', 'card-eight', 'card-nine', 'top-heading'].forEach(cls => {
+                    document.querySelectorAll(`.${cls}`).forEach(element => {
+                        element.classList.remove('active');
+                    });
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

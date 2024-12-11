@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="v2primary">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KGK - Blog Details</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="__className_d65c78">
+    <!-- header -->
+    <header
+        class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0 space-mobile">
+        <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
+            <!-- Navigation Section -->
+            <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
+                <a href="index.html" class="flex gap-5 mr-6">
+                    <img src="static/images/kgklogo-svg.png" alt="KGK logo" class="cursor-pointer" loading="lazy"
+                        width="36" height="48" decoding="async" />
+                </a>
+                <div class="first-li flex w-full justify-between">
+                    <ul class="flex list-none items-center space-x-4">
+                        <!-- Home -->
+                        <li class="menu-item">
+                            <a href="index.html"
+                                class="inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <div class="relative inline-block text-left margin-0 menu-li menu-item">
+                            <button type="button"
+                                class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
+                                id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown()">
+                                <span>About Us</span>
+                                <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <div id="dropdown-menu"
+                                class="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden"
+                                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+                                style="min-width: 150px;">
+                                <div class="flex flex-col !rounded-[8px] border-[1px] border-neutral200" role="none">
+                                    <li>
+                                        <a href="our-story.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Our Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="leadership.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Leadership
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Links -->
+                        <li class="menu-item">
+                            <a href="traceability.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Traceability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="sustainability.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Sustainability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact-us.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Buttons Section -->
+                    <div class="flex gap-4 auth-btns">
+                        <button
+                            class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                            Login
+                        </button>
+                        <button
+                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
+                            Register
+                        </button>
+                    </div>
+                </div>
+                <div class="homeburg">
+                    <img src="static/images/menu.png" class="menu-sign" width="25" height="25" alt="" />
+                    <img src="static/images/close.png" class="close-sign" width="25" height="25" alt="" />
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- blog page -->
+    <div class="min-h-screen post-page">
+        <main>
+            <div class="container mx-auto px-5">
+                <article>
+                    <div class="flex flex-col max-w-[42rem] mx-auto justify-center">
+                        <div class="flex flex-col w-full justify-around text-[30px] mt-[100px]">Certified Diamonds: KGK
+                            Group’s Commitment to Quality</div>
+                        <div class="max-w-2xl mx-auto flex w-full">
+                            <div class="mb-6 text-lg">Published <time datetime="2024-07-31T05:57:24">July 31,
+                                    2024</time></div>
+                        </div>
+                    </div>
+                    <div class="max-w-2xl mx-auto">
+                        <div class="post-body_content___byfu">
+                            <figure class="wp-block-image size-large is-style-rounded is-style-rounded--1">
+                                <img loading="lazy" decoding="async" width="1024" height="512"
+                                    src="static/images/blogs/blog-1.png" alt="" class="wp-image-48"
+                                    sizes="auto, (max-width: 1024px) 100vw, 1024px" />
+                            </figure>
+
+                            <p class="has-large-font-size"><strong>Significance of Certified Diamonds</strong></p>
+                            <p>
+                                It is quite important to look for certifications when you are looking to buy
+                                manufactured diamonds. A certification helps the buyers with an unbiased picture about
+                                the quality and the characteristics of a diamond. The Gemological
+                                Institute of America (GIA) has been the most renowned and credible amongst all global
+                                certification bodies.<br />
+                            </p>
+
+                            <p class="has-large-font-size"><strong>Why are GIA Certified Diamonds better?</strong></p>
+                            <p>Being regarded as one of the best Here’s why GIA certification is considered the gold
+                                standard for wholesale diamonds:</p>
+
+                            <ul class="wp-block-list">
+                                <li>Objective and Unbiased: GIA is a non-profit organization with no vested interest in
+                                    diamond sales.</li>
+                                <li>Consistent Grading: GIA’s standardized process ensures reliability across all
+                                    certified diamonds.</li>
+                                <li>Comprehensive Analysis: Each diamond is thoroughly examined for all aspects of the
+                                    4Cs.</li>
+                                <li>Advanced Technology: GIA uses state-of-the-art equipment for accurate assessments.
+                                </li>
+                            </ul>
+                            <p class="has-large-font-size"><strong>The 4Cs of Diamond Quality</strong></p>
+                            <figure
+                                class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex">
+                                <figure class="wp-block-image size-full">
+                                    <img loading="lazy" decoding="async" width="998" height="560" data-id="44"
+                                        src="static/images/blogs/colors.png" alt="" class="wp-image-44"
+                                        sizes="auto, (max-width: 998px) 100vw, 998px" />
+                                </figure>
+                            </figure>
+                            <p>For buyers who are looking for high quality diamonds, it is important to understand the
+                                4Cs of a diamond stone.<br /></p>
+
+                            <p><strong>1. Color</strong></p>
+                            <p>GIA has specified a scale for diamonds which ranges from D (colorless) to Z (light yellow
+                                or brown).<br /></p>
+
+                            <p><strong>2. Clarity</strong></p>
+                            <p>Clarity has a spectrum of Ranges within the terminology being Flawless Diamonds (FL) to
+                                Diamonds with obvious inclusions (I<sub>3</sub>)<br /></p>
+
+                            <p><strong>3. Cut</strong></p>
+                            <p>GIA grades cut from Excellent to Poor, focusing on how well the diamond interacts with
+                                light.<br /></p>
+
+                            <p><strong>4. Carat Weight</strong></p>
+                            <p>This measures the diamond’s weight, where one carat equals 0.2 grams.</p>
+                            <p class="has-large-font-size"><strong>The GIA Certification Process</strong></p>
+                            <figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024"
+                                    height="529" src="static/images/blogs/gia-1.png" alt="" class="wp-image-43"
+                                    sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+
+                            <p class="has-medium-font-size">Each diamond undergoes a meticulous examination:</p>
+                            <ol class="wp-block-list">
+                                <li>Initial Screening: Determining if the stone is a natural diamond.</li>
+                                <li>Cleaning: Ensuring an accurate assessment.</li>
+                                <li>Color Grading: Comparing the diamond to master stones.</li>
+                                <li>Clarity Grading: Examining the diamond under 10x magnification.</li>
+                                <li>Cut Grading: Assessing proportions and symmetry.</li>
+                                <li>Carat Weight: Precise measurement to the nearest 0.001 carat.</li>
+                            </ol>
+                            <p class="has-large-font-size"><strong>KGK Group: Committed to Certified Diamonds</strong>
+                            </p>
+                            <p>KGK Group, a leader in the wholesale diamond industry, ensures that the majority of their
+                                diamonds for sale are certified. Here’s how KGK Group maintains their commitment to
+                                quality:</p>
+                            <ul class="wp-block-list">
+                                <li>Rigorous Selection: We ensure highest quality during our sourcing stage.&nbsp;
+                                    KState-of-the-Art Facilities: Their cutting and polishing facilities use advanced
+                                    technology to maximize each diamond’s potential.</li>
+                                <li>Certification Priority: KGK Group prioritizes certification for their diamonds, with
+                                    a focus on GIA certification.</li>
+                                <li>Transparency: Each certified diamond comes with a detailed report, ensuring
+                                    customers have complete information about their purchase.</li>
+                                <li>Quality Assurance: KGK Group’s team of gemologists double-checks each diamond before
+                                    it’s made available for sale.</li>
+                                <li>Ethical Sourcing: KGK Group is committed to responsible sourcing, ensuring their
+                                    certified diamonds are conflict-free.</li>
+                            </ul>
+                            <p class="has-large-font-size"><strong>Why Choose Certified Diamonds from KGK
+                                    Group?</strong></p>
+                            <p>Opting for certified diamonds from KGK Group offers several advantages:<br /></p>
+                            <ul class="wp-block-list">
+                                <li>Confidence in Quality: Each diamond’s characteristics are verified by independent
+                                    experts.</li>
+                                <li>Value Assurance: Certification helps ensure you’re paying a fair price for wholesale
+                                    diamonds.</li>
+                                <li>Resale Value: Certified diamonds often maintain their value better over time.</li>
+                                <li>Peace of Mind: You’re protected against misrepresentation in the wholesale diamond
+                                    market.</li>
+                                <li>Wide Selection: KGK Group offers a vast array of certified diamonds for sale,
+                                    catering to various preferences and budgets.</li>
+                            </ul>
+                            <p class="has-large-font-size"><strong>How to Verify a GIA Certificate</strong></p>
+                            <p>Every GIA certificate has a unique report number. You can verify its authenticity on the
+                                GIA website using this number, ensuring the credibility of your wholesale diamond
+                                purchase.<br /></p>
+
+                            <p class="has-large-font-size"><strong>Conclusion</strong></p>
+                            <p>
+                                Certification is of utmost importance when buying Diamonds. For us at KGK, our buyers’
+                                experience has always been our first priority. This is why we go to great lengths to
+                                ensure that most of our inventory is certified. We champion
+                                quality &amp; excellence at each part of our manufacturing cycle to ensure that we
+                                curate a selection of premium diamond stones in our stock.<br />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="max-w-2xl mx-auto">
+                        <p class="mt-8 text-lg font-bold">Tags<span class="ml-4 font-normal">Certified
+                                Diamonds</span><span class="ml-4 font-normal">GIA</span><span
+                                class="ml-4 font-normal">Wholesale Diamonds</span></p>
+                    </div>
+                </article>
+                <hr class="border-accent-2 mt-28 mb-24" />
+            </div>
+        </main>
+    </div>
+    <!-- blog page -->
+
+    <!-- footer -->
+    <footer style="z-index: 100;">
+        <div
+            class="space-mobile registered-yet flex w-full xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] justify-between items-center py-4">
+            <div class="flex flex-col gap-2">
+                <p class="text-neutral900 text-[30px] font-bold">Haven't registered yet?</p>
+                <p class="text-neutral700 text-headingS">Elevate Your Diamond Buying Experience with KGK
+                    Diamonds!<!-- --></p>
+            </div>
+            <div class="mb-[-30px]"><img alt="register now" loading="lazy" width="276" height="92" decoding="async"
+                    data-nimg="1" class="cursor-pointer" style="color: transparent;"
+                    src="static/images/register-now.278c05b2.png" /></div>
+        </div>
+
+        <div class="globe-mobile">
+            <img alt="KGK Globe presence" width="250" height="258" src="static/images/globe-mobile.png" />
+        </div>
+
+        <div class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main">
+            <div class="footer-glob w-[30%] flex flex-col gap-8"><img alt="KGK Globe presence" loading="lazy"
+                    width="250" height="258" decoding="async" data-nimg="1" style="color: transparent;"
+                    src="static/images/newletter-globe.png" /></div>
+            <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
+                <img alt="KGK logo" loading="lazy" width="36" height="48" decoding="async" data-nimg="1"
+                    class="ml-2 h-[48px] w-[36px]" style="color: transparent;" src="static/images/kgklogo-svg.png" />
+                <div class="flex justify-end relative -top-14 h-1">
+                    <div class="badgew">
+                        <div class="badgew__front">
+                            <div class="badgew__icon">
+                                <img src="static/images/offset-website.svg"
+                                    alt="Tree-Nation - CO2 neutral website badge" />
+                            </div>
+                            <div class="badgew__text">
+                                <h1 class="offset-badge__title">
+                                    <span class="offset-badge__title--blue">Net Zero</span><br />
+                                    Website
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="badgew__back">
+                            <a href="https://tree-nation.com/profile/impact/kgk-diamonds-i-pvt-ltd#co2"
+                                id="forest-link-website" class="forest-link" target="_blank">
+                                <h2 class="forest-link__title">
+                                    Visit our Forest
+                                    <span class="forest-link__tree-nation">on tree-nation.com</span>
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between footer-li">
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Company</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="our-story.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">About
+                                    us</a></div>
+                            <div class="flex"><a href="/v3/about-us/leadership"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Leadership</a>
+                            </div>
+                            <div class="flex"><a href="/v3/sustainability"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Sustainability</a>
+                            </div>
+                            <div class="flex"><a href="/v3/traceability"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Traceability</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Resources</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="blog.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Blog</a>
+                            </div>
+                            <p class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2">Legal</p>
+                            <div class="flex this-mobile mt-2"><a href="/terms-and-conditions"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
+                                    &amp; Conditions</a></div>
+                            <div class="flex this-mobile"><a href="/privacy-policy"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
+                                    Policy</a></div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col not-mobile">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Legal</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="/terms-and-conditions"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
+                                    &amp; Conditions</a></div>
+                            <div class="flex"><a href="/privacy-policy"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
+                                    Policy</a></div>
+                        </div>
+                    </div>
+                    <div class="w-[45%] flex flex-col gap-4">
+                        <p class="text-[#667085] text-mMedium font-semiBold">Contact us</p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#475467] text-lRegular">DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse,
+                                Bandra Kurla Complex, Bandra East, Mumbai - 400051</p>
+                            <a href="tel:+91-9892421286" class="flex gap-1 items-center">
+                                <div class="flex items-center"><img alt="Phone" loading="lazy" width="24" height="24"
+                                        decoding="async" data-nimg="1" style="color: transparent;"
+                                        src="static/images/phone.png" /></div>
+
+                                <img alt="Phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    style="color: transparent;" src="static/images/india-1.png" />
+                                <p class="text-neutral600 text-lRegular">+91-9892421286</p>
+                            </a>
+                            <div class="flex gap-1 items-center">
+                                <a href="mailto:ajay.ghiya@kgkmail.com" class="flex gap-1 items-center">
+                                    <div class="flex items-center"><img alt="Mail" loading="lazy" width="24" height="24"
+                                            decoding="async" data-nimg="1" style="color: transparent;"
+                                            src="static/images/mail.png" /></div>
+
+                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com<!-- --></p>
+                                </a>
+                                <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
+                                    class="cursor-pointer" style="color: transparent;" src="static/images/copy.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12">
+            <p class="text-neutral500">
+                Copyright ©
+                <!-- -->2024<!-- -->
+                KGK Diamonds. All rights reserved.
+            </p>
+            <div class="flex gap-8">
+                <a href="https://www.linkedin.com/company/kgk-group/mycompany/" target="_blank">
+                    <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        style="color: transparent;" src="static/images/linkedin.png" />
+                </a>
+
+                <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank"> <img alt="Instagram"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/insta.png" /></a>
+
+                <a href="https://www.facebook.com/KGKgroup.officialpage/" target="_blank"><img alt="Facebook"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/facebook.png" /></a>
+                <a href="https://x.com/kgk_group" target="_blank"> <img alt="Twitter" loading="lazy" width="24"
+                        height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/twitter.png" /></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/js/custom.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

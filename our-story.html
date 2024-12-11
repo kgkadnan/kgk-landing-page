@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" class="v2primary">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KGK - Our Story</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="__className_d65c78">
+    <!-- header -->
+    <header
+        class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0 space-mobile">
+        <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
+            <!-- Navigation Section -->
+            <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
+                <a href="index.html" class="flex gap-5 mr-6">
+                    <img src="static/images/kgklogo-svg.png" alt="KGK logo" class="cursor-pointer" loading="lazy"
+                        width="36" height="48" decoding="async" />
+                </a>
+                <div class="first-li flex w-full justify-between">
+                    <ul class="flex list-none items-center space-x-4">
+                        <!-- Home -->
+                        <li class="menu-item">
+                            <a href="index.html"
+                                class="inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <div class="relative inline-block text-left margin-0 menu-li menu-item">
+                            <button type="button"
+                                class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
+                                id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown()">
+                                <span>About Us</span>
+                                <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <div id="dropdown-menu"
+                                class="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden"
+                                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+                                style="min-width: 150px;">
+                                <div class="flex flex-col !rounded-[8px] border-[1px] border-neutral200" role="none">
+                                    <li>
+                                        <a href="our-story.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Our Story
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="leadership.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Leadership
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Links -->
+                        <li class="menu-item">
+                            <a href="traceability.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Traceability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="sustainability.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Sustainability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact-us.html"
+                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Buttons Section -->
+                    <div class="flex gap-4 auth-btns">
+                        <button
+                            class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                            Login
+                        </button>
+                        <button
+                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
+                            Register
+                        </button>
+                    </div>
+                </div>
+                <div class="homeburg">
+                    <img src="static/images/menu.png" class="menu-sign" width="25" height="25" alt="" />
+                    <img src="static/images/close.png" class="close-sign" width="25" height="25" alt="" />
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- heading animation section -->
+    <section class="flex flex-col gap-4 top-heading">
+        <div
+            class="min-h-[800px] flex justify-center xl:px-[112px] lg:px-[32px] bg-animated-gradient bg-[length:200%_200%] bg-no-repeat animate-gradient blur-bottom">
+            <div class="flex items-center justify-center">
+                <div
+                    class="top-heading-panel space-mobile flex flex-wrap flex-col gap-14 pt-[160px] pb-[80px] flex-wrap min-h-[160px] justify-between items-center max">
+                    <div class="text-neutral900 text-[96px] font-bold text-center leading-[80px]">
+                        <h1 class="h1title" data-aos="fade-right" data-aos-easing="ease-in-bounce"
+                            data-aos-duration="2000">The Origins of KGK <br> Diamonds</h1>
+                    </div>
+                    <div data-aos="fade-left" data-aos-easing="ease-in-bounce" data-aos-duration="2000"
+                        class="flex flex-col gap-3 items-center">
+                        <p class="text-neutral800 text-lRegular w-[800px] text-center">
+                            KGK Group began its journey in the gemstones business, laying the foundation for what would
+                            become a legacy. Fifty years ago, we ventured into diamonds, a move that has since grown
+                            into the largest vertical of KGK Group. We’ve
+                            evolved from purchasing our first stone to establishing the largest manufacturing presence
+                            in Africa and the most extensive networks of sales offices in the diamond industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- heading animation section -->
+
+    <!-- image zoom section -->
+    <div class="relative" style="clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%); overflow: hidden;">
+        <div class="w-full timeline-animate-zoom timeline-image-bg">
+            <img alt="Timeline banner" loading="lazy" width="1280" height="912" decoding="async" data-nimg="1"
+                class="w-full h-[105vh] asset" style="color: transparent; z-index: 1;object-fit: cover;"
+                src="static/images/timeline-banner.png" />
+        </div>
+        <div class="timeline-heading space-mobile absolute top-[250px] xl:px-[112px] lg:px-[32px] text-neutral0 w-full flex justify-between"
+            style="z-index: 2;">
+            <div class="w-[500px] timeline-heading-panel">
+                <div class="text-headingXL font-bold timeline-heading-text">The Timeline</div>
+                <div class="flex gap-1">
+                    <div class="absolute transform -translate-x-1/2 top-20 h-full timeline-heading-border">
+                        <div class="h-[75px] mr-4 w-[2px] bg-[white] mx-auto"></div>
+                    </div>
+                    <div class="text-headingS">KGK Group, founded by Shri Keshrimal Ji of Jaipur in 1905, began with a
+                        humble task of trading coloured gemstones from India.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- image zoom section -->
+
+    <!-- timeline -->
+    <section class="timeline mt-[-100px] minislider">
+        <ul>
+            <li data-year="1905">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/1905.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div class="flex flex-col gap-2 pl-[60px] time-text" data-aos="fade-up"
+                                    data-aos-easing="ease-in-back" data-aos-delay="200">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>1905</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK Group started as a gemstone trading company, with sales offices in Hong
+                                        Kong, New York, Chennai, and Jaipur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="1962">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/1962.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>1962</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        Mr. Ghisilal Ji Kothari was one of the first Indians in the gemstone industry to
+                                        expand internationally to Hong Kong.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="1975">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/1975.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>1975</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        Mr. Navrattan Kothari initiated diamond sourcing operations in Mumbai, India.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="1986">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/1986.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>1986</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK set up its first diamond processing facility in Mumbai, India.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="1997">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/1997.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>1997</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK was awarded Sightholder status by De Beers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2000">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2000.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2000</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK established a diamond manufacturing unit in South Africa, being one of the
+                                        first diamond companies to expand manufacturing into Africa.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2001">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2001.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2001</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK Group expanded its presence to Europe with a Sales office in the Diamond
+                                        Capital of the world - Antwerp, Belgium.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2005">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2005.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2005</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK Group opened their sales office in Dubai, United Arab Emirates.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2014">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2014.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2014</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK continued to expand its presence in the producer nations, establishing a
+                                        manufacturing plant in Botswana.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2017">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2017.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2017</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK opened a diamond manufacturing facility in Windhoek, Namibia.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2019">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2019.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2019</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK opened a diamond manufacturing facility in Luanda, Angola.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2021">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2021.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2021</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK launched a diamond manufacturing facility in Saurimo, Angola.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px]  h-[calc(100%+300px)] mt-[300px] h-[calc(100%+310px)] !mt-40 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+            <li data-year="2023">
+                <div class="timeline-content">
+                    <div class="relative flex-shrink-0 w-[50%] flex flex-row-reverse pr-[64px] timeline-block">
+                        <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            class="relative w-[350px] h-[250px] transition-transform duration-500 bg-primaryMain timeline-image">
+                            <img alt="timelineImage" loading="lazy" decoding="async" data-nimg="fill"
+                                style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover; color: transparent;"
+                                sizes="100vw" src="static/images/timeline/2023.png" />
+                        </div>
+                        <div
+                            class="absolute top-2 shadow-image right-10 w-[350px] h-[250px] bg-primaryMain transform -translate-x-10 translate-y-2 z-[-1] shadow-lg translate-y-0 opacity-100">
+                        </div>
+                    </div>
+                    <div class="timeline-text flex-grow flex items-center w-[50%]">
+                        <div class="transition-transform duration-500 translate-y-0 opacity-100">
+                            <div class="flex items-center w-[500px] width500">
+                                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                                    class="flex flex-col gap-2 pl-[60px] time-text">
+                                    <h2 class="text-headingXL neutral900 font-bold">
+                                        <time>2023</time>
+                                    </h2>
+                                    <p
+                                        class="text-neutral900 text-headingM font-semiBold reveal-type break-words whitespace-normal">
+                                        KGK launched a diamond and jewellery manufacturing facility in Gaborone,
+                                        Botswana.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 w-[2px] h-[calc(100%+70px)] mt-[300px] h-[calc(100%+310px)] !mt-20 bg-timeline-gradient">
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 seprator-timeline">
+                        <img alt="timeline separator" loading="lazy" width="24" height="24" decoding="async"
+                            data-nimg="1" style="color: transparent;" src="static/images/timeline/diamond.svg" />
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Mini Slider to navigate years -->
+    <div
+        class="timeline-slider fixed right-10 top-1/2 -mt-[50px] transition-transform duration-300 ease-in-out opacity-100 translate-x-0">
+        <button class="prev-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" stroke="hsla(180, 13%, 24%, 1)" fill="none">
+                <rect width="27" height="27" x="0.5" y="0.5" rx="13.5"></rect>
+                <path d="m20 17-6-6-6 6"></path>
+            </svg>
+        </button>
+        <div class="absolute left-1/2 top-full w-0.5 h-8 bg-black bg-opacity-50"
+            style="background-image: repeating-linear-gradient(black 0px, black 1px, transparent 2px, transparent 4px);">
+        </div>
+        <div style="box-shadow: var(--input-shadow);"
+            class="slider-years absolute h-[60px] !w-[60px] -left-[15px] mt-[35px] border-[1px] rounded-[50%] p-15 flex items-center text-center justify-center border-primaryMain">
+            <button class="year-btn" data-year="1905">1905</button>
+            <button class="year-btn" data-year="1962">1962</button>
+            <button class="year-btn" data-year="1975">1975</button>
+            <button class="year-btn" data-year="1986">1986</button>
+            <button class="year-btn" data-year="1997">1997</button>
+            <button class="year-btn" data-year="2000">2000</button>
+            <button class="year-btn" data-year="2001">2001</button>
+            <button class="year-btn" data-year="2005">2005</button>
+            <button class="year-btn" data-year="2014">2014</button>
+            <button class="year-btn" data-year="2017">2017</button>
+            <button class="year-btn" data-year="2019">2019</button>
+            <button class="year-btn" data-year="2021">2021</button>
+            <button class="year-btn" data-year="2023">2023</button>
+        </div>
+        <div class="absolute mt-[100px] left-1/2 top-full w-0.5 h-8 bg-black bg-opacity-50"
+            style="background-image: repeating-linear-gradient(black 0px, black 1px, transparent 2px, transparent 4px);">
+        </div>
+        <button class="next-btn absolute left-[1px] rotate-180 cursor-pointer" style="margin-top: 10.6rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" stroke="hsla(180, 13%, 24%, 1)" fill="none">
+                <rect width="27" height="27" x="0.5" y="0.5" rx="13.5"></rect>
+                <path d="m20 17-6-6-6 6"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- timeline -->
+
+    <!-- footer -->
+    <footer style="z-index: 100;">
+        <div
+            class="space-mobile registered-yet flex w-full xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] justify-between items-center py-4">
+            <div class="flex flex-col gap-2">
+                <p class="text-neutral900 text-[30px] font-bold">Haven't registered yet?</p>
+                <p class="text-neutral700 text-headingS">Elevate Your Diamond Buying Experience with KGK
+                    Diamonds!<!-- --></p>
+            </div>
+            <div class="mb-[-30px]"><img alt="register now" loading="lazy" width="276" height="92" decoding="async"
+                    data-nimg="1" class="cursor-pointer" style="color: transparent;"
+                    src="static/images/register-now.278c05b2.png" /></div>
+        </div>
+
+        <div class="globe-mobile">
+            <img alt="KGK Globe presence" width="250" height="258" src="static/images/globe-mobile.png" />
+        </div>
+
+        <div class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main">
+            <div class="footer-glob w-[30%] flex flex-col gap-8"><img alt="KGK Globe presence" loading="lazy"
+                    width="250" height="258" decoding="async" data-nimg="1" style="color: transparent;"
+                    src="static/images/newletter-globe.png" /></div>
+            <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
+                <img alt="KGK logo" loading="lazy" width="36" height="48" decoding="async" data-nimg="1"
+                    class="ml-2 h-[48px] w-[36px]" style="color: transparent;" src="static/images/kgklogo-svg.png" />
+                <div class="flex justify-end relative -top-14 h-1">
+                    <div class="badgew">
+                        <div class="badgew__front">
+                            <div class="badgew__icon">
+                                <img src="static/images/offset-website.svg"
+                                    alt="Tree-Nation - CO2 neutral website badge" />
+                            </div>
+                            <div class="badgew__text">
+                                <h1 class="offset-badge__title">
+                                    <span class="offset-badge__title--blue">Net Zero</span><br />
+                                    Website
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="badgew__back">
+                            <a href="https://tree-nation.com/profile/impact/kgk-diamonds-i-pvt-ltd#co2"
+                                id="forest-link-website" class="forest-link" target="_blank">
+                                <h2 class="forest-link__title">
+                                    Visit our Forest
+                                    <span class="forest-link__tree-nation">on tree-nation.com</span>
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between footer-li">
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Company</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="/v3/about-us/our-story"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">About
+                                    us</a></div>
+                            <div class="flex"><a href="/v3/about-us/leadership"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Leadership</a>
+                            </div>
+                            <div class="flex"><a href="/v3/sustainability"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Sustainability</a>
+                            </div>
+                            <div class="flex"><a href="/v3/traceability"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Traceability</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Resources</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="blog.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Blog</a>
+                            </div>
+                            <p class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2">Legal</p>
+                            <div class="flex this-mobile mt-2"><a href="/terms-and-conditions"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
+                                    &amp; Conditions</a></div>
+                            <div class="flex this-mobile"><a href="/privacy-policy"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
+                                    Policy</a></div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col not-mobile">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Legal</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex"><a href="/terms-and-conditions"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
+                                    &amp; Conditions</a></div>
+                            <div class="flex"><a href="/privacy-policy"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
+                                    Policy</a></div>
+                        </div>
+                    </div>
+                    <div class="w-[45%] flex flex-col gap-4">
+                        <p class="text-[#667085] text-mMedium font-semiBold">Contact us</p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#475467] text-lRegular">DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse,
+                                Bandra Kurla Complex, Bandra East, Mumbai - 400051</p>
+                            <a href="tel:+91-9892421286" class="flex gap-1 items-center">
+                                <div class="flex items-center"><img alt="Phone" loading="lazy" width="24" height="24"
+                                        decoding="async" data-nimg="1" style="color: transparent;"
+                                        src="static/images/phone.png" /></div>
+
+                                <img alt="Phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    style="color: transparent;" src="static/images/india-1.png" />
+                                <p class="text-neutral600 text-lRegular">+91-9892421286</p>
+                            </a>
+                            <div class="flex gap-1 items-center">
+                                <a href="mailto:ajay.ghiya@kgkmail.com" class="flex gap-1 items-center">
+                                    <div class="flex items-center"><img alt="Mail" loading="lazy" width="24" height="24"
+                                            decoding="async" data-nimg="1" style="color: transparent;"
+                                            src="static/images/mail.png" /></div>
+
+                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com<!-- --></p>
+                                </a>
+                                <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
+                                    class="cursor-pointer" style="color: transparent;" src="static/images/copy.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12">
+            <p class="text-neutral500">
+                Copyright ©
+                <!-- -->2024<!-- -->
+                KGK Diamonds. All rights reserved.
+            </p>
+            <div class="flex gap-8">
+                <a href="https://www.linkedin.com/company/kgk-group/mycompany/" target="_blank">
+                    <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        style="color: transparent;" src="static/images/linkedin.png" />
+                </a>
+
+                <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank"> <img alt="Instagram"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/insta.png" /></a>
+
+                <a href="https://www.facebook.com/KGKgroup.officialpage/" target="_blank"><img alt="Facebook"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/facebook.png" /></a>
+                <a href="https://x.com/kgk_group" target="_blank"> <img alt="Twitter" loading="lazy" width="24"
+                        height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        src="static/images/twitter.png" /></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/js/custom.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        // {{{{{{{{7}}}}}}}} timeline js
+        (function () {
+            "use strict";
+            var items = document.querySelectorAll(".timeline li");
+            var yearButtons = document.querySelectorAll(".year-btn");
+            var prevBtn = document.querySelector(".prev-btn");
+            var nextBtn = document.querySelector(".next-btn");
+            var currentIndex = 0;
+            var timelineSlider = document.querySelector(".timeline-slider"); // Get the timeline slider container
+
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <=
+                    (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function updateInView() {
+                yearButtons.forEach(function (button) {
+                    button.classList.remove("visible");
+                });
+                items.forEach(function (item) {
+                    item.classList.remove("in-view");
+                });
+
+                let isItemInView = false;
+                for (var i = 0; i < items.length; i++) {
+                    if (isElementInViewport(items[i])) {
+                        items[i].classList.add("in-view");
+                        var year = items[i].getAttribute("data-year");
+                        var yearButton = document.querySelector(
+                            `.year-btn[data-year="${year}"]`
+                        );
+                        if (yearButton) {
+                            yearButton.classList.add("visible");
+                        }
+                        currentIndex = i; // Update the current index when an item is in view
+                        isItemInView = true;
+                        break; // Exit the loop once the first visible item is found
+                    }
+                }
+
+                if (isItemInView) {
+                    timelineSlider.classList.add("visible");
+                } else {
+                    timelineSlider.classList.remove("visible");
+                }
+
+                if (currentIndex === items.length - 1) {
+                    yearButtons.forEach(function (button) {
+                        button.classList.remove("visible");
+                    });
+                    items.forEach(function (item) {
+                        item.classList.remove("in-view");
+                    });
+                    timelineSlider.classList.remove("visible");
+                }
+            }
+
+            function updateSlider() {
+                if (currentIndex >= 0 && currentIndex < items.length) {
+                    var targetItem = items[currentIndex];
+                    window.scrollTo({
+                        top: targetItem.offsetTop - 100, // Adjust for header or other offsets
+                        behavior: "smooth",
+                    });
+                }
+            }
+
+            window.addEventListener("scroll", updateInView);
+            window.addEventListener("resize", updateInView);
+            window.addEventListener("load", updateInView);
+
+            yearButtons.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    var year = this.getAttribute("data-year");
+                    var targetItem = document.querySelector(
+                        `.timeline li[data-year="${year}"]`
+                    );
+                    if (targetItem) {
+                        currentIndex = Array.from(items).indexOf(targetItem);
+                        updateSlider();
+                    }
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const prevBtn = document.querySelector(".prev-btn");
+                if (prevBtn) {
+                    prevBtn.addEventListener("click", function () {
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            updateSlider();
+                        }
+                    });
+                }
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const nextBtn = document.querySelector(".next-btn");
+                if (nextBtn) {
+                    nextBtn.addEventListener("click", function () {
+                        if (currentIndex < items.length - 1) {
+                            currentIndex++;
+                            updateSlider();
+                        }
+                    });
+                }
+            });
+            updateInView();
+        })();
+    </script>
+</body>
+
+</html>
