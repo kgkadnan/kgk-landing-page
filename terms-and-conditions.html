@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html lang="en" class="v2primary">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KGK - Terms And Conditions</title>
+
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="main-body">
+    <!-- header -->
+    <header
+        class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0 space-mobile">
+        <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
+            <!-- Navigation Section -->
+            <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
+                <a href="index.html" class="flex gap-5 mr-6">
+                    <img src="static/images/kgklogo-svg.png" alt="KGK logo" class="cursor-pointer" loading="lazy"
+                        width="36" height="48" decoding="async" />
+                </a>
+                <div class="first-li flex w-full justify-between">
+                    <ul class="flex list-none items-center space-x-4">
+                        <!-- Home -->
+                        <li class="menu-item">
+                            <a href="index.html"
+                                class="menu-link inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <div class="relative inline-block text-left margin-0 menu-li menu-item">
+                            <button type="button"
+                                class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
+                                id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown()">
+                                <span class="menu-link">About Us</span>
+                                <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <div id="dropdown-menu"
+                                class="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden"
+                                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+                                style="min-width: 150px;">
+                                <div class="flex flex-col !rounded-[8px] border-[1px] border-neutral200" role="none">
+                                    <li class="menu-item">
+                                        <a href="our-story.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Our Story
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="leadership.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Leadership
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Links -->
+                        <li class="menu-item">
+                            <a href="traceability.html"
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Traceability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="sustainability.html"
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Sustainability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact-us.html"
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Buttons Section -->
+                    <div class="flex gap-4 auth-btns">
+                        <a href="login.html"
+                            class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                            Login
+                        </a>
+                        <a href="register.html"
+                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
+                            Register
+                        </a>
+                    </div>
+                </div>
+                <div class="homeburg">
+                    <img src="static/images/menu.png" class="menu-sign" width="25" height="25" alt="" />
+                    <img src="static/images/close.png" class="close-sign" width="25" height="25" alt="" />
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+
+    <section class="max-w-4xl mx-auto flex flex-col gap-[16px] commonStyle">
+        <div class="flex w-full items-center flex-col">
+            <h1 class="text-headingS font-medium text-neutral-900">Terms and Conditions</h1>
+            <div class="terms-tabs mb-6">
+                <button class="tablinks px-[16px] py-[8px] rounded-l-[8px] text-neutral600 border-[1px] border-neutral-200 pb-[8px] active"
+                    onclick="openTab(event, 'kgkWebsite')">KGK Website
+                </button>
+                <button class="tablinks px-[16px] py-[8px] rounded-l-[8px] text-neutral600 border-[1px] border-neutral-200 pb-[8px]"
+                    onclick="openTab(event, 'kgkDiamondsbv')">KGK Diamonds BV
+                </button>
+                <button class="tablinks px-[16px] py-[8px] rounded-l-[8px] text-neutral600 border-[1px] border-neutral-200 pb-[8px]"
+                    onclick="openTab(event, 'spvTc')">SPV T&C
+                </button>
+            </div>
+
+            <div id="kgkWebsite" class="tabcontent active">
+                <div class="statiContentBox">
+                    <div class="staticContentWrapper mb-0">
+                        <div class="staticList">
+                            <p>
+                                This is a legally binding contract (hereinafter referred to as
+                                “Agreement”), By And Between User(s) (hereinafter referred as “User” or
+                                “Users” or “You” which expression shall, unless it be repugnant to the
+                                context or meaning thereof, be deemed to mean and include his/her/their
+                                heirs, executors, administrators and legal representatives its
+                                successors, as the case may be), i.e. any person, who accesses and/or
+                                uses internet resource www.kgk.live, including, without limitation, all
+                                its associated sub-domains, mobile applications, if any, and all
+                                accompanying or associated data, applications, utilities or interface
+                                available or provided now and in future (collectively referred to as
+                                “Website”) or any Services (defined hereinafter) provided by KGK Jewels
+                                Online DMCC, a company with limited liability incorporated under the
+                                relevant laws of Dubai Multi Commodities Centre Authority, and having
+                                its registered offices at Unit no. 1222, DMCC Business Centre, Level No.
+                                1, Jewellery &amp; Gemplex 3, Dubai, United Arab Emirates
+                            </p>
+                            <p>
+                                AND KGK Jewels Online DMCC (hereinafter referred to as the “Company” or
+                                “Us” or “We”). and each of which are hereinafter referred to as a
+                                “Party” and both of which are herein referred to as the “Parties”.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="1. ABOUT KGK GROUP">
+                            1. About KGK Group
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        KGK Jewels Online is a part of the KGK Group, having companies and
+                                        its affiliates worldwide, operating under the brand name(s) KGK, and
+                                        includes the following companies, that is, KGK Diamonds BV, Belgium
+                                        Diamond LLC, Sparkle Gems Inc and KGK Diamonds (I) Pvt Ltd. (“KGK
+                                        Group”). The KGK Group has been in the diamond trade for more than
+                                        110 years and has secured a notewothry presence across the globe.
+                                        KGK’s rough gemstones and diamonds are directly sourced from the
+                                        mines and the status of De Beers Sightholder and has diamond
+                                        manufacturing units in India, Russia, South Africa, Angola, Botswana
+                                        and Namibia. The KGK Group has its offices in USA, UAE, Asia,
+                                        Africa, China, Japan, Russia, Europe etc. The diamonds listed on the
+                                        Platform are natural diamonds and sourced in compliance with the
+                                        United Nations Resolutions and corresponding international laws with
+                                        certificates issued from Gemological Institute of America (GIA),
+                                        International Gemological Institute (IGI) and HRD Antwerp (HRD).
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        KGK Jewels Online offers, through its Website (as defined
+                                        hereinbelow), concierge services and acts as a marketplace for
+                                        registered users and visitors to view a wide range of products and
+                                        information displayed thereon, and placing a request/enquiry and/or
+                                        bidding and/or purchasing product(s). It further offers Registered
+                                        User Services (defined hereinafter) to those users who have
+                                        registered on the Website, such as bidding, purchasing, tracking
+                                        orders, viewing the product price, viewing the selection history,
+                                        and viewing certificates and other product and/or authenticity
+                                        related documents. The Platform is owned, operated, and edited by
+                                        KGK Jewels Online DMCC.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Please read these Terms and Conditions carefully before using the
+                                        Platform or any material or information therein, or availing
+                                        Services (as defined hereinafter) from the Company offered through
+                                        the Website.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="2. INTERPRETATION">
+                            2. Interpretation
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        The words
+                                        <strong>“hereof”, “hereto”, “herein”, and “hereunder”</strong> and
+                                        words of similar import, when used in this Agreement, shall refer to
+                                        this Agreement as a whole and not to any particular provision of
+                                        this Agreement.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Words denoting the singular shall include the plural and words
+                                        denoting any gender shall include all genders.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The headings to clauses, sub-clauses and paragraphs of this
+                                        Agreement shall only serve the purpose of easier orientation and
+                                        shall not affect the contents and interpretation of this Agreement.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Reference to days, months and years are to English calendar days,
+                                        calendar months and calendar years, respectively.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Any reference to <strong>“writing”</strong> shall include printing,
+                                        typing, lithography, an electronic record, and other means of
+                                        reproducing words in a visible form.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The words <strong>“include”</strong> and
+                                        <strong>“including”</strong> are to be construed without limitation
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Law”</strong> means all statutes, enactments, acts of
+                                        legislature, laws, ordinances, rules, by-laws, regulations,
+                                        negotiations, guidelines, policies, directions, directives and
+                                        orders of the Dubai Multi Commodities Centre or the United Arab
+                                        Emirates Federal Law.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Person”</strong> includes any individual, partnership,
+                                        corporation, company, unincorporated organization or association,
+                                        trust or other entity
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The words <strong>“Your”</strong> or <strong>“your”</strong> or
+                                        <strong>“You”</strong> or <strong>“you”</strong>, when used in this
+                                        Agreement, shall refer to and mean
+                                        <strong>“Website visitor/s”</strong> or
+                                        <strong>“Registered User/s”</strong>, as the case may be.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="3. DEFINITIONS">
+                            3. Definitions
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        The following words and terms, whenever used in this Agreement,
+                                        unless repugnant to the meaning or context thereof, shall have the
+                                        respective meanings set forth below.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Registered User Services”</strong> shall mean those
+                                        services made available and provided only to Registered Users,
+                                        including but not limited to services such as placing bids to
+                                        purchase Products, viewing the approximate price of a product, image
+                                        and 360° view of the diamond, GIA Report, certifications other such
+                                        documents in respect of the Product(s), details of the diamond,
+                                        offers, notifications, and viewing a Registered Users selection
+                                        history, cart, order status, invoice, shipment status,
+                                        watchlist/wishlist, ‘my diamonds’, orders, saved searches, notes,
+                                        demands, and ledger reflecting invoices raised, payments received,
+                                        due dates, and outstanding balances;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Applicable Laws”</strong> or <strong>“Law”</strong> shall
+                                        mean any applicable laws and regulations of the Dubai Multi
+                                        Commodities Centre and the applicable federal laws of the United
+                                        Arab Emirates
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Company”</strong> or <strong>“Us”</strong> or
+                                        <strong>“We”</strong>, shall mean and include KGK Jewels Online
+                                        DMCC, its Offices, Officers, Directors, Partners, Owners,
+                                        Administrators, independent Contractors, Employees, Agents, or
+                                        affiliates, and its/their successors and assigns;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Intellectual Property Rights”</strong>, which may also be
+                                        referred as IPR, shall mean and include all registered and
+                                        unregistered trademarks, copyright in all forms including but not
+                                        limited to the contents of the Website, images, text, illustrations,
+                                        audio clips, trademarks, logos, labels, video clips, software and
+                                        coding; industrial designs, patents, inventions, domain names, trade
+                                        secrets, methodology, processes, features, functionality, User
+                                        Information and common law rights in the aforesaid, which are
+                                        associated with the Company, Services or the System;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Person”</strong> shall mean a person, and includes any
+                                        individual, corporation, firm, partnership, joint venture,
+                                        association, organisation, trust, Dubai Multi Commodity Centre
+                                        Authority, federal authority, or other legal entity (in each case,
+                                        whether or not having separate legal personality);
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Privacy Policy”</strong> shall mean the Privacy Policy of
+                                        the Company published on the Website;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Product Owners”</strong> shall mean the third party,
+                                        independent owner(s) of a product(s) that is being displayed on the
+                                        Website;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Registered User”</strong> shall mean any person, and
+                                        includes any individual, corporation, firm, partnership, joint
+                                        venture, association, organisation, or trust who has completed the
+                                        basic KYC procedure on our Website and has been granted a registered
+                                        account to access the Website;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Services”</strong> shall mean and include Services provided
+                                        by the Company from time to time through the Website, including
+                                        services to its Website visitors to view the wide range of products
+                                        displayed on the Platform as well as Registered User Services
+                                        provided only to the Registered Users;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Website/Platform”</strong> shall mean and include, whole or
+                                        in part, the internet resource and website known as www.kgklive.com
+                                        including but not limited to all its associated sub-domain, mobile
+                                        application, any accompanying or associated data, applications,
+                                        utilities or interface
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“System”</strong> shall mean and include the Website,
+                                        electronic communication network including all software, all
+                                        hardware, all files and images and data contained in or generated by
+                                        the System associated with the Website.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Use”</strong> shall mean and include any use of the Website
+                                        or Services by a Person, including, without limitation, Website
+                                        visitors, Registered Users, and any other Persons who accesses or
+                                        visits the Website and their relative(s), representatives, agents,
+                                        servants or affiliates, for whom, or on whose behalf, such Website
+                                        Visitor, Registered User, or Person is using the Website and
+                                        availing the Services
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“User”</strong> and <strong>“Users”</strong> shall mean and
+                                        include a Registered User, Website Visitor or any Person who Uses
+                                        the Website, Users, including his relative(s), representatives,
+                                        agents, servants or affiliates, for whom or on whose behalf, the
+                                        User is using the Website.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“User Account Information”</strong> shall mean and include
+                                        the full name, nationality, residential address (city, state, PIN
+                                        code), e-mail address, telephone number (mobile or landline and any
+                                        other information as may be required by the Company in relation of
+                                        the User Account.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“User Information”</strong> shall mean and include User
+                                        Account Information, User generated content, information generated,
+                                        directly or indirectly, subject to the privacy policy of the
+                                        Company, with respect to the User Account, during the process of
+                                        obtaining Registered User Services by the User, or otherwise. It
+                                        shall also include the information provided to the Company or
+                                        collected by the Company in respect of a Website Visitor.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <strong>“Website Visitor”</strong> shall mean any Person who is not
+                                        a Registered User and therefore does not have a registered account
+                                        to access the Website and cannot avail of the Registered User
+                                        Services, but is visiting the Website in order to view the products
+                                        displayed thereon.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="4. ACCEPTANCE OF TERMS">
+                            4. Acceptance of terms
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        This Agreement applies to the Company and User, and governs the
+                                        provision of access to Users of the Website, and/or the use by Users
+                                        of any Services provided on or through the Website.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company is, and User accepts that the Company is, the owner,
+                                        author and publisher of the Website and the operator of the System
+                                        associated with the Website for providing Services.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        By using the Website or accessing any material, information or
+                                        services through the Website, the User agrees, admits, confirms and
+                                        declares that the User have completed 18 years of age as on date of
+                                        this Agreement, and that the User has fully read and understood the
+                                        Terms and Conditions (also referred as
+                                        <strong>“Terms of Use”</strong>) as set forth in this Agreement,
+                                        without any impairment in judgment resulting from (but not limited
+                                        to) mental illness, mental handicap, intoxication, medication, or
+                                        any other health or other problem that could impair judgment.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        In case the User has any issue or difficulty with the understanding
+                                        of this Agreement or any of its clause or portion, you are advised
+                                        not to Use the Website and if the User uses the Website, it shall be
+                                        presumed and signified that User has agreed to be bound by the terms
+                                        and conditions of the Agreement, without any objection or
+                                        reservation.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        If you do not wish to be bound by any part of this Agreement, you
+                                        are not allowed to and shall not use the Website or any of Services
+                                        offered by the Company or the Website, any such use of the Website
+                                        or any of the Services shall not be valid and shall not vest any
+                                        rights or entitlements in you, and shall be a breach of this
+                                        Agreement by you.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        By mere use of or access to the Website, you shall be contracting
+                                        with Company, and these terms and conditions including the Privacy
+                                        Policy, constitute your binding obligation.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Further, by mere use of or access to the Website, you agree and
+                                        declare that you are intending to use or using the Services offered
+                                        by the Company through Website, on your own volition, free will,
+                                        without any undue influence, force or coercion, while in sound mind,
+                                        and disposing capacity, and your being legally capable of
+                                        contracting in law.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Use of the Website, and/or the Services and/or Registered User
+                                        Services by any User, shall be solely at the discretion of the
+                                        Company. The Company reserves its right to add, delete or
+                                        discontinue its any Service or Website in part or whole.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company reserves, at its sole discretion, the right to refuse
+                                        any User to access the Website or avail any Services, without
+                                        assigning any reason
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company also reserves, at its sole discretion, the right to
+                                        block any User from creation of any User Account, or block any
+                                        Registered User from accessing the Website or Services, without
+                                        assigning any reason.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        comply with the Digital Millennium Copyright Act (DMCA), Electronic
+                                        Communications Privacy Act (ECPA), and other relevant state and
+                                        federal laws regarding online conduct.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle"
+                            title="5. PLATFORM FOR CONNECTING USERS WITH PRODUCT OWNERS">
+                            5. Platform for connecting users with product owners
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        The Website is strictly a technology platform that the Company is
+                                        providing to enable Users and the Product Owner to interact with
+                                        each other, without any liability of the Company. The Website is a
+                                        marketplace that allows for Product Owners to display, list and sell
+                                        their products. While the Company facilitates transactions that are
+                                        carried out on the Website, the Company is neither the buyer nor the
+                                        seller of any product(s).
+                                    </div>
+                                </li>
+                                <p>
+                                    <strong>The Company is not and cannot be a party to or control in any
+                                        manner any dealing between the Users and Product Owners, and the
+                                        User hereby understands and accepts as under:</strong>
+                                </p>
+
+                                <li>
+                                    <div>
+                                        The Company does not own any products displayed on the Website;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        All or any of the Product Owners who may display products through
+                                        our Website, are independent professionals and/or corporate
+                                        entities/organisations who are providing services in their
+                                        professional capacity.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company does not make any representations or warranties with
+                                        respect to these Product Owners and/or the quality of the
+                                        products/services they may provide. Accordingly, the Company shall
+                                        not be held responsible for any interaction or associated issues
+                                        between the User and the Product Owner.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        The User hereby understands and agrees that the relationship between
+                                        the User and the Product Owner, is and shall always be independently
+                                        governed under Applicable Laws. The Company does not claim any
+                                        control over any such specific, particular, individual or general
+                                        rules and regulations and Applicable Laws;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        There is and shall always be a separate and independent contractual
+                                        relationship between the User, and the Product Owner, as the case
+                                        may be, without any involvement or control or interference of the
+                                        Company. The User shall note that the Company is not privy to any
+                                        separate or independent Agreements that User has with any Product
+                                        Owner, which independently govern their inter-se relationship, and
+                                        shall be on a principal-to-principal basis between them.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Website and its Services are accessible to several international
+                                        Users and Product Owners. The Company may provide access to certain
+                                        features and tools to such international buyers or sellers, such as
+                                        currency conversion, customs duty estimations and other tax tools.
+                                        It shall be the responsibility of such Users and Product Owners
+                                        respectively to comply with all laws and regulations applicable to
+                                        international sale, purchase and shipment of product(s).
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Users and Product Owners agree to indemnify and hold the Company
+                                        harmless from any claims, losses, damages, or expenses arising out
+                                        of their use of the Website or their interactions with each other,
+                                        including but not limited to claims related to product liability,
+                                        intellectual property infringement, and violations of law.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company reserves the right to modify, suspend, or discontinue
+                                        any aspect of the Website and Services at its sole discretion,
+                                        without notice, and without liability to Users or Product Owners.
+                                        This includes the ability to change features, functionalities, or
+                                        accessibility.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Nothing in these Terms shall be construed to create an agency,
+                                        partnership, or joint venture between the Company and Users or
+                                        Product Owners. The Company is not responsible for any actions or
+                                        omissions of Users or Product Owners.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle"
+                            title="6. USER OBLIGATIONS, UNDERTAKINGS AND CONSENT WHEN USING THE WEBSITE">
+                            6. User obligations, undertakings and consent when using the website
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        Prior to availing any Registered User Services on the Website, you
+                                        will have to register and become a Registered User. If you choose
+                                        not to register, you shall be considered a Website Visitor and will
+                                        not be able to avail of any Registered User Services
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        When a User registers on the Website, the User shall be required to
+                                        create an account (“User Account”) by providing User Account
+                                        Information and certain other information as may be required by the
+                                        Company.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The verification of a User’s email shall be compulsory without which
+                                        the Company will not create a User Account.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        If the User registers on the Website and successfully gets a User
+                                        Account, User shall be responsible for maintaining the
+                                        confidentiality of the account, including display name and password
+                                        of the account, and User shall be responsible for all activities
+                                        that occur under User’s Account
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The User hereby declares and verifies that all information provided
+                                        by the User is true, accurate and genuine. User hereby agrees that
+                                        in case any information provided by the User is not true or accurate
+                                        or genuine or complete, or the Company has reasonable grounds to
+                                        suspect that such information is false, misleading, untrue,
+                                        inaccurate, not current or incomplete, or not in accordance with
+                                        these Terms of Use, then the Company shall have the right to
+                                        indefinitely suspend or terminate or block access of the User’s
+                                        Account on the Website as set out herein
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User hereby agrees, declares and warrants that the User is fully
+                                        authorized and has taken all requisite approvals from any person on
+                                        whose behalf (if any) User is acting on the Website
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Users will ensure that the User is in compliance of all Applicable
+                                        Laws, regulations and conventions.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User agrees that the User shall be solely responsible for all usage
+                                        of the User’s Account and password.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User consents to immediately notify the Company of any actual or
+                                        suspected unauthorized use or breach of the User’s Account. User
+                                        hereby agrees that the Company shall not be liable for any direct or
+                                        indirect damages, losses, costs, charges, expenses, etc. caused to
+                                        User by any unauthorized use of User Account, and the User shall be
+                                        liable for all damage and loss caused to the Company or others, due
+                                        to such unauthorized use.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Users acknowledge that it is their responsibility to back up any
+                                        content or data they submit or store on the Website. The Company
+                                        shall not be liable for any loss of data or content that results
+                                        from the use of the Website or the termination of the User’s
+                                        Account.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Users agree to keep their contact information up to date and to
+                                        promptly notify the Company of any changes. This includes updating
+                                        their email address to ensure they receive important notifications
+                                        and communications related to their Account.
+                                    </div>
+                                </li>
+                                <p>
+                                    <strong>
+                                        agrees and undertakes that the User will not or attempt to:</strong>
+                                </p>
+                                <li>
+                                    <div>impersonate any other User, person or entity,</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        misrepresent his affiliation with the Company (there being no such
+                                        affiliation);
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        use the Website or Services in violation of any Applicable Laws;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        obtain any Services from the Website, using his account for any
+                                        person, except for himself, his family, and/or his children below 18
+                                        years of age.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        use the Services, Website or System in any manner that exceeds the
+                                        scope of the right to use the Website, System and Services.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        use abusive, inappropriate or derogatory language while
+                                        communicating with the representative of the Company through the
+                                        Website.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Users must comply with all applicable export control laws and
+                                        regulations when using the Website or Services, ensuring that no
+                                        prohibited products or services are offered or acquired.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle"
+                            title="7. USER OBLIGATIONS, UNDERTAKINGS AND CONSENT WHEN BIDDING OR BUYING THE PRODUCT">
+                            7. User obligations, undertakings and consent when bidding and buying the
+                            product
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        A Registered User may place a bid on a Product for sale/purchase of
+                                        product(s) through the Registered User Services. The bid placed by
+                                        the User must be higher than the ask price of the Product Owner at
+                                        an interval of 0.50
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        A Registered User can view his own bid by checking the status. If
+                                        the Registered Users bid is reflected in green, it would indicate
+                                        that he is currently the highest bidder. If the Registered Users bid
+                                        is reflected in black, it would indicate that there are similar bids
+                                        to the one places by the Registered User and in such an event the
+                                        winner will be decided on a first save basis, and if the Registered
+                                        Users bid is reflected in red, it would indicate that there have
+                                        been higher bids places by other Registered Users
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        A bid for product(s) that is/are a new arrival will be closed on the
+                                        next day after its launch of the Website, at 4:00 pm CET. However,
+                                        if the product is displayed on a Friday then bidding will be closed
+                                        on Monday at 4:00 pm CET. Bid to buy will be closed on Monday at
+                                        9:00 am CET.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        When a Registered User’s bid is accepted by the Product Owner, he
+                                        will be notified by the Product Owner and the order will be
+                                        generated. Accordingly, upon acceptance, a contract for these third
+                                        party product(s) will be entered into between the Product Owner and
+                                        Registered User.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Upon acceptance of a bid, the order is generated and an invoice will
+                                        be raised by the Product Owner. All sales are final once the bid is
+                                        accepted, and no refund/revision/cancellation will be permitted. The
+                                        User will be obligated to purchase the Product for which his bid has
+                                        been accepted.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        If for any reason whatsoever, a User decides to cancel his order
+                                        pursuant to the same having been accepted by the concerned Product
+                                        Owner, the User may contact us and the concerned Product Owner
+                                        through the Website. The Product Owner and/or KGK Online shall have
+                                        the sole discretion to decide if the cancellation request should be
+                                        accepted or not. In the event, the cancellation request is accepted,
+                                        the User will be charged 10% of the bid amount as a cancellation fee
+                                        and the remaining amount paid shall be refunded by the concerned
+                                        Product Owner. Upon acceptance of a cancellation request, you
+                                        acknowledge that the refund shall be made directly by the concerned
+                                        Product Owner without any involvement and/or liability of the
+                                        Company.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        A Registered User may also activate the “buy now” function/feature
+                                        when intending to bid/purchase product(s). If a Registered User uses
+                                        the “buy now” feature, the Website will attempt to automatically
+                                        match such Registered User with the Product Owner, and the Website
+                                        will furnish the Registered User with a transaction id number and a
+                                        confirmatory email.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        A Registered User acknowledges that even pursuant to receipt of a
+                                        confirmation e-mail sent from the Website, the same shall only be in
+                                        respect of confirming receipt of the Registered User’s order and
+                                        shall not be considered as an e-mail accepting the order. Basis
+                                        availability of the selected Product, the order will be considered
+                                        as accepted by the Product Owner once the order is generated and the
+                                        invoice is raised
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        A Registered User acknowledges that the invoice displayed on the
+                                        Website is an invoice raised by the Product Owner and not by the
+                                        Company. The Company has made considerable effort toward providing
+                                        guidelines to the Product Owner’s in respect of generating an
+                                        invoice. However, in the event, the Registered User has any queries
+                                        in respect of the invoice, he can immediately contact the sales
+                                        representative and/or raise a query through the Website.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        While placing a bid or buying a product(s), a Registered User must
+                                        enter their preferred mode of payment and shipping company. As KGK
+                                        Online Jewels cannot estimate the amount of time taken for the
+                                        product to be delivered, we cannot guarantee a specific delivery
+                                        timeframe for any items and therefore, a Registered User is not
+                                        permitted to cancel the purchase if the product(s) does not ship
+                                        from the Product Owner within a reasonable timeframe. If the
+                                        Registered User does not receive a product(s) within the timeframe
+                                        specified in the confirmation email, a Registered User shall
+                                        promptly report the issue on the Website within 7 days of the latest
+                                        estimated delivery date. KGK Jewels Online has the right, in our
+                                        sole and absolute discretion to refuse to accept returns or other
+                                        refunds and/or to charge restocking fees for returned or abandoned
+                                        items.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle"
+                            title="8. INFORMATION PROVIDED BY USER, DATA RETENTION, COMMUNICATION AND PRIVACY POLICY">
+                            8. Information provided by user, data retention, communication and privacy
+                            policy
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        While the Company takes utmost care with respect to the security of
+                                        the information you decide to upload, you understand that any
+                                        information that you disclose on the Website, is at your own risk.
+                                        By uploading / sharing / disclosing your information on the Website,
+                                        you hereby give your consent to the Company to store such
+                                        information on the Company’s servers.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User agrees that it is User’s responsibility to ensure and keep a
+                                        copy of all data pertaining to the User account, in User’s own
+                                        computer or any other place or in any other form.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User hereby declares that the User understands and agrees that the
+                                        Company is not obliged to keep or preserve data of the User, and
+                                        there may be hardware, System or network failure of the Website,
+                                        including data storage facility of the Company, which may result in
+                                        partial or total loss of data, and in case of such loss of data, the
+                                        Company shall not be obliged or held responsible to retrieve or
+                                        restore or provide a copy of the data to the User, with or without
+                                        cost; and further the Company shall not be held responsible for any
+                                        payment or compensation or damages to the User, for any such dat
+                                        store or provide a copy of the data to the User, and it shall be the
+                                        sole and exclusive responsibility of the User to keep a copy of the
+                                        data, with respect to anything related to the User Account.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        When you use the Website or access any material, information or
+                                        Services through the Website, you agree and understand that you are
+                                        communicating with us, through electronic medium and you consent to
+                                        receive communications, through any mode of communication from
+                                        Company, time to time, as and when required by Company, for any
+                                        purpose.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        By verifying the mobile number at the time of creation of the User
+                                        Account and by registering as a Registered user on the Website, User
+                                        consents to be contacted by Company via phone, and/or SMS
+                                        notifications, WhatsApp, email or any other utility or social media
+                                        platforms such as Facebook, Instagram etc., application, method or
+                                        mode of communication, and authorizes the Company, to send any
+                                        information or communication relating to the Services availed by the
+                                        User from the Company or any concerned product owner, newsletter,
+                                        promotional material, advertisements, or to contact for feedbacks,
+                                        reviews, etc. or for any other purpose, including the communications
+                                        relating to your registration, transactions that you carry out
+                                        through the Website, reviews, feedbacks, and promotions that are
+                                        undertaken by the Company. Further, the Company may also send
+                                        notifications and reminders with respect to other Services that you
+                                        have subscribed to on the Website. Please note that while the
+                                        Company endeavours to provide these notifications and reminders to
+                                        you promptly, the Company does not provide any guarantee and shall
+                                        not be held liable or responsible for the failure to send such
+                                        notifications or reminders to you
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company is committed to maintaining the privacy of your personal
+                                        information and has made considerable effort toward ensuring that
+                                        your personal information is secure. You acknowledge and accept the
+                                        terms of Our Privacy Policy which sets out the terms on which we
+                                        retain and process any personal data and any other information we
+                                        collect from you or that you provide to us. By using the Website,
+                                        you consent to such processing and you confirm and warrant that all
+                                        data provided by you is accurate.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="Data Protection and Privacy">
+                            Data Protection and Privacy
+                        </h2>
+                        <div>
+                            <div>
+                                <h3>1. User Consent for Data Processing</h3>
+                                <p>
+                                    Users must provide explicit consent for the collection and processing
+                                    of their personal data when registering and making purchases. This
+                                    consent should be clear, informed, and revocable at any time.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3>2. Right to Access and Rectification</h3>
+                                <p>
+                                    Users have the right to access their personal data held by the Company
+                                    and request corrections to any inaccuracies. This is in line with GDPR
+                                    Article 15 (Right of access) and CCPA Section 1798.100 (Right to
+                                    know).
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3>3. Right to Erasure</h3>
+                                <p>
+                                    Users can request the deletion of their personal data when it is no
+                                    longer necessary for the purposes for which it was collected, in
+                                    compliance with GDPR Article 17 (Right to erasure) and CCPA Section
+                                    1798.105 (Right to delete).
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3>4. Data Breach Notifications</h3>
+                                <p>
+                                    In the event of a data breach, Users will be notified without undue
+                                    delay, in compliance with GDPR Article 33 (Notification of a personal
+                                    data breach to the supervisory authority) and CCPA Section 1798.82
+                                    (Notice of security breach).
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3>5. Privacy Policy Transparency</h3>
+                                <p>
+                                    The Company will maintain a comprehensive privacy policy that outlines
+                                    how Users' personal data is collected, used, stored, and shared,
+                                    ensuring compliance with both GDPR and CCPA requirements for
+                                    transparency and user rights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle"
+                            title="9. VIOLATIONS OF SYSTEM OR NETWORK SECURITY">
+                            9. Violations of System or Network Security
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        Subject to the terms of this Agreement, and any other agreement that
+                                        the Company may have with the User, the User shall act in an honest,
+                                        bonafide, and ethical manner at all times when the User accesses the
+                                        Website or Uses any of the Services, and undertakes to provide all
+                                        co-operation reasonably required by Company in relation to the
+                                        Website and Services.
+                                    </div>
+                                </li>
+                                <p>
+                                    <strong>
+                                        Any violation or breach of System or network security is prohibited
+                                        and actionable, and any such act may result in the User facing
+                                        criminal and civil liability, and being denied access to the
+                                        Website. Violations and breach of Website, System or network
+                                        security may include, but are not limited to, the following:</strong>
+                                </p>
+
+                                <li>
+                                    <div>
+                                        introduction of any virus, logic bomb, harmful code and/or Trojan
+                                        horse to the Website or Service;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        flaming, hacking or otherwise obtaining unauthorized access to or
+                                        use of data, systems or networks, including any attempt to probe,
+                                        scan or test the vulnerability of a system or network
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        unauthorized monitoring of data or traffic on any network or system
+                                        without express authorization of the Company of the system or
+                                        network.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        interfering with any User, host or network, including mail bombing,
+                                        flooding, deliberate attempts to overload a system and broadcast
+                                        attacks.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        interference with any other users use and enjoyment of the Website
+                                        or Service, or any other individuals’ use and enjoyment of similar
+                                        services in any manner.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        placing on the Website or Service, any misleading, defamatory,
+                                        obscene, offensive or indecent material or material which breaches
+                                        any intellectual property rights of others
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        reverse engineering, disassembling, decompiling, or translating any
+                                        software or other components of the Website, System or Services;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>any copyright violation of the Website or System;</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        transmitting any information (including job posts, messages and
+                                        hyperlinks) on or through the Website that is disruptive or
+                                        competitive to the provision of Services by the Company;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>making any unsolicited communications to other Users;</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        framing or hot linking or deep linking any content made available by
+                                        the Company.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        User agrees not to use any device, software or routine to interfere
+                                        or attempt to interfere with the proper working of the Website or
+                                        System, or any transaction being conducted on the Website or System,
+                                        or with any other person’s use of the Website or System.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company reserves, and shall have all the rights to take
+                                        necessary actions, at its sole discretion, including claiming
+                                        damages that may occur due to User’s above acts or
+                                        involvement/participation in any way on its own or through group/s
+                                        of people, intentionally or unintentionally in DoS/DDoS (Distributed
+                                        Denial of Services).
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="10. PRODUCT QUALITY">
+                            10. Product Quality
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        If a Registered User receives a product(s) that it believes to be
+                                        counterfeit, then such Registered User may notify the Company in
+                                        writing within 1 day after receiving the product(s), and the Company
+                                        will commence an independent investigation into the veracity of the
+                                        product(s). The Registered User shall cooperate with the Company in
+                                        the investigation and final disposition of the product(s), including
+                                        providing photographs and other evidence of the item, or delivering
+                                        the item back to us, at our direction. Any decision made by the
+                                        Company in this regard, shall be binding and final.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        In the event the Company believes that a User and/or Registered User
+                                        is attempting to interfere with the free and fair operation of the
+                                        Website, or creates artificial, false or misleading information, or
+                                        information appearing to mislead with respect to the quality of the
+                                        Product upon delivery, then, without limiting any other rights of
+                                        the Company, the Company reserves the right to do any or all of the
+                                        following, in its sole discretion: (i) cancel any or all of the
+                                        Registered User’s orders pending through the Website; (ii) place
+                                        limits on a Registered User’s buying privileges; (iii) charge Users
+                                        and/or Registered User for costs, expenses and fees incurred by the
+                                        Company as a result of the User/Registered User’s actions; (iv)
+                                        notify law enforcement of the fraudulent activity; (v) temporarily
+                                        or permanently suspend the Registered User’s account, and (vi)
+                                        charge the User/Registered User an additional service fee of up to
+                                        US$ 1,000/-, to cover the Company’s investigation fees and other
+                                        related costs and expenses.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Uniform Commercial Code (UCC) for sales of goods, FTC guidelines on
+                                        product claims, and consumer protection laws.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle"
+                            title="11. DISCLAIMER OF WARRANTIES, GUARANTEES AND REPRESENTATIONS">
+                            11. Disclaimer of warranties, guarantees and representations
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        User agrees that use of the Services is entirely at User's own risk,
+                                        cost and consequences and the use of the Website and the Services by
+                                        the User, shall be solely at the discretion of the Company. The
+                                        Services and/or Registered User Services are provided on 'as it is'
+                                        basis, without warranty, or guarantee of any kind, and/or any
+                                        responsibility or liability either express or implied, or whether
+                                        vicarious, or contingent
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Whilst considerable effort has been taken to ensure that product
+                                        details, descriptions, prices and other information hosted on this
+                                        Website accurate and kept up to date and representative of the
+                                        colour, design, cut, etc. of the original products, slight
+                                        variations, distortions and/or differences may occur when compared
+                                        to the original product. This may, for example, be due to technical
+                                        issues such as your browser or computer settings. Accordingly, the
+                                        Company cannot be held liable for any apparent differences in the
+                                        product images represented on the Platform and the original products
+                                        purchased from the Product Owner. Errors may sometimes occur in
+                                        showcasing the pricing. Prices displayed on the Platform may change
+                                        from time to time.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company reserves the right, at its sole discretion, to change,
+                                        modify, add to, or remove any part of the Service or portions of
+                                        these Terms of Use at any time without any prior written notice to
+                                        the User, and any such change, modification, addition or removal
+                                        (hereinafter referred as “Modifications”) shall be considered as a
+                                        part of these Terms of Use. It is User’s responsibility to review
+                                        these Terms of Use periodically for updates/changes. User’s
+                                        continued use of and access to the Website following the
+                                        Modifications will mean that the User accepts and agrees to the
+                                        Modifications
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Any right granted to the User to use the Services offered by the
+                                        Company by its Website is personal, non-exclusive, and
+                                        non-transferable and a limited and revocable (at the discretion of
+                                        the Company) permission to use the Website and Services.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company does not make any representations or warranties with
+                                        respect to any Product Owners or the quality of the product
+                                        displayed by them, or service they it may provide to the User.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company disclaims all warranties including, but not limited to,
+                                        the implied warranty of merchantability and suitability for any
+                                        Services.
+                                    </div>
+                                </li>
+
+                                <p><strong> Company also, does not warrant that </strong></p>
+
+                                <li>
+                                    <div>
+                                        this Website will be constantly available, or available at all;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        any or all the Services or any other Services on the Website will be
+                                        constantly available, or available at all;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User will be able to access his or her account at any or all times;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        the information on this Website is complete, true, accurate or
+                                        non-misleading
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        the quality of any Services, information, or other thing obtained by
+                                        the User through the Website will meet the User’s expectations, need
+                                        or purpose;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        the User or any other person will be able to use any Services;
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        the feedbacks and reviews provided by the User will be published on
+                                        the Website; and
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        the Website, information, content, materials, or Services included
+                                        on or otherwise made available to the User through the Website;
+                                        their servers; or electronic communication sent from the Company or
+                                        the Website, are free of virus’s or any other harmful components.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company shall not be held liable for any interaction and
+                                        associated issues, between Users and Product Owners. If you decide
+                                        to engage with a Product Owner, you do so at your entire risk and
+                                        liabilities in all respects. The Company shall not be liable for any
+                                        reason whatsoever for the services provided by such Product Owner,
+                                        and we bear no liability for the consequences to you, of your use of
+                                        the System or Services or Registered User Services.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company assumes no responsibility, and shall not be liable for,
+                                        any damages to, or viruses that may infect User’s equipment on
+                                        account of User’s access to, use of, or browsing the Website or the
+                                        downloading of any material, data, text, images, video content, or
+                                        audio content from the Website. If a User is dissatisfied with the
+                                        Website, User’s sole remedy is to discontinue using the Website.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        To the fullest extent permitted by Applicable Law, the Company shall
+                                        not be liable for any indirect, incidental, special or consequential
+                                        damages of any kind arising out of or in connection with the use of
+                                        information available from the Platform or any liability relating to
+                                        any loss of use, interruption of business, lost profits or lost
+                                        data, regardless of the form of action, whether in contract, tort
+                                        (including negligence) or otherwise.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company shall not be liable for any loss of production, work,
+                                        data, use, business, goodwill, reputation, revenue or profit, any
+                                        diminution in value, costs of replacement goods or services, or any
+                                        consequential, incidental, special or punitive damages or losses,
+                                        including, but not limited to, lost profits, whether direct or
+                                        indirect by your use of this Platform.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Website acts as a commercial concierge service and marketplace
+                                        to conclude the sale/purchase on behalf of each Product Owner and
+                                        User involved in each transaction. Because Product Owner(s) set
+                                        prices, they may be higher than retail value of the product(s) sold
+                                        on our Website. Any item valuations displayed through the Website
+                                        are estimates only. The Company does not guarantee that any item
+                                        will sell and/or made available for purchase by Product Owner. The
+                                        Company reserves the right to investigate complaints and violations
+                                        of these Terms and, to the extent permitted by applicable law, may
+                                        take any actions we deem appropriate, including suspending a Product
+                                        Owner or User account and charging such Product Owner and/or User
+                                        payment method for costs we incur as a result of the violation.”
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Users are responsible for maintaining the confidentiality of their
+                                        account credentials and for all activities that occur under their
+                                        account. The Company shall not be liable for any loss or damage
+                                        arising from unauthorized access to User accounts.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company shall not be liable for any failure to perform its
+                                        obligations under these Terms due to events beyond its reasonable
+                                        control, including but not limited to acts of God, natural
+                                        disasters, pandemics, war, terrorism, or governmental action.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="12. INTELLECTUAL PROPERTY">
+                            12. Intellectual Property
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        The Website is held, controlled and operated by the Company, and all
+                                        Intellectual Property Rights /IPR including copyright in the Website
+                                        and Service solely and exclusively belongs to and owned by the
+                                        Company.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        All IPR protected material on the Website, are the intellectual
+                                        property of the Company and / or of their respective owner(s). The
+                                        IPR including the User Information that is collected by the Company
+                                        from the Users and the Practitioner(s), subject to the privacy
+                                        policy of the Company, shall be owned and controlled by the Company.
+                                        Any other use of content on the Website including but not limited to
+                                        the redistribution, modification, reproduction, transmission,
+                                        performance, broadcast, publication, uploading, licensing, reverse
+                                        engineering, transfer or sale of, or the creation of derivative
+                                        works from, any material, information, software, products or
+                                        services obtained from the Website, or use of the Website for
+                                        purposes competitive to the Company and/or KGK Group, of part or all
+                                        of the contents featured in the Website or Service in any form is
+                                        prohibited and actionable. You are not permitted to distribute or
+                                        commercially exploit the IPR or the User Information. Nothing in
+                                        these Terms of Use grants the User any right in respect of
+                                        Intellectual Property Rights of Company.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        You may access, copy, download and print the material contained on
+                                        the Website for your personal and non-commercial use, provided you
+                                        do not modify or delete any copyright, trademark or other
+                                        proprietary notice that appears on the material you access, copy,
+                                        download or print.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        You may not use contact information provided on the Website for
+                                        unauthorized purposes, including marketing. You may not use any
+                                        hardware or software intended to damage or interfere, interrupt with
+                                        the proper working of the Website or to surreptitiously intercept
+                                        any system, data or personal information from the Website. You agree
+                                        to abide by all additional restrictions displayed on the Website as
+                                        it may be updated from time to time.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <b>Fair Use and Exceptions</b><br>
+                                        Users may be able to use limited portions of copyrighted material
+                                        under the "fair use" doctrine (in the US) or fair dealing provisions
+                                        in the (EU) (EEA) and (UK) for purposes such as criticism,
+                                        commentary, news reporting, teaching, scholarship, or research.
+                                        However, any such use must comply with the specific criteria set
+                                        forth in applicable copyright law, and Users should not assume they
+                                        are automatically covered by these exceptions.<br>
+                                        &nbsp;<b>DMCA Notice and Take down Procedure</b><br>
+                                        The Company will respond to notices of alleged copyright
+                                        infringement in accordance with the Digital Millennium Copyright Act
+                                        (DMCA) in the US. If you believe that any content on the Website
+                                        infringes your copyright, you should send a written notice to the
+                                        designated agent listed on the Website. The Company reserves the
+                                        right to remove any infringing content at its discretion.<br>
+                                        &nbsp;Trademark <b>Protection</b><br>
+                                        All trademarks, service marks, and trade names displayed on the
+                                        Website are the exclusive property of the Company or their
+                                        respective owners. Users may not use any of these trademarks without
+                                        the express prior written permission of the Company or the
+                                        respective owners. Unauthorized use of any trademarks may constitute
+                                        trademark infringement and may be subject to legal action.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="13. LINKS TO OTHER WEBSITES">
+                            13. Links to other websites
+                        </h2>
+                        <div class="staticList">
+                            <p class="mainHeadingTitle,popupInnerTitle"
+                                title="You have the right to see and/or access the personal information we hold about you. In addition, you have certain rights regarding your personal information, subject to local law. These include the following rights">
+                                <strong>
+                                    You have the right to see and/or access the personal information we
+                                    hold about you. In addition, you have certain rights regarding your
+                                    personal information, subject to local law. These include the
+                                    following rights</strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <div>
+                                        The Website may contain links to third-party websites or services
+                                        that are not owned or controlled by Us.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        We have no control over, and assumes no responsibility for, the
+                                        content, privacy policies, or practices of any third party web sites
+                                        or services. You further acknowledge and agree that we shall not be
+                                        responsible or liable, directly or indirectly, for any damage or
+                                        loss caused or alleged to be caused by or in connection with use of
+                                        or reliance on any such content, goods or services available on or
+                                        through any such websites or services.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="14. TERMINATION">
+                            14. Termination
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        The Company reserves its right to add, delete or discontinue its any
+                                        Service or Website in part or whole. We may limit, restrict, block,
+                                        suspend or terminate your access or registration to the Website
+                                        and/or its Services and/or Registered User Services if we believe
+                                        you are in breach of our Terms and Conditions or applicable law, or
+                                        for any other reason without notice or liability. We will revoke the
+                                        Website use privileges of users who are repeat infringers of
+                                        intellectual property rights. All provisions of the Terms and
+                                        Conditions which by their nature should survive termination shall
+                                        survive termination, including, without limitation, ownership
+                                        provisions, warranty disclaimers, indemnity and limitations of
+                                        liability. Termination of your access or use will not waive or
+                                        affect any other right or relief to which the Company may be
+                                        entitled at law or in equity.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User may deactivate the User Account and end the registration at any
+                                        time, for any reason, by writing to us through the Contact Us form
+                                        on the Website. The Company may suspend or terminate your use of the
+                                        Website, your Account and/or registration for any reason at any
+                                        time, at its sole discretion. The Company reserves the right to
+                                        maintain, delete or destroy all communications and materials posted
+                                        or uploaded to the Website pursuant to its internal record retention
+                                        and/or content destruction policies. After such termination, the
+                                        Company will have no further obligation towards the User. <br>
+
+                                        &nbsp;Notice <b>of Termination</b> <br>
+                                        While the Company may terminate access without notice in cases of
+                                        violation of the Terms and Conditions, for other reasons, it may
+                                        provide reasonable notice to the User before termination. This
+                                        notice period may vary depending on the circumstances but generally
+                                        aims to allow Users an opportunity to address any issues that may
+                                        lead to termination. <br>
+                                        &nbsp;Data <b> Retention and Deletion</b> Upon termination of a
+                                        User's account, the Company will adhere to applicable data
+                                        protection laws, including the GDPR (in the UK) (EEA) and ( UK)and
+                                        CCPA (in California), regarding the retention and deletion of
+                                        personal data. Users should be informed of how long their data may
+                                        be retained and the process for its deletion, ensuring compliance
+                                        with legal obligations. <br>
+                                        &nbsp;Post-<b>Termination Responsibilities</b> <br>
+                                        Upon termination, Users are reminded of their ongoing obligations
+                                        regarding confidentiality, indemnity, and any liabilities that may
+                                        arise from their prior use of the Website and Services. Any
+                                        obligations that logically should survive termination (e.g., payment
+                                        obligations, confidentiality agreements) shall remain in effect as
+                                        stipulated in the Terms and Conditions.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="15. INDEMNIFICATION">
+                            15. Indemnification
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        You agree to defend, indemnify, and hold harmless the Company, and
+                                        its licensors, and service providers, and their respective officers,
+                                        directors, employees, contractors, agents, licensors, suppliers,
+                                        successors, and assigns from and against any claims, liabilities,
+                                        damages, judgments, awards, losses, costs, expenses, or fees
+                                        (including reasonable attorneys' fees) arising out of or relating to
+                                        your violation of these Terms and Conditions or your use of the
+                                        Website or Services, including, but not limited to, your use or any
+                                        other person's accessing the Website using your account and/or your
+                                        personal information, of the Website's content, services, and
+                                        products other than as expressly authorized in these Terms and
+                                        Conditions or your use of any information obtained from the Website
+                                        or Services
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        User hereby undertakes to indemnify the Company for all losses,
+                                        damage, costs, charges and expenses incurred as a result of User’s
+                                        misrepresentations or fraudulent feedback that has adversely
+                                        affected the Company or its Users, or has caused any direct or
+                                        indirect loss to the Company.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <b>Third-Party Claims</b>: You agree to indemnify the Company
+                                        against any claims or actions brought by third parties arising from
+                                        your breach of these Terms and Conditions or your violation of any
+                                        rights of another party, including intellectual property rights.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <b>Scope of Indemnification</b>: The indemnity provided by you shall
+                                        include, but not be limited to, any claims arising from your failure
+                                        to comply with applicable laws and regulations, including data
+                                        protection and privacy laws such as the GDPR and CCPA, as well as
+                                        any industry-specific regulations.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <b>Notification of Claims</b>: The Company shall promptly notify you
+                                        in writing of any claims or legal actions for which it seeks
+                                        indemnification. You shall have the right to control the defense and
+                                        settlement of any such claims, provided that you do not settle any
+                                        claim in a manner that imposes any liability or obligation on the
+                                        Company without its prior written consent.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="16. LIMITATION OF LIABILITY">
+                            16. limitation of liability
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        This paragraph shall apply to all content and functionality of the
+                                        Company, Website, System, and Services.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        While the Website helps facilitate transactions and acts as a
+                                        marketplace, the Company is neither the buyer nor the seller of the
+                                        Products. The Website provides a platform for Product Owners and
+                                        Registered Users to interact, negotiate and complete transactions.
+                                        Accordingly, the contract formed at the completion of a sale for
+                                        these third party products is solely between the Product Owner and
+                                        such Registered User. Although the Website might provide historical
+                                        pricing data to the Product Owner and Registered User, the Company
+                                        does not set prices for the product(s) and is not an auctioneer.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        All product(s) purchased on the Website from Product Owners are
+                                        fulfilled by such Product Owner directly and product(s) are kept in
+                                        the Product Owner’s inventory. It is the responsibility of the
+                                        Product Owner to assure timely shipping to the Registered User and
+                                        in this regard, the Website and the Company shall not be liable for
+                                        any shipping related disputes
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Under no circumstances, including on account of any act, omission,
+                                        commission or negligence, shall the Company including or anyone else
+                                        involved in creating, producing or distributing the Services be
+                                        liable for any direct, indirect, incidental, special or
+                                        consequential damages that result from the use of or inability to
+                                        use the Website, Services, or that results from mistakes, omissions,
+                                        interruptions, deletion of files, errors, defects, delays in
+                                        operation, or transmission or any failure of performance, whether or
+                                        not limited to acts of God, communication failure, theft,
+                                        destruction or unauthorized access to the Company records, programs
+                                        or the Website, or the Services.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company under no circumstances are liable for any loss of
+                                        production, work, data, use, business, goodwill, reputation, revenue
+                                        or profit, any diminution in value, costs of replacement goods or
+                                        services, or any consequential, incidental, special or punitive
+                                        damages or losses, including, but not limited to, lost profits,
+                                        whether direct or indirect by your use of this Website.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company shall not be liable for any breach of service or service
+                                        deficiency, product related deficiencies by any Product Owner.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The Company shall not be liable for any damages or injury caused by
+                                        any failure of performance, error, omission, interruption, deletion,
+                                        defect, delay in operation or transmission, computer virus,
+                                        communication line failure, theft or destruction or unauthorized
+                                        access to, alteration of, or use of record, in any way relating to
+                                        or arising out of the use of the Website or Services.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Without prejudice to the generality of the above, the Company will
+                                        never be liable (directly or vicariously) for any act or omission
+                                        commission or negligence on part of the Product Owner.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Further, the Company shall not be liable, under any event, for any
+                                        comments or feedback given by any of the Users in relation to the
+                                        Services provided by the Product Owner. All such feedback should be
+                                        made in accordance with applicable law. The option of Users to give
+                                        feedback remains at the Company’s sole discretion and may be
+                                        modified or withdrawn at its sole discretion. The Company may
+                                        moderate such feedback at any time. The Company shall not be obliged
+                                        to act in any manner to give effect to the content of Users’
+                                        feedback, such as suggestions for delisting of a particular Product
+                                        Owner from the Website.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="17. GEOGRAPHICAL RESTRICTIONS">
+                            17. Geographical restrictions
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        The Company makes no representation that all products, Services
+                                        and/or material described on the Website, or the Services available
+                                        through the Website, are appropriate or available for use in
+                                        locations.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="18. SEVERABILITY">
+                            18. Severability
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        If any or part of this Agreement is declared invalid, unlawful or
+                                        unenforceable, then such part will be severed. The remaining parts
+                                        of this Agreement will continue to be valid and enforceable to the
+                                        fullest extent permitted by applicable laws and regulations.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="19. WAIVER">
+                            19. Waiver
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        Any waiver by the Company of any breach of any term or condition of
+                                        the Agreement by the User, shall not preclude the Company from
+                                        enforcing any subsequent breach of that or any other term or
+                                        condition and shall not be considered as a waiver of the subsequent
+                                        breach also.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="20. ASSIGNMENT">
+                            20. Assignment
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        You hereby agree that the Company may assign this Agreement along
+                                        with the Company, Website and Services at any time at its sole
+                                        discretion, without the requirement of any consent from the User and
+                                        the User also waives the right of any such requirement of consent,
+                                        to any parent, subsidiary or affiliated company, or as part of the
+                                        sale to, merger with, or other transfer or license of any kind, of
+                                        the Company to another entity(s); and any such assignee or
+                                        transferee or licensee shall automatically step in to the shoes of
+                                        the Company for the purpose of this Agreement.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        The User shall not be entitled to assign, transfer or sublicense
+                                        these Terms of Use to anyone else and any attempt to do so in
+                                        violation of this Agreement, and the same shall be null and void.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="21. APPLICABLE LAWS AND JURISDICTION">
+                            21. Applicable laws and jurisdiction
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        These Terms and Conditions shall be governed by and construed in
+                                        accordance with the laws applicable to Dubai Multi Commodities and
+                                        Centre. Any dispute, controversy or claim arising out of or in
+                                        relation to the Terms and Conditions, including the validity,
+                                        invalidity, breach or termination thereof, shall be governed by laws
+                                        of Dubai Multi Commodities and Centre.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        These Terms and Conditions shall be governed by and construed in
+                                        accordance with the laws of the United States and the United
+                                        Kingdom, as applicable. Any dispute, controversy, or claim arising
+                                        out of or in relation to these Terms and Conditions, including the
+                                        validity, invalidity, breach, or termination thereof, shall be
+                                        subject to the exclusive jurisdiction of the courts located in
+                                        [insert specific jurisdiction, e.g., New York for the US, or London
+                                        for the UK], unless otherwise agreed in writing by the parties.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="22. CONTACT US">
+                            22. Contact Us
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        If you want to contact us to know more these Terms of Use, please
+                                        contact us by post.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Postal Address<br>
+                                        Unit no. 1222, DMCC Business Centre,
+                                        <br>
+                                        Level No. 1,
+                                        <br>
+                                        Jewellery &amp; Gemplex 3,
+                                        <br>
+                                        Dubai, United Arab Emirates.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        If you would like to contact us through email, please use
+                                        enquiry@kgklive.com. We will endeavour to send you a response as
+                                        soon as possible. Your patience is much appreciated during busy
+                                        periods.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticList">
+                        <p>
+                            <strong>USER UNDERSTAND AND ACKNOWLEDGE THAT BY CHECKING THE “AGREE/ I AGREE”
+                                TAB/BUTTON ON THE WEBSITE, FOR THIS AGREEMENT AND/OR ANY OTHER FORM(S)
+                                OR AGREEMENT PRESENTED TO YOU ON THE WEBSITE, OR BY USING ANY SERVICES,
+                                YOU ARE AGREEING TO THE TERMS AND CONDITIONS OF THIS AGREEMENT, AND THAT
+                                SUCH ACTION / CONFIRMATION CONSTITUTES A LEGAL SIGNATURE RESULTING IN A
+                                BINDING CONTRACT BETWEEN YOU AND THE COMPANY.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="kgkDiamondsbv" class="tabcontent">
+                <div class="statiContentBox">
+                    <div class="staticContentWrapper mb-0">
+                        <div class="staticList"></div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="1. DELIVERY / TITLE">1. Delivery/Title</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser shall acquire title to the Goods upon delivery thereof. Delivery of
+                                        the goods to
+                                        Purchaser shall occur either upon (i) delivery by Seller of the Goods to the
+                                        carrier
+                                        specified in the Invoice or selected by Seller or (ii) collection by Purchaser
+                                        of the Goods
+                                        from Seller’s local office as set forth in this Invoice; provided that, if
+                                        Purchaser fails
+                                        to collect the Goods on the date specified in this Invoice, then delivery and
+                                        transfer of
+                                        title shall be deemed to occur on such date.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="2. RISK OF LOSS – F.O.B. (SELLER)">2. Risk
+                            of Loss –
+                            F.O.B. (Seller)</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>The risk of loss (and responsibility for insurance) from any casualty to the
+                                        Goods,
+                                        regardless of the cause, will be the responsibility of Purchaser upon transfer
+                                        of title as
+                                        provided herein.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="3. NO SET-OFF">3. No set-off</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser shall pay this Invoice in full on the Payment Due Date, without any
+                                        set-off,
+                                        counterclaim, deduction or withholding for any reason whatsoever (including,
+                                        without
+                                        limitation, any loss or damage to the Goods after deemed delivery or shipment,
+                                        as specified
+                                        above).</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="4. NO RETURN">4. No return</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser shall have no right whatsoever to return the Goods to the Seller or
+                                        to receive
+                                        any refund in respect thereof.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="5. GOVERNING LAW">5. Governing law</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>The agreement recorded in this Invoice (the <strong>“Contract”</strong>) and
+                                        any debt
+                                        arising hereunder (a <strong>“Debt”</strong>), and any dispute or claim
+                                        (including all
+                                        non-contractual disputes or claims) arising out of or in connection with this
+                                        Contract
+                                        and/or any Debt, are governed by and shall be construed and interpreted in
+                                        accordance with
+                                        New York law.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="6. ARBITRATION">6. Arbitration</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser and Seller hereby agree that any dispute or claim (including all
+                                        non-contractual
+                                        disputes or claims) that may arise out of or in connection with this Contract
+                                        (including any
+                                        question regarding its existence, validity or termination) and/or any Debt (a
+                                        <strong>“Dispute”</strong>) shall be referred to and finally resolved by
+                                        arbitration under
+                                        the Rules of Arbitration of the International Chamber of Commerce (the “Rules”),
+                                        which Rules
+                                        are deemed to be incorporated by reference into this clause (in which case the
+                                        number of
+                                        arbitrators shall be three; the seat of the arbitration shall be Brussels,
+                                        Belgium; and the
+                                        language of the arbitration shall be English). For the avoidance of doubt, the
+                                        arbitration
+                                        agreement contained in this clause is governed by, and shall be construed in
+                                        accordance
+                                        with, New York law.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="7. ASSIGNMENT">7. Assignment</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Seller may assign and transfer or, to the extent permitted or required by any
+                                        applicable
+                                        law constitute a trust over, any or all of its rights under this Contract and
+                                        any Debt to
+                                        any person (the "Assignee") and, to the extent required by any applicable law,
+                                        Purchaser
+                                        expressly consents to any such assignment and transfer, or constitution of trust
+                                        over, any
+                                        or all of its rights under this Contract and any Debt, which shall be fully
+                                        binding on it.
+                                        Purchaser also consents to any charge, mortgage or any other dealings in any or
+                                        all of its
+                                        rights under this Contract and/or any Debt. Purchaser agrees that it shall pay
+                                        (to the
+                                        account described above or to such other account as notified to it by or on
+                                        behalf of the
+                                        Assignee) the full amount owing to Seller under this Contract without exercising
+                                        any right
+                                        of set-off, credit or counterclaim in respect of any amounts owing by Seller to
+                                        it. Payment
+                                        on this invoice will only be valid if made into the bank account specified
+                                        herein. The
+                                        invoice payment amount may never be compensated with claim(s) from the Purchaser
+                                        against the
+                                        Seller, and if this invoice is assigned or transferred to an Assignee, the
+                                        return of Goods
+                                        and/or any claim of not receiving any Goods or any other claim by the Purchaser
+                                        against the
+                                        Seller shall not be valid if brought against the Assignee. The Purchaser
+                                        acknowledges and
+                                        accepts that any Assignee cannot be held liable in any manner for any sales
+                                        transaction
+                                        between the Purchaser and the Seller. Purchaser may be notified that this
+                                        Contract has been
+                                        assigned to KGK Receivables Finance III LLC (the <strong>“KGK
+                                            Assignee”</strong>) by Seller
+                                        or KGK Assignee and, after receiving such notice, Purchaser shall pay to the
+                                        account of KGK
+                                        Assignee specified in such notice the full amount owing to Seller under this
+                                        Contract
+                                        without exercising any right of set-off, credit or counterclaim in respect of
+                                        any amounts
+                                        owing by Seller to it.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="8. INDEMNIFICATION">8. Indemnification</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser agrees to pay, indemnify, and hold Seller and its assigns (including,
+                                        without
+                                        limitation, any Assignee) harmless from, any and all recording and filing fees,
+                                        stamp,
+                                        excise, VAT, sales tax and other similar taxes and duties and any and all
+                                        liabilities with
+                                        respect to, or resulting from any delay in paying any such amounts, which may be
+                                        payable or
+                                        determined to be payable in connection with the execution and delivery of, or
+                                        consummation
+                                        or administration of the transactions contemplated by, this Contract.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="9. MISCELLANEOUS">9. Miscellaneous</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>This Contract contains the entire agreement between the parties and supersedes
+                                        and replaces
+                                        all such prior agreements with respect to matters expressly set forth herein. No
+                                        modification shall be made to this Contract except in writing and signed by both
+                                        parties.
+                                        This Contract shall be binding upon the parties and their respective heirs,
+                                        executors,
+                                        administrators, successors, assigns and personal representatives.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticList">
+                        <p><strong>USER UNDERSTAND AND ACKNOWLEDGE THAT BY CHECKING THE “AGREE/ I AGREE” TAB/BUTTON ON
+                                THE WEBSITE,
+                                FOR THIS AGREEMENT AND/OR ANY OTHER FORM(S) OR AGREEMENT PRESENTED TO YOU ON THE
+                                WEBSITE, OR BY
+                                USING ANY SERVICES, YOU ARE AGREEING TO THE TERMS AND CONDITIONS OF THIS AGREEMENT, AND
+                                THAT SUCH
+                                ACTION / CONFIRMATION CONSTITUTES A LEGAL SIGNATURE RESULTING IN A BINDING CONTRACT
+                                BETWEEN YOU AND
+                                THE COMPANY.</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div id="spvTc" class="tabcontent">
+                <div class="statiContentBox">
+                    <div class="staticContentWrapper mb-0">
+                        <div class="staticList"></div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="1. DELIVERY / TITLE">1. Delivery/Title</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser shall acquire title to the Goods upon delivery thereof. Delivery of
+                                        the goods to
+                                        Purchaser shall occur either upon (i) delivery by Seller of the Goods to the
+                                        carrier
+                                        specified in the Invoice or selected by Seller or (ii) collection by Purchaser
+                                        of the Goods
+                                        from Seller’s local office as set forth in this Invoice; provided that, if
+                                        Purchaser fails
+                                        to collect the Goods on the date specified in this Invoice, then delivery and
+                                        transfer of
+                                        title shall be deemed to occur on such date.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="2. RISK OF LOSS – F.O.B. (SELLER)">2. Risk
+                            of Loss –
+                            F.O.B. (Seller)</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>The risk of loss (and responsibility for insurance) from any casualty to the
+                                        Goods,
+                                        regardless of the cause, will be the responsibility of Purchaser upon transfer
+                                        of title as
+                                        provided herein.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="3. NO SET-OFF">3. No set-off</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser shall pay this Invoice in full on the Payment Due Date, without any
+                                        set-off,
+                                        counterclaim, deduction or withholding for any reason whatsoever (including,
+                                        without
+                                        limitation, any loss or damage to the Goods after deemed delivery or shipment,
+                                        as specified
+                                        above).</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="4. NO RETURN">4. No return</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser shall have no right whatsoever to return the Goods to the Seller or
+                                        to receive
+                                        any refund in respect thereof.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="5. GOVERNING LAW">5. Governing law</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>The agreement recorded in this Invoice (the “Contract”) and any debt arising
+                                        hereunder (a
+                                        “Debt”), and any dispute or claim (including all non-contractual disputes or
+                                        claims) arising
+                                        out of or in connection with this Contract and/or any Debt, are governed by and
+                                        shall be
+                                        construed and interpreted in accordance with New York law.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="6. ARBITRATION">6. Arbitration</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser and Seller hereby agree that any dispute or claim (including all
+                                        non-contractual
+                                        disputes or claims) that may arise out of or in connection with this Contract
+                                        (including any
+                                        question regarding its existence, validity or termination) and/or any Debt (a
+                                        “Dispute”)
+                                        shall be referred to and finally resolved by arbitration under the Rules of
+                                        Arbitration of
+                                        the International Chamber of Commerce (the “Rules”), which Rules are deemed to
+                                        be
+                                        incorporated by reference into this clause (in which case the number of
+                                        arbitrators shall be
+                                        three; the seat of the arbitration shall be the Dubai International Finance
+                                        Centre; and the
+                                        language of the arbitration shall be English). For the avoidance of doubt, the
+                                        arbitration
+                                        agreement contained in this clause is governed by, and shall be construed in
+                                        accordance
+                                        with, New York law.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="7. ASSIGNMENT">7. Assignment</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Seller may assign and transfer or, to the extent permitted or required by any
+                                        applicable
+                                        law constitute a trust over, any or all of its rights under this Contract and
+                                        any Debt to
+                                        any person (the "Assignee") and, to the extent required by any applicable law,
+                                        Purchaser
+                                        expressly consents to any such assignment and transfer, or constitution of trust
+                                        over, any
+                                        or all of its rights under this Contract and any Debt, which shall be fully
+                                        binding on it.
+                                        Purchaser also consents to any charge, mortgage or any other dealings in any or
+                                        all of its
+                                        rights under this Contract and/or any Debt. Purchaser agrees that it shall pay
+                                        (to the
+                                        account described above or to such other account as notified to it by or on
+                                        behalf of the
+                                        Assignee) the full amount owing to Seller under this Contract without exercising
+                                        any right
+                                        of set-off, credit or counterclaim in respect of any amounts owing by Seller to
+                                        it. Payment
+                                        on this invoice will only be valid if made into the bank account specified
+                                        herein. The
+                                        invoice payment amount may never be compensated with claim(s) from the Purchaser
+                                        against the
+                                        Seller, and if this invoice is assigned or transferred to an Assignee, the
+                                        return of Goods
+                                        and/or any claim of not receiving any Goods or any other claim by the Purchaser
+                                        against the
+                                        Seller shall not be valid if brought against the Assignee. The Purchaser
+                                        acknowledges and
+                                        accepts that any Assignee cannot be held liable in any manner for any sales
+                                        transaction
+                                        between the Purchaser and the Seller. Purchaser may be notified that this
+                                        Contract has been
+                                        assigned to KGK Receivables Finance III LLC (the “KGK Assignee”) by K.G.K.
+                                        Diamonds BV or
+                                        KGK Assignee and, after receiving such notice, Purchaser shall pay to the
+                                        account of KGK
+                                        Assignee specified in such notice the full amount owing to Seller under this
+                                        Contract
+                                        without exercising any right of set-off, credit or counterclaim in respect of
+                                        any amounts
+                                        owing by Seller to it.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="8. INDEMNIFICATION">8. Indemnification</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Purchaser agrees to pay, indemnify, and hold Seller and its assigns (including,
+                                        without
+                                        limitation, any Assignee) harmless from, any and all recording and filing fees,
+                                        stamp,
+                                        excise, VAT, sales tax and other similar taxes and duties and any and all
+                                        liabilities with
+                                        respect to, or resulting from any delay in paying any such amounts, which may be
+                                        payable or
+                                        determined to be payable in connection with the execution and delivery of, or
+                                        consummation
+                                        or administration of the transactions contemplated by, this Contract.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="9. MISCELLANEOUS">9. Miscellaneous</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>This Contract contains the entire agreement between the parties and supersedes
+                                        and replaces
+                                        all such prior agreements with respect to matters expressly set forth herein. No
+                                        modification shall be made to this Contract except in writing and signed by both
+                                        parties.
+                                        This Contract shall be binding upon the parties and their respective heirs,
+                                        executors,
+                                        administrators, successors, assigns and personal representatives.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="10. INTEREST ON OVERDUE INVOICE">10.
+                            Interest On Overdue Invoice</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>Seller shall be entitled to charge interest, without any prior notice, on
+                                        overdue invoices
+                                        from the date when payment becomes due until the date of payment in full at a
+                                        rate of 12%
+                                        per annum.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="11.">11. Diamonds Invoice Compliance
+                            Statement</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>To the best of Seller’s knowledge and/or based on written assurances from
+                                        suppliers, the
+                                        diamonds herein invoiced have not been obtained in violation of applicable
+                                        national laws
+                                        and/or sanctions by the U.S. Department of Treasury’s Office of Foreign Assets
+                                        Control and
+                                        have not been originated from the Mbada and Marrange Resources of Zimbabwe.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticList">
+                        <p><strong>USER UNDERSTAND AND ACKNOWLEDGE THAT BY CHECKING THE “AGREE/ I AGREE” TAB/BUTTON ON
+                                THE WEBSITE,
+                                FOR THIS AGREEMENT AND/OR ANY OTHER FORM(S) OR AGREEMENT PRESENTED TO YOU ON THE
+                                WEBSITE, OR BY
+                                USING ANY SERVICES, YOU ARE AGREEING TO THE TERMS AND CONDITIONS OF THIS AGREEMENT, AND
+                                THAT SUCH
+                                ACTION / CONFIRMATION CONSTITUTES A LEGAL SIGNATURE RESULTING IN A BINDING CONTRACT
+                                BETWEEN YOU AND
+                                THE COMPANY.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer style="z-index: 100;">
+        <div
+            class="space-mobile registered-yet flex w-full xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] justify-between items-center py-4">
+            <div class="flex flex-col gap-2">
+                <p class="text-neutral900 text-[30px] font-bold">Haven't registered yet?</p>
+                <p class="text-neutral700 text-headingS">Elevate Your Diamond Buying Experience with KGK
+                    Diamonds!</p>
+            </div>
+            <div class="mb-[-30px]">
+                <a href="register.html">
+                    <img alt="register now" loading="lazy" width="276" height="92" decoding="async" data-nimg="1"
+                        class="cursor-pointer" src="static/images/register-now.278c05b2.png" />
+                </a>
+            </div>
+        </div>
+
+        <div class="globe-mobile">
+            <img alt="KGK Globe presence" width="250" height="258" src="static/images/globe-mobile.png" />
+        </div>
+
+        <div class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main">
+            <div class="footer-glob w-[30%] flex flex-col gap-8">
+                <img alt="KGK Globe presence" loading="lazy" width="250" height="258" decoding="async" data-nimg="1"
+                    src="static/images/newletter-globe.png" />
+            </div>
+            <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
+                <img alt="KGK logo" loading="lazy" width="36" height="48" decoding="async" data-nimg="1"
+                    class="ml-2 h-[48px] w-[36px]" src="static/images/kgklogo-svg.png" />
+                <div class="flex justify-end relative -top-14 h-1">
+                    <div class="badgew">
+                        <div class="badgew__front">
+                            <div class="badgew__icon">
+                                <img src="static/images/offset-website.svg"
+                                    alt="Tree-Nation - CO2 neutral website badge" />
+                            </div>
+                            <div class="badgew__text">
+                                <h1 class="offset-badge__title">
+                                    <span class="offset-badge__title--blue">Net Zero</span><br />
+                                    Website
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="badgew__back">
+                            <a href="https://tree-nation.com/profile/impact/kgk-diamonds-i-pvt-ltd#co2"
+                                id="forest-link-website" class="forest-link" target="_blank">
+                                <h2 class="forest-link__title">
+                                    Visit our Forest
+                                    <span class="forest-link__tree-nation">on tree-nation.com</span>
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between footer-li">
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Company</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex">
+                                <a href="our-story.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    About us
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="leadership.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Leadership
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="sustainability.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Sustainability
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="traceability.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Traceability
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Resources</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex">
+                                <a href="blog.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Blog
+                                </a>
+                            </div>
+                            <p class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2">Legal</p>
+                            <div class="flex this-mobile mt-2">
+                                <a href="terms-and-conditions.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Terms &amp; Conditions
+                                </a>
+                            </div>
+                            <div class="flex this-mobile">
+                                <a href="privacy-policy.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Privacy Policy
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col not-mobile">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Legal</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex">
+                                <a href="terms-and-conditions.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Terms &amp; Conditions
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="privacy-policy.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Privacy Policy
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[45%] flex flex-col gap-4">
+                        <p class="text-[#667085] text-mMedium font-semiBold">Contact us</p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#475467] text-lRegular">DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse,
+                                Bandra Kurla Complex, Bandra East, Mumbai - 400051</p>
+                            <a href="tel:+91-9892421286" class="flex gap-1 items-center">
+                                <div class="flex items-center">
+                                    <img alt="Phone" loading="lazy" width="24" height="24" decoding="async"
+                                        data-nimg="1" src="static/images/phone.png" />
+                                </div>
+
+                                <img alt="Phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    src="static/images/india-1.png" />
+                                <p class="text-neutral600 text-lRegular">+91-9892421286</p>
+                            </a>
+                            <div class="flex gap-1 items-center">
+                                <a href="mailto:ajay.ghiya@kgkmail.com" class="flex gap-1 items-center">
+                                    <div class="flex items-center">
+                                        <img alt="Mail" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="static/images/mail.png" />
+                                    </div>
+
+                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com</p>
+                                </a>
+                                <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
+                                    class="cursor-pointer" src="static/images/copy.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12">
+            <p class="text-neutral500">
+                Copyright © 2024 KGK Diamonds. All rights reserved.
+            </p>
+            <div class="flex gap-8">
+                <a href="https://www.linkedin.com/company/kgk-group/mycompany/" target="_blank">
+                    <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        src="static/images/linkedin.png" />
+                </a>
+
+                <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank"> <img alt="Instagram"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        src="static/images/insta.png" /></a>
+
+                <a href="https://www.facebook.com/KGKgroup.officialpage/" target="_blank"><img alt="Facebook"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        src="static/images/facebook.png" /></a>
+                <a href="https://x.com/kgk_group" target="_blank"> <img alt="Twitter" loading="lazy" width="24"
+                        height="24" decoding="async" data-nimg="1" src="static/images/twitter.png" /></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="static/js/custom.js"></script>
+</body>
+
+</html>

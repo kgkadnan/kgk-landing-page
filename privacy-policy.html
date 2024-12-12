@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" class="v2primary">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KGK - Privacy Policy</title>
+
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="main-body">
+    <!-- header -->
+    <header
+        class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0 space-mobile">
+        <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
+            <!-- Navigation Section -->
+            <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
+                <a href="index.html" class="flex gap-5 mr-6">
+                    <img src="static/images/kgklogo-svg.png" alt="KGK logo" class="cursor-pointer" loading="lazy"
+                        width="36" height="48" decoding="async" />
+                </a>
+                <div class="first-li flex w-full justify-between">
+                    <ul class="flex list-none items-center space-x-4">
+                        <!-- Home -->
+                        <li class="menu-item">
+                            <a href="index.html"
+                                class="menu-link inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <div class="relative inline-block text-left margin-0 menu-li menu-item">
+                            <button type="button"
+                                class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
+                                id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown()">
+                                <span class="menu-link">About Us</span>
+                                <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <div id="dropdown-menu"
+                                class="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden"
+                                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+                                style="min-width: 150px;">
+                                <div class="flex flex-col !rounded-[8px] border-[1px] border-neutral200" role="none">
+                                    <li class="menu-item">
+                                        <a href="our-story.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Our Story
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="leadership.html"
+                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
+                                            Leadership
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Links -->
+                        <li class="menu-item">
+                            <a href="traceability.html"
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Traceability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="sustainability.html"
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Sustainability
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact-us.html"
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Buttons Section -->
+                    <div class="flex gap-4 auth-btns">
+                        <a href="login.html"
+                            class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
+                            Login
+                        </a>
+                        <a href="register.html"
+                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
+                            Register
+                        </a>
+                    </div>
+                </div>
+                <div class="homeburg">
+                    <img src="static/images/menu.png" class="menu-sign" width="25" height="25" alt="" />
+                    <img src="static/images/close.png" class="close-sign" width="25" height="25" alt="" />
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+
+    <section class="max-w-4xl mx-auto flex flex-col gap-[16px] commonStyle">
+        <div class="flex w-full items-center flex-col">
+            <h1 class="text-headingS font-medium text-neutral-900"> Privacy Policy</h1>
+            <div class="text-neutral-900">
+                <div class="statiContentBox">
+                    <div class="staticContentWrapper mb-0">
+                        <div class="staticList"></div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="1. PREAMBLE">
+                            1. Preamble
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        KGK Infotech LLP (hereinafter referred to as “KGK,” “we,” “our,” or
+                                        “us”) is a limited liability partnership that owns, operates, edits,
+                                        and manages the website/platform, www.kgkdiamonds.com, including any
+                                        microsites and tools contained therein (collectively referred to as
+                                        the “Website/Platform”). KGK Infotech LLP is part of the KGK Group,
+                                        a global entity with over 110 years of experience in the diamond
+                                        trade, operating under the brand names KGK Diamonds BV, Belgium
+                                        Diamond LLC, Sparkle Gems Inc., and KGK Diamonds (I) Pvt Ltd.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Our Website provides a wide range of products and information for
+                                        users and offers additional services to registered users, including
+                                        purchasing, bidding, price estimation, viewing 360° product images,
+                                        accessing certifications, and tracking orders. We prioritize
+                                        protecting your personal data and ensuring its security through
+                                        compliance with this Privacy Policy, and we take relevant measures
+                                        to safeguard your data.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        This Privacy Policy applies to users and visitors of our Platform
+                                        and/or Services. In this policy, “you” or “your” refers to Website
+                                        visitors and registered users, as applicable.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        For European data protection, the data controller is KGK Diamonds
+                                        BV, Hoveniersstraat 2, Suite No. 708, Antwerp, Belgium. Any data
+                                        collection, storage, or processing from our European servers
+                                        complies strictly with the EU’s General Data Protection Regulation
+                                        (GDPR).
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="2. INTRODUCTION TO THE PRIVACY POLICY">
+                            2. Introduction to the Privacy Policy
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        This Privacy Policy outlines how we collect, use, store, and protect
+                                        the information you provide or that we collect through your use of
+                                        our Website. It explains how and under what circumstances your
+                                        information is managed.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        “Personal information” refers to any information that can identify
+                                        you, such as name, nationality, address, email, phone number, and,
+                                        where applicable, details like your driver’s license or identity
+                                        card.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="3. CONSENT">
+                            3. Consent
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        By providing personal information while using our Website, you
+                                        consent to the terms of this Privacy Policy, including the use,
+                                        storage, and processing of your data. If you disagree with our
+                                        practices, please do not use our Platform or provide personal
+                                        information.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        You may withdraw your consent or delete your account by contacting
+                                        us through the “Contact Us” form on our Website. We retain your data
+                                        only as long as your account remains active and dispose of it
+                                        securely when no longer needed. Your data may be anonymized and
+                                        retained for analytics purposes
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="4">
+                            4. What information do we collect about you?
+                        </h2>
+                        <div class="staticList">
+                            <h3><strong>Personal information you provide voluntarily:</strong></h3>
+                            <ul>
+                                <li>
+                                    <div>
+                                        Information provided via Website forms, such as account
+                                        registration, order details, or the “Raise an Enquiry” form
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Records of correspondence (including email addresses) when
+                                        contacting us.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Social media, web chat, and ‘WhatsApp’ chat interactions with
+                                        information like name, email, and call recordings.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="staticList">
+                            <h3>
+                                <strong>Other Incidental Information Collected Automatically:</strong>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <div>
+                                        Device information, usage details, IP addresses, and browsing
+                                        patterns.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Cookies, web beacons, and other tracking technologies.</div>
+                                </li>
+                                <li>
+                                    <div>Data on website visits, traffic, and location data.</div>
+                                </li>
+                            </ul>
+                            <p>
+                                Our Website does not require sensitive information like passwords, bank
+                                details, or medical history for account registration or product viewing.
+                                However, some users may need to provide financial details directly to
+                                product owners for transactions. KGK is not responsible for the storage
+                                or management of sensitive information shared with product owners.
+                            </p>
+                        </div>
+
+                        <div class="staticList">
+                            <h3><strong>Personal information you provide voluntarily:</strong></h3>
+                            <ul>
+                                <li>
+                                    <div>
+                                        It is important to note that the Website does not require you to
+                                        provide any ‘sensitive’ personal information, which may include your
+                                        passwords, financial information such as bank account number, credit
+                                        card/ debit card number or other payment instruction details,
+                                        medical records and history, biometric information, sexual
+                                        orientation, etc., for the purpose of registering your account,
+                                        viewing the products on the Website, contacting us, or raising an
+                                        enquiry
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        However, Users that avail of certain Services of the Website to bid,
+                                        place offers and purchase products, may be required to share certain
+                                        ‘sensitive’ personal information such as financial details including
+                                        bank account number, credit card/debit card or other payment related
+                                        information, with relevant product owner(s). By consenting to this
+                                        Privacy Policy, you acknowledge and accept that the Company is not,
+                                        and shall never be, liable for the retention, transfer, storage,
+                                        management and/or use of this ‘sensitive’ personal information which
+                                        would be provided by You directly to the product owner, without any
+                                        intervention by the Company.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="5.">
+                            5. Purpose of collecting of your information
+                        </h2>
+                        <div class="staticList">
+                            <p>KGK Infotech LLP may use your data for:</p>
+
+                            <ul>
+                                <li>
+                                    <div>Communication and responding to queries.</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Verifying account information and analyzing Website performance.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Processing registrations and enhancing user experiences.</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Sending newsletters, promotional materials, and legal compliance.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="6">
+                            6. Sharing, Transfer &amp; Disclosure oF Information to third parties
+                        </h2>
+                        <div class="staticList">
+                            <h3>
+                                KGK may share your information to streamline operations, fulfill legal
+                                obligations, or provide requested services. We may disclose information
+                                to:
+                            </h3>
+                            <ul>
+                                <li>
+                                    <div>
+                                        KGK Group companies for data analysis and to keep you informed about
+                                        showcased products.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Contracted third parties (e.g., cloud service providers, IT
+                                        services, auditors) bound by confidentiality agreements.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        Legal or governmental entities where required by law or for the
+                                        protection of KGK’s rights.
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>
+                                KGK implements appropriate safeguards to ensure your data is adequately
+                                protected in all jurisdictions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="7">
+                            7. Our Cookie Policy
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        Our Website uses cookies to personalize content and for analytics.
+                                        Cookies may identify your device but do not directly identify you.
+                                        You may disable cookies through your browser settings.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="8">
+                            8. Where we store your information
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        Data collected is stored on local servers managed by KGK or
+                                        transferred to our data controller in Belgium, subject to EU data
+                                        protection laws.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="9">
+                            9. Payment processing and shipping
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        KGK does not manage payment transactions or shipping services.
+                                        Payments are processed directly by product owners, who are
+                                        responsible for secure handling. Shipping details provided to KGK
+                                        are shared with product owners and third-party shipping companies at
+                                        the user’s discretion.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="10. Data Retention">
+                            10. Data Retention
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        We retain your information only as long as necessary for service
+                                        provision or legal compliance. Data is disposed of securely when no
+                                        longer needed.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="11. Data Security">
+                            11. Data Security
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        We take data security seriously and use industry-standard
+                                        technologies, physical safeguards, and contractual agreements to
+                                        protect your personal data. However, KGK assumes no responsibility
+                                        for security breaches beyond its control or unauthorized access due
+                                        to unsecured communications or device loss.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle"
+                            title="12. Your Right to Restrict Processing/Use of Your Information">
+                            12. Your Right to Restrict Processing/Use of Your Information
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        You may request the restriction of data processing under specific
+                                        conditions, such as contesting data accuracy or processing
+                                        unlawfulness.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        KGK may still process data where necessary for legal claims or
+                                        protecting another individual’s rights.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="staticList">
+                            <h3>
+                                <strong>We may continue to use your information and/or data following a
+                                    request for restriction, where</strong>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <div>we have your consent;</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        we are required to establish, exercise or defend legal claims; and
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        we are required to protect the rights of another natural or legal
+                                        person.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="staticList">
+                            <h3>
+                                <strong>We are not required to comply with any requests to erase/delete your
+                                    personal information if the processing of your information is
+                                    necessary for:</strong>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <div>compliance with a legal obligation; and/or</div>
+                                </li>
+                                <li>
+                                    <div>for the establishment, exercise or defence of legal claims</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="13">
+                            13. Aggregate data, data analytics and social media functionality
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        We may anonymize data for analysis to improve user experience and
+                                        marketing. If you use social media buttons, data may be shared based
+                                        on your privacy settings on those platforms.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="14">
+                            14. Your right in relation to your personal information
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        You may request access, modification, deletion, data portability, or
+                                        withdraw consent. Complaints can be lodged with local data
+                                        protection authorities.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="15">
+                            15. Legal Basis for Processing Personal Data (GDPR)
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        KGK processes data based on consent, contractual necessity, or legal
+                                        obligations under GDPR.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="16">
+                            16. Third party links
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        Our Platform may contain links to external sites with independent
+                                        privacy policies. Please review these policies before sharing any
+                                        personal information.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="17">
+                            17. Changes and updates to this privacy policy
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        KGK reserves the right to update this Privacy Policy. Continued
+                                        Platform use implies acceptance of these updates.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>This Privacy Policy was last updated on 11th March 2024.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="18">18. Children</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        Our Platform is not intended for users under 18. If submitting data
+                                        on behalf of a minor, parental consent is required.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="19">
+                            19. Governing law and dispute Resolution
+                        </h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        This Privacy Policy is governed by the laws and regulations of the
+                                        relevant jurisdiction.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="staticContentWrapper">
+                        <h2 class="mainHeadingTitle,popupInnerTitle" title="20">20. Contact Us</h2>
+                        <div class="staticList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        For questions or concerns, contact us via our Website’s “Contact Us”
+                                        form. For assistance, please visit www.kgkdiamonds.com for Grievance
+                                        Officer details, where applicable.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer style="z-index: 100;">
+        <div
+            class="space-mobile registered-yet flex w-full xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] justify-between items-center py-4">
+            <div class="flex flex-col gap-2">
+                <p class="text-neutral900 text-[30px] font-bold">Haven't registered yet?</p>
+                <p class="text-neutral700 text-headingS">Elevate Your Diamond Buying Experience with KGK
+                    Diamonds!</p>
+            </div>
+            <div class="mb-[-30px]">
+                <a href="register.html">
+                    <img alt="register now" loading="lazy" width="276" height="92" decoding="async" data-nimg="1"
+                        class="cursor-pointer" src="static/images/register-now.278c05b2.png" />
+                </a>
+            </div>
+        </div>
+
+        <div class="globe-mobile">
+            <img alt="KGK Globe presence" width="250" height="258" src="static/images/globe-mobile.png" />
+        </div>
+
+        <div class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main">
+            <div class="footer-glob w-[30%] flex flex-col gap-8">
+                <img alt="KGK Globe presence" loading="lazy" width="250" height="258" decoding="async" data-nimg="1"
+                    src="static/images/newletter-globe.png" />
+            </div>
+            <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
+                <img alt="KGK logo" loading="lazy" width="36" height="48" decoding="async" data-nimg="1"
+                    class="ml-2 h-[48px] w-[36px]" src="static/images/kgklogo-svg.png" />
+                <div class="flex justify-end relative -top-14 h-1">
+                    <div class="badgew">
+                        <div class="badgew__front">
+                            <div class="badgew__icon">
+                                <img src="static/images/offset-website.svg"
+                                    alt="Tree-Nation - CO2 neutral website badge" />
+                            </div>
+                            <div class="badgew__text">
+                                <h1 class="offset-badge__title">
+                                    <span class="offset-badge__title--blue">Net Zero</span><br />
+                                    Website
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="badgew__back">
+                            <a href="https://tree-nation.com/profile/impact/kgk-diamonds-i-pvt-ltd#co2"
+                                id="forest-link-website" class="forest-link" target="_blank">
+                                <h2 class="forest-link__title">
+                                    Visit our Forest
+                                    <span class="forest-link__tree-nation">on tree-nation.com</span>
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between footer-li">
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Company</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex">
+                                <a href="our-story.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    About us
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="leadership.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Leadership
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="sustainability.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Sustainability
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="traceability.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Traceability
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Resources</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex">
+                                <a href="blog.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Blog
+                                </a>
+                            </div>
+                            <p class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2">Legal</p>
+                            <div class="flex this-mobile mt-2">
+                                <a href="terms-and-conditions.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Terms &amp; Conditions
+                                </a>
+                            </div>
+                            <div class="flex this-mobile">
+                                <a href="privacy-policy.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Privacy Policy
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-col not-mobile">
+                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Legal</p>
+                        <div class="flex flex-col gap-0">
+                            <div class="flex">
+                                <a href="terms-and-conditions.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Terms &amp; Conditions
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="privacy-policy.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Privacy Policy
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[45%] flex flex-col gap-4">
+                        <p class="text-[#667085] text-mMedium font-semiBold">Contact us</p>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#475467] text-lRegular">DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse,
+                                Bandra Kurla Complex, Bandra East, Mumbai - 400051</p>
+                            <a href="tel:+91-9892421286" class="flex gap-1 items-center">
+                                <div class="flex items-center">
+                                    <img alt="Phone" loading="lazy" width="24" height="24" decoding="async"
+                                        data-nimg="1" src="static/images/phone.png" />
+                                </div>
+
+                                <img alt="Phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    src="static/images/india-1.png" />
+                                <p class="text-neutral600 text-lRegular">+91-9892421286</p>
+                            </a>
+                            <div class="flex gap-1 items-center">
+                                <a href="mailto:ajay.ghiya@kgkmail.com" class="flex gap-1 items-center">
+                                    <div class="flex items-center">
+                                        <img alt="Mail" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="static/images/mail.png" />
+                                    </div>
+
+                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com</p>
+                                </a>
+                                <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
+                                    class="cursor-pointer" src="static/images/copy.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12">
+            <p class="text-neutral500">
+                Copyright © 2024 KGK Diamonds. All rights reserved.
+            </p>
+            <div class="flex gap-8">
+                <a href="https://www.linkedin.com/company/kgk-group/mycompany/" target="_blank">
+                    <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        src="static/images/linkedin.png" />
+                </a>
+
+                <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank"> <img alt="Instagram"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        src="static/images/insta.png" /></a>
+
+                <a href="https://www.facebook.com/KGKgroup.officialpage/" target="_blank"><img alt="Facebook"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                        src="static/images/facebook.png" /></a>
+                <a href="https://x.com/kgk_group" target="_blank"> <img alt="Twitter" loading="lazy" width="24"
+                        height="24" decoding="async" data-nimg="1" src="static/images/twitter.png" /></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="static/js/custom.js"></script>
+</body>
+
+</html>

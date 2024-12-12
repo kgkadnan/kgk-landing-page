@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="v2primary">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KGK - Login</title>
+
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="main-body">
+
+    <section class="w-full flex auth-main">
+        <div class="auth-video w-[60%] h-[100vh] flex items-center bg-black px-2">
+            <div class="h-full w-full flex items-center">
+                <div class="youtube-container">
+                    <div class="youtube-overlay"></div>
+                    <iframe id="youtube-player" frameborder="0" allowfullscreen="" title="KGK Diamonds Explainer"
+                        width="100%" height="550"
+                        src="https://www.youtube.com/embed/awoG54PaWPg?autoplay=1&amp;mute=1&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;iv_load_policy=3&amp;loop=1&amp;playlist=awoG54PaWPg&amp;disablekb=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost%3A3000&amp;widgetid=1"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="auth-field flex justify-center w-[40%] text-center h-[100vh] overflow-auto">
+            <div
+                class="m-auto loginscreen flex flex-col w-[450px]  p-8 gap-[24px] rounded-[8px] border-[1px] border-neutral-200 ">
+                <a href="index.html" class="flex flex-col items-center cursor-pointer kgk-logo">
+                    <img src="static/images/logo.svg" alt="kgk logo">
+                </a>
+                <div class="parent relative">
+                    <hr class="absolute bottom-0 left-0 border-none h-[1px] w-full bg-neutral200">
+                </div>
+                <div class="text-headingM text-neutral900 font-medium text-left">Login</div>
+                <div class="flex h-[40px] logintab">
+                    <button
+                        class="tablinks login-tab pt-[8px] px-4 text-mMedium font-medium h-[40px] text-neutral600 border-b-[2px] border-[#E4E7EC] pb-[8px] active"
+                        onclick="openTab(event, 'mobile')">Mobile</button>
+                    <button
+                        class="tablinks login-tab pt-[8px] px-4 text-mMedium font-medium h-[40px] text-neutral600 border-b-[2px] border-[#E4E7EC] pb-[8px]"
+                        onclick="openTab(event, 'email')">Email</button>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div id="mobile" class="tabcontent active">
+                        <div class="h-[65px] w-full">
+                            <div class="flex text-left  flex-col ">
+                                <p class="text-mRegular text-neutral900">Mobile Number*</p>
+                                <div class="flex h-[40px]">
+                                    <input required style="box-shadow:var(--input-shadow) inset"
+                                        placeholder="Enter contact number" id="phone" type="tel" name="phone"
+                                        class="h-[40px] focus:outline-none focus:border-[#CFD1D4] focus-visible:border-[#CFD1D4] hover:border-neutral900 bg-neutral25 text-neutral900 border-[1px] w-full p-2 rounded-[4px] disabled:bg-neutral100 disabled:text-neutral-500 undefined rounded-l-[0px] focus:border-[1px] border-neutral200" />
+                                </div>
+                                <!-- <p class="text-dangerMain h-1">Please enter mobile number</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="email" class="tabcontent">
+                        <div class="h-[65px] w-full">
+                            <div class="text-left w-full gap-1  h-[64px]">
+                                <p class="text-mRegular text-neutral900">Email*</p>
+                                <div class="flex relative items-center"><input required
+                                        class="h-[40px] focus:outline-none focus:border-[3px] focus:border-[#CFD1D4] focus-visible:border-[#CFD1D4] hover:border-neutral900 bg-neutral25 text-neutral900 border-[1px] w-full p-2 rounded-[4px] disabled:bg-neutral-100 disabled:text-neutral-500 undefined border-neutral200 undefined"
+                                        placeholder="Enter email id" title="" autocomplete="none" type="email" value=""
+                                        name="email" style="box-shadow: var(--input-shadow) inset;"></div>
+                                <!-- <p class="text-dangerMain h-1">Please email</p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-left w-full gap-1 h-[64px]">
+                        <p class="text-mRegular text-neutral900">Password*</p>
+                        <div class="flex relative items-center">
+                            <input required
+                                class="password-input h-[40px] focus:outline-none focus:border-[3px] focus:border-[#CFD1D4] focus-visible:border-[#CFD1D4] hover:border-neutral900 bg-neutral25 text-neutral900 border-[1px] w-full p-2 rounded-[4px] undefined border-neutral200"
+                                placeholder="Enter your password" type="password" value="" name="password"
+                                style="box-shadow: var(--input-shadow) inset;">
+                            <div class="show-hide-eye absolute right-2 cursor-pointer">
+                                <img src="static/images/close-eye.svg" alt="eye" class="close-eye">
+                                <img src="static/images/eye.svg" alt="eye" class="show-eye hidden">
+                            </div>
+                        </div>
+                        <div class="mt-1">
+                            <!-- <p class="text-dangerMain">Please enter password</p> -->
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-mRegualar text-neutral900 pt-1">
+                        <div class="flex items-center gap-2">
+                            <div class="flex flex-col gap-[5px]">
+                                <div class="flex gap-[5px]">
+                                    <input class="checkbox-custom rounded-[4px]" type="checkbox" value="yes">
+                                </div>
+                            </div>
+                            <p>Keep me signed in</p>
+                        </div>
+                        <a href="forgot-password.html" class="cursor-pointer">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <button type="submit"
+                        class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 bg-primaryMain text-neutral25 h-[56px] rounded-[4px] w-[100%] hover:bg-primaryHover focus:bg-primaryMain active:bg-primary-pressed">Login</button>
+                    <button
+                        class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-neutral200 border-[1px] bg-neutral0 text-neutral900 h-[56px] border-none w-[100%] hover:bg-neutral-50 focus:bg-neutral-50 active:bg-neutral-100"
+                        type="submit">
+                        <div class="text-mMedium font-medium flex">
+                            <p class="text-neutral600">Don't have an account yet?</p>&nbsp;
+                            <a href="register.html" class="text-neutral900">Register</a>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="static/js/custom.js"></script>
+
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+</body>
+
+</html>

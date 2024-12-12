@@ -5,12 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KGK - Leadership</title>
+
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="static/css/style.css" rel="stylesheet" />
     <link href="static/css/custom.css" rel="stylesheet" />
 </head>
 
-<body class="__className_d65c78">
+<body class="main-body">
     <!-- header -->
     <header
         class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0 space-mobile">
@@ -26,7 +28,7 @@
                         <!-- Home -->
                         <li class="menu-item">
                             <a href="index.html"
-                                class="inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
+                                class="menu-link inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
                                 Home
                             </a>
                         </li>
@@ -35,7 +37,7 @@
                             <button type="button"
                                 class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
                                 id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown()">
-                                <span>About Us</span>
+                                <span class="menu-link">About Us</span>
                                 <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
                                     aria-hidden="true" data-slot="icon">
                                     <path fill-rule="evenodd"
@@ -49,13 +51,13 @@
                                 role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
                                 style="min-width: 150px;">
                                 <div class="flex flex-col !rounded-[8px] border-[1px] border-neutral200" role="none">
-                                    <li>
+                                    <li class="menu-item">
                                         <a href="our-story.html"
                                             class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
                                             Our Story
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="menu-item">
                                         <a href="leadership.html"
                                             class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
                                             Leadership
@@ -68,33 +70,33 @@
                         <!-- Other Links -->
                         <li class="menu-item">
                             <a href="traceability.html"
-                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
                                 Traceability
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="sustainability.html"
-                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
                                 Sustainability
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="contact-us.html"
-                                class="group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
+                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
                                 Contact Us
                             </a>
                         </li>
                     </ul>
                     <!-- Buttons Section -->
                     <div class="flex gap-4 auth-btns">
-                        <button
+                        <a href="login.html"
                             class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
                             Login
-                        </button>
-                        <button
+                        </a>
+                        <a href="register.html"
                             class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
                             Register
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="homeburg">
@@ -131,7 +133,7 @@
     <!-- heading animation section -->
 
     <!-- leadership -->
-    <div class="flexjustify-center main-content">
+    <section class="flexjustify-center main-content">
         <div class="flex flex-col items-center">
             <div class="flex flex-col gap-2 cursor-pointer xl:px-[112px] lg:px-[42px] profile-one">
                 <div class="flex flex-col w-fit items-center cardOneMain">
@@ -204,9 +206,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="flexjustify-center details-content">
+    <section class="flexjustify-center details-content">
         <div class="flex justify-center card-one card-profile-details">
             <div class="flex flex-col gap-6 px-[190px] mt-24 mb-4">
                 <div class="flex gap-6 items-end"><img alt="Navrattan Kothari" loading="lazy" width="374" height="375"
@@ -575,7 +577,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- leadership -->
 
 
@@ -586,11 +588,14 @@
             <div class="flex flex-col gap-2">
                 <p class="text-neutral900 text-[30px] font-bold">Haven't registered yet?</p>
                 <p class="text-neutral700 text-headingS">Elevate Your Diamond Buying Experience with KGK
-                    Diamonds!<!-- --></p>
+                    Diamonds!</p>
             </div>
-            <div class="mb-[-30px]"><img alt="register now" loading="lazy" width="276" height="92" decoding="async"
-                    data-nimg="1" class="cursor-pointer" style="color: transparent;"
-                    src="static/images/register-now.278c05b2.png" /></div>
+            <div class="mb-[-30px]">
+                <a href="register.html">
+                    <img alt="register now" loading="lazy" width="276" height="92" decoding="async" data-nimg="1"
+                        class="cursor-pointer" src="static/images/register-now.278c05b2.png" />
+                </a>
+            </div>
         </div>
 
         <div class="globe-mobile">
@@ -598,12 +603,13 @@
         </div>
 
         <div class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main">
-            <div class="footer-glob w-[30%] flex flex-col gap-8"><img alt="KGK Globe presence" loading="lazy"
-                    width="250" height="258" decoding="async" data-nimg="1" style="color: transparent;"
-                    src="static/images/newletter-globe.png" /></div>
+            <div class="footer-glob w-[30%] flex flex-col gap-8">
+                <img alt="KGK Globe presence" loading="lazy" width="250" height="258" decoding="async" data-nimg="1"
+                    src="static/images/newletter-globe.png" />
+            </div>
             <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
                 <img alt="KGK logo" loading="lazy" width="36" height="48" decoding="async" data-nimg="1"
-                    class="ml-2 h-[48px] w-[36px]" style="color: transparent;" src="static/images/kgklogo-svg.png" />
+                    class="ml-2 h-[48px] w-[36px]" src="static/images/kgklogo-svg.png" />
                 <div class="flex justify-end relative -top-14 h-1">
                     <div class="badgew">
                         <div class="badgew__front">
@@ -633,44 +639,71 @@
                     <div class="flex gap-4 flex-col">
                         <p class="text-[#667085] text-mMedium font-semiBold pl-2">Company</p>
                         <div class="flex flex-col gap-0">
-                            <div class="flex"><a href="/v3/about-us/our-story"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">About
-                                    us</a></div>
-                            <div class="flex"><a href="/v3/about-us/leadership"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Leadership</a>
+                            <div class="flex">
+                                <a href="our-story.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    About us
+                                </a>
                             </div>
-                            <div class="flex"><a href="/v3/sustainability"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Sustainability</a>
+                            <div class="flex">
+                                <a href="leadership.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Leadership
+                                </a>
                             </div>
-                            <div class="flex"><a href="/v3/traceability"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Traceability</a>
+                            <div class="flex">
+                                <a href="sustainability.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Sustainability
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="traceability.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Traceability
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="flex gap-4 flex-col">
                         <p class="text-[#667085] text-mMedium font-semiBold pl-2">Resources</p>
                         <div class="flex flex-col gap-0">
-                            <div class="flex"><a href="blog.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Blog</a>
+                            <div class="flex">
+                                <a href="blog.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Blog
+                                </a>
                             </div>
                             <p class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2">Legal</p>
-                            <div class="flex this-mobile mt-2"><a href="/terms-and-conditions"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
-                                    &amp; Conditions</a></div>
-                            <div class="flex this-mobile"><a href="/privacy-policy"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
-                                    Policy</a></div>
+                            <div class="flex this-mobile mt-2">
+                                <a href="terms-and-conditions.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Terms &amp; Conditions
+                                </a>
+                            </div>
+                            <div class="flex this-mobile">
+                                <a href="privacy-policy.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Privacy Policy
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="flex gap-4 flex-col not-mobile">
                         <p class="text-[#667085] text-mMedium font-semiBold pl-2">Legal</p>
                         <div class="flex flex-col gap-0">
-                            <div class="flex"><a href="/terms-and-conditions"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Terms
-                                    &amp; Conditions</a></div>
-                            <div class="flex"><a href="/privacy-policy"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">Privacy
-                                    Policy</a></div>
+                            <div class="flex">
+                                <a href="terms-and-conditions.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Terms &amp; Conditions
+                                </a>
+                            </div>
+                            <div class="flex">
+                                <a href="privacy-policy.html"
+                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
+                                    Privacy Policy
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="w-[45%] flex flex-col gap-4">
@@ -679,24 +712,26 @@
                             <p class="text-[#475467] text-lRegular">DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse,
                                 Bandra Kurla Complex, Bandra East, Mumbai - 400051</p>
                             <a href="tel:+91-9892421286" class="flex gap-1 items-center">
-                                <div class="flex items-center"><img alt="Phone" loading="lazy" width="24" height="24"
-                                        decoding="async" data-nimg="1" style="color: transparent;"
-                                        src="static/images/phone.png" /></div>
+                                <div class="flex items-center">
+                                    <img alt="Phone" loading="lazy" width="24" height="24" decoding="async"
+                                        data-nimg="1" src="static/images/phone.png" />
+                                </div>
 
                                 <img alt="Phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
-                                    style="color: transparent;" src="static/images/india-1.png" />
+                                    src="static/images/india-1.png" />
                                 <p class="text-neutral600 text-lRegular">+91-9892421286</p>
                             </a>
                             <div class="flex gap-1 items-center">
                                 <a href="mailto:ajay.ghiya@kgkmail.com" class="flex gap-1 items-center">
-                                    <div class="flex items-center"><img alt="Mail" loading="lazy" width="24" height="24"
-                                            decoding="async" data-nimg="1" style="color: transparent;"
-                                            src="static/images/mail.png" /></div>
+                                    <div class="flex items-center">
+                                        <img alt="Mail" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="static/images/mail.png" />
+                                    </div>
 
-                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com<!-- --></p>
+                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com</p>
                                 </a>
                                 <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
-                                    class="cursor-pointer" style="color: transparent;" src="static/images/copy.png" />
+                                    class="cursor-pointer" src="static/images/copy.png" />
                             </div>
                         </div>
                     </div>
@@ -705,26 +740,23 @@
         </div>
         <div class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12">
             <p class="text-neutral500">
-                Copyright ©
-                <!-- -->2024<!-- -->
-                KGK Diamonds. All rights reserved.
+                Copyright © 2024 KGK Diamonds. All rights reserved.
             </p>
             <div class="flex gap-8">
                 <a href="https://www.linkedin.com/company/kgk-group/mycompany/" target="_blank">
                     <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
-                        style="color: transparent;" src="static/images/linkedin.png" />
+                        src="static/images/linkedin.png" />
                 </a>
 
                 <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank"> <img alt="Instagram"
-                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
                         src="static/images/insta.png" /></a>
 
                 <a href="https://www.facebook.com/KGKgroup.officialpage/" target="_blank"><img alt="Facebook"
-                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color: transparent;"
+                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
                         src="static/images/facebook.png" /></a>
                 <a href="https://x.com/kgk_group" target="_blank"> <img alt="Twitter" loading="lazy" width="24"
-                        height="24" decoding="async" data-nimg="1" style="color: transparent;"
-                        src="static/images/twitter.png" /></a>
+                        height="24" decoding="async" data-nimg="1" src="static/images/twitter.png" /></a>
             </div>
         </div>
     </footer>

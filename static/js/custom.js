@@ -13,8 +13,13 @@ window.addEventListener("scroll", function () {
 });
 
 // {{{{{{{{3}}}}}}}} for menubar
-document.querySelector(".homeburg").addEventListener("click", function () {
-  document.querySelector(".main-menu").classList.toggle("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const homeburg = document.querySelector(".homeburg");
+  if (homeburg) {
+    homeburg.addEventListener("click", function () {
+      document.querySelector(".main-menu").classList.toggle("active");
+    });
+  }
 });
 
 // {{{{{{{1}}}}}}} for lazer video effect
@@ -188,11 +193,14 @@ const handlePlayPauseButtonClick = () => {
   }
 };
 
-if (playPauseButtonToggle) {
-  playPauseButtonToggle.addEventListener("click", handlePlayPauseButtonClick);
-} else {
-  console.log("playPauseButtonToggle element not found!");
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const playPauseButtonToggle = document.querySelector(
+    ".playPauseButtonToggle"
+  );
+  if (playPauseButtonToggle) {
+    playPauseButtonToggle.addEventListener("click", handlePlayPauseButtonClick);
+  }
+});
 
 // Intersection Observer to handle video play/pause based on viewport visibility
 const observerOptions = {
@@ -353,7 +361,7 @@ function openTab(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(cityName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
 // <!-- tabination js -->
@@ -389,4 +397,64 @@ menuLinks.forEach(function (link) {
   if (currentPath.endsWith(linkPath)) {
     link.classList.add("active"); // Add the 'active' class if there's a match
   }
+});
+
+// copy paste text
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".copyPaste").forEach((copyButton) => {
+    const textElement =
+      copyButton.previousElementSibling.querySelector(".copyedText");
+    const tooltip = copyButton.nextElementSibling;
+
+    copyButton.addEventListener("click", () => {
+      navigator.clipboard.writeText(textElement.textContent).then(() => {
+        tooltip.classList.replace("hidden", "visible");
+        setTimeout(() => tooltip.classList.replace("visible", "hidden"), 2000);
+      });
+    });
+
+    copyButton.addEventListener("mouseenter", () => {
+      const { left, top } = copyButton.getBoundingClientRect();
+      Object.assign(tooltip.style, {
+        left: `${left + window.pageXOffset}px`,
+        top: `${top + window.pageYOffset - tooltip.offsetHeight}px`,
+      });
+    });
+  });
+});
+
+// world map location
+document.querySelectorAll(".kgk-locate").forEach((element) => {
+  element.addEventListener("mouseenter", function () {
+    document.querySelectorAll(".active-location").forEach((activeElement) => {
+      activeElement.classList.remove("active-location");
+    });
+
+    this.classList.add("active-location");
+  });
+
+  element.addEventListener("mouseleave", function () {});
+});
+
+// password visible
+const passwordFields = document.querySelectorAll(".password-input");
+const showHideIcons = document.querySelectorAll(".show-hide-eye");
+
+// Loop through all the password fields and add event listeners to each show-hide-eye container
+showHideIcons.forEach((icon, index) => {
+  icon.addEventListener("click", function () {
+    const passwordInput = passwordFields[index];
+    const closeEye = this.querySelector(".close-eye");
+    const showEye = this.querySelector(".show-eye");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      closeEye.classList.add("hidden");
+      showEye.classList.remove("hidden");
+    } else {
+      passwordInput.type = "password";
+      closeEye.classList.remove("hidden");
+      showEye.classList.add("hidden");
+    }
+  });
 });
