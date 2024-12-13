@@ -7,7 +7,7 @@
     <title>KGK - Register</title>
 
     <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/css/intlTelInput.min.css">
     <link href="static/css/style.css" rel="stylesheet" />
     <link href="static/css/custom.css" rel="stylesheet" />
 </head>
@@ -150,15 +150,34 @@
 
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/intlTelInput.min.js"></script>
     <script src="static/js/custom.js"></script>
 
     <script>
-        const phoneInputField = document.querySelector("#phone");
-        const phoneInput = window.intlTelInput(phoneInputField, {
-            utilsScript:
-                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        const input = document.querySelector("#phone");
+        const iti = window.intlTelInput(input, {
+            initialCountry: "in",
+            separateDialCode: true,
+            allowDropdown: true,
+            nationalMode: false,
+            preferredCountries: ['gb', 'us', 'in'],
+            allowSearch: true,
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/utils.js",
         });
+
+        window.iti = iti;
+
+        const movePreferredCountriesToTop = () => {
+            const dropdown = document.querySelector(".iti__country-list");
+            const preferredCountries = ['gb', 'us', 'in'];
+            preferredCountries.forEach(countryCode => {
+                const country = dropdown.querySelector(`[data-country-code="${countryCode}"]`);
+                if (country) {
+                    dropdown.prepend(country);
+                }
+            });
+        };
+        movePreferredCountriesToTop();
     </script>
 </body>
 

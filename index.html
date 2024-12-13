@@ -19,7 +19,7 @@
         <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
             <!-- Navigation Section -->
             <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
-                <a href="index.html" class="flex gap-5 mr-6">
+                <a href="index.html" class="header-logo flex gap-5 mr-6">
                     <img src="static/images/kgklogo-svg.png" alt="KGK logo" class="cursor-pointer" loading="lazy"
                         width="36" height="48" decoding="async" />
                 </a>
@@ -280,13 +280,23 @@
             </video>
         </div>
         <div class="controls bottom-14 absolute flex gap-4">
-            <div class="progress-bar flex justify-between gap-4 flex items-center h-[38px] border-[white] rounded-[8px] px-[8px] border-[1px] min-w-[150px]"
+            <div class="progress-bar flex justify-between gap-4 flex items-center h-[38px] border-[white] rounded-[8px] border-[1px] min-w-[150px]"
                 style="box-shadow: var(--popups-shadow);">
-                <div id="dot-1" class="dot" data-time-start="0" data-time-end="3"></div>
-                <div id="dot-2" class="dot" data-time-start="3" data-time-end="11"></div>
-                <div id="dot-3" class="dot" data-time-start="11" data-time-end="17"></div>
-                <div id="dot-4" class="dot" data-time-start="17" data-time-end="27"></div>
-                <div id="dot-5" class="dot" data-time-start="27" data-time-end="31"></div>
+                <div id="dot-1" class="dot" data-time-start="0" data-time-end="3">
+                    <div class="progress-bar-line"></div>
+                </div>
+                <div id="dot-2" class="dot" data-time-start="3" data-time-end="11">
+                    <div class="progress-bar-line"></div>
+                </div>
+                <div id="dot-3" class="dot" data-time-start="11" data-time-end="17">
+                    <div class="progress-bar-line"></div>
+                </div>
+                <div id="dot-4" class="dot" data-time-start="17" data-time-end="27">
+                    <div class="progress-bar-line"></div>
+                </div>
+                <div id="dot-5" class="dot" data-time-start="27" data-time-end="31">
+                    <div class="progress-bar-line"></div>
+                </div>
             </div>
             <button class="videoplay cursor-pointer">
                 <img src="static/images/play.png" class="playbtn" alt=""
@@ -871,10 +881,18 @@
                                             data-nimg="1" src="static/images/mail.png" />
                                     </div>
 
-                                    <p class="text-neutral600 text-lRegular">ajay.ghiya@kgkmail.com</p>
+                                    <p id="copyedText" class="text-neutral600 text-lRegular copyedText">ajay.ghiya@kgkmail.com</p>
                                 </a>
                                 <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
-                                    class="cursor-pointer" src="static/images/copy.png" />
+                                    class="cursor-pointer copyPaste" src="static/images/contact_us/copy.svg">
+                                <span id="tooltip" class="tooltip hidden">Copied successfully
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="h-4 w-4  text-neutral0">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </div>
