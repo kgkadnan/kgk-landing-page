@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // {{{{{{{1}}}}}}} for lazer video effect
-const videoRef = document.getElementById("video");
+const videoRef = document.querySelector("video");
 const progressDots = document.querySelectorAll(".dot");
 const steps = document.querySelectorAll(".step");
 const stepCount = document.querySelector(".stepcount");
@@ -47,23 +47,27 @@ const calculateProgressHeight = (timeStart, timeEnd, currentTime) => {
   return "0%";
 };
 
+// Handle Play/Pause
 const handlePlayPause = () => {
   if (videoRef.paused) {
     videoRef.play();
     isPlaying = true;
+    playPauseButtonToggle.querySelector(".playbtn").style.display = "none";
+    playPauseButtonToggle.querySelector(".Pausebtn").style.display = "block";
   } else {
     videoRef.pause();
     isPlaying = false;
+    playPauseButtonToggle.querySelector(".playbtn").style.display = "block";
+    playPauseButtonToggle.querySelector(".Pausebtn").style.display = "none";
   }
 };
 
+// Handle Dot Click
 const handleDotClick = (event) => {
   const timeStart = parseFloat(event.target.dataset.timeStart);
 
   // Remove the 'active' class from all laser-img elements first
-  laserImages.forEach((laserImage) => {
-    laserImage.classList.remove("active");
-  });
+  laserImages.forEach((laserImage) => laserImage.classList.remove("active"));
 
   const dotIndex = Array.from(progressDots).indexOf(event.target);
 
@@ -81,6 +85,7 @@ const handleDotClick = (event) => {
   }
 };
 
+// Update progress bar
 const updateProgressBar = () => {
   const currentTime = videoRef.currentTime;
   const totalDuration = videoRef.duration;
@@ -167,42 +172,12 @@ const updateProgressBar = () => {
   }
 };
 
-progressDots.forEach((dot) => dot.addEventListener("click", handleDotClick));
-
-document.addEventListener("DOMContentLoaded", function () {
-  const videoRef = document.querySelector("video"); // Adjust selector as needed
-  if (videoRef) {
-    videoRef.addEventListener("click", handlePlayPause);
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const videoRef = document.querySelector("video"); // Update the selector if needed
-  if (videoRef) {
-    videoRef.addEventListener("timeupdate", updateProgressBar);
-  }
-});
-
+// Play/pause button click handler
 const handlePlayPauseButtonClick = () => {
-  if (videoRef.paused) {
-    videoRef.play();
-    playPauseButtonToggle.classList.add("active"); // Update button state when playing
-  } else {
-    videoRef.pause();
-    playPauseButtonToggle.classList.remove("active"); // Update button state when paused
-  }
+  handlePlayPause();
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const playPauseButtonToggle = document.querySelector(
-    ".playPauseButtonToggle"
-  );
-  if (playPauseButtonToggle) {
-    playPauseButtonToggle.addEventListener("click", handlePlayPauseButtonClick);
-  }
-});
-
-// Intersection Observer to handle video play/pause based on viewport visibility
+// Intersection Observer for video visibility
 const observerOptions = {
   root: null, // Use the viewport as the root
   rootMargin: "0px", // No margin around the viewport
@@ -212,13 +187,13 @@ const observerOptions = {
 const videoObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // When video is in the viewport, play it
+      // Play the video when it comes into the viewport
       if (videoRef.paused) {
         videoRef.play();
         isPlaying = true;
       }
     } else {
-      // When video is out of the viewport, pause it
+      // Pause the video when it goes out of the viewport
       if (!videoRef.paused) {
         videoRef.pause();
         isPlaying = false;
@@ -227,13 +202,21 @@ const videoObserver = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Start observing the video element
-document.addEventListener("DOMContentLoaded", function () {
-  const videoRef = document.querySelector("video"); // Update the selector if needed
+// Event Listeners
+document.addEventListener("DOMContentLoaded", () => {
   if (videoRef) {
+    videoRef.addEventListener("click", handlePlayPause);
+    videoRef.addEventListener("timeupdate", updateProgressBar);
     videoObserver.observe(videoRef);
-  } else {
   }
+
+  if (playPauseButtonToggle) {
+    playPauseButtonToggle.addEventListener("click", handlePlayPauseButtonClick);
+  }
+
+  progressDots.forEach((dot) => {
+    dot.addEventListener("click", handleDotClick);
+  });
 });
 
 // {{{{{{{2}}}}}}} for glob video
@@ -425,15 +408,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // world map location
 document.querySelectorAll(".kgk-locate").forEach((element) => {
-  element.addEventListener("mouseenter", function () {
+  const handleMouseEnter = function () {
     document.querySelectorAll(".active-location").forEach((activeElement) => {
       activeElement.classList.remove("active-location");
     });
-
     this.classList.add("active-location");
-  });
+  };
 
-  element.addEventListener("mouseleave", function () {});
+  const handleMouseLeave = function () {};
+
+  const handleClick = function () {
+    document.querySelectorAll(".active-location").forEach((activeElement) => {
+      activeElement.classList.remove("active-location");
+    });
+    this.classList.add("active-location");
+  };
+
+  element.addEventListener("mouseenter", handleMouseEnter);
+  element.addEventListener("mouseleave", handleMouseLeave);
+  element.addEventListener("click", handleClick);
 });
 
 // password visible
@@ -457,4 +450,61 @@ showHideIcons.forEach((icon, index) => {
       showEye.classList.add("hidden");
     }
   });
+});
+
+// top text Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.querySelector(".typing-text");
+  const lines = textElement.querySelectorAll(".line"); // Get all the lines
+  let delay = 0;
+  lines.forEach((line, lineIndex) => {
+    const text = line.textContent;
+    line.textContent = "";
+
+    setTimeout(() => {
+      line.style.opacity = 1;
+    }, delay + lineIndex * 10);
+
+    const letters = text.split("");
+    letters.forEach((letter, index) => {
+      const letterSpan = document.createElement("span");
+      letterSpan.textContent = letter;
+      line.appendChild(letterSpan);
+
+      setTimeout(() => {
+        letterSpan.style.opacity = 1;
+      }, delay + lineIndex * 10 + index * 40);
+    });
+
+    delay += text.length * 40;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const paragraphElement = document.querySelector(".ptag");
+  const text = paragraphElement.textContent;
+  paragraphElement.textContent = ""; // Clear the paragraph
+
+  let delay = 0;
+
+  // Split the text into individual letters
+  const letters = text.split("");
+  letters.forEach((letter, index) => {
+    const letterSpan = document.createElement("span");
+    letterSpan.textContent = letter; // Set the letter text
+    paragraphElement.appendChild(letterSpan);
+
+    // Add animation delay for each letter
+    setTimeout(() => {
+      letterSpan.style.opacity = 1;
+    }, delay + index * 10); // Adjust typing speed here
+
+    // Increment delay for the next letter
+    delay += 0; // Adjust speed of the typing effect here
+  });
+
+  // Animate the entire paragraph's opacity
+  setTimeout(() => {
+    paragraphElement.style.opacity = 1;
+  }, delay + 100); // Delay the opacity of the paragraph as a whole
 });

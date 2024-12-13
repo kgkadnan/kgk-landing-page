@@ -5,6 +5,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: "Inter", serif;
+    scroll-behavior: smooth;
 }
 
 .relative {
@@ -696,6 +697,7 @@ body .visit-linkedin {
 
 .location-modal {
     display: none;
+    position: absolute;
 }
 
 .active-location .location-modal {
@@ -707,6 +709,115 @@ body .visit-linkedin {
     align-items: center;
     justify-content: center;
 }
+
+.kgk-locate {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.newyork-location {
+    top: 15rem;
+    left: 24rem;
+}
+
+.johannesburg-south-africa-location {
+    bottom: 8rem;
+    left: 45rem;
+}
+
+.antwerp-belgium-location {
+    top: 13rem;
+    left: 40rem;
+}
+
+.bienne-switzerland-location {
+    top: 14rem;
+    left: 41rem;
+}
+
+.ramat-gan-israel-location {
+    left: 46rem;
+    top: 18rem;
+}
+
+.dubai-uae-location {
+    left: 51rem;
+    top: 20rem;
+}
+
+.mumbai-india-location {
+    left: 55rem;
+    top: 22rem;
+}
+
+.singapore-location {
+    left: 64rem;
+    top: 28rem;
+}
+
+.taipei-chinese-taiwan-location {
+    left: 66rem;
+    top: 25rem;
+}
+
+.bangkok-thailand-location {
+    left: 61rem;
+    top: 24rem;
+}
+
+.shenzhen-china-location {
+    left: 64rem;
+    top: 20rem;
+}
+
+.shanghai-china-location {
+    left: 66rem;
+    top: 17.5rem;
+}
+
+.tokyo-japan-location {
+    left: 70rem;
+    top: 17.5rem;
+}
+
+.newyork-diamond,
+.jsal-diamond,
+.newyork-diamond,
+.bsl-diamond,
+.antwerp-diamond,
+.dul-diamond,
+.mil-diamond,
+.scl-diamond,
+.sclchaina-diamond,
+.tjl-diamond,
+.rjil-diamond,
+.singapore-diamond,
+.btl-diamond,
+.tctl-diamond {
+    margin-top: -21px;
+}
+
+.pulse-animation {
+    min-width: 12px;
+}
+
+.diamond-stone img {
+    min-width: 1rem;
+}
+
+.typing-text .line {
+    opacity: 0;
+}
+
+.typing-text .line span,
+.ptag span {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
 
 /* login css */
 .youtube-container {
@@ -861,8 +972,58 @@ input.checkbox-custom[type=checkbox]:before {
     background-color: var(--primary-main);
 }
 
+.report-data {
+    background-image: url(../images/landscape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.report-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 6rem);
+}
+
+.report-middle .report-main {
+    width: 350px;
+}
+
+.report-main p {
+    color: #fff;
+    margin-top: -28px;
+    max-width: calc(100% - 1rem);
+    margin-left: 25px;
+}
+
+.slideanimate {
+    transform: translateY(385px);
+}
+
+.phone-skeleton {
+    transform: translateY(calc(-950px + 100vh));
+}
+
+.mobile-heading-hide {
+    font-size: 42px;
+}
+
+.access-kgk p {
+    font-size: 28px;
+}
+
+.home-full {
+    height: calc(100vh - 80px);
+}
+
+
 /* responsive media query */
 @media (max-width: 1379px) {
+    .report-middle {
+        height: calc(100vh - 12rem);
+    }
+
     .world-map-doc {
         overflow-x: auto;
         width: 100%;
@@ -892,7 +1053,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .formation-no {
         font-size: 18px;
         margin: 0;
@@ -1189,7 +1350,6 @@ input.checkbox-custom[type=checkbox]:before {
         bottom: -11px;
     }
 
-    body .stones-inventory-mobile,
     body .main-menu.active .close-sign,
     body .laser-img.dummy-class {
         display: flex;
@@ -1203,26 +1363,6 @@ input.checkbox-custom[type=checkbox]:before {
     .space-mobile {
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .home-area {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .home-area .kgk-inventory {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        margin-top: 2rem;
-        gap: 3rem;
-        z-index: 99;
-        position: relative;
-    }
-
-    body .home-area .phone-skeleton {
-        transform: translateY(-11rem) !important;
     }
 
     .timeline {
@@ -1345,6 +1485,7 @@ input.checkbox-custom[type=checkbox]:before {
         border: none;
         box-shadow: none;
         margin: 0;
+        overflow: hidden;
     }
 
     .menu-li #dropdown-menu li {
@@ -1363,6 +1504,35 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 991px) {
+    .stones-inventory-mobile {
+        display: flex;
+    }
+
+    .home-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-area .kgk-inventory {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 3rem;
+        z-index: 99;
+        position: relative;
+    }
+
+    body .home-area .phone-skeleton {
+        transform: translateY(-11rem) !important;
+    }
+
+    .content-right .p-\[20px\] {
+        padding: 0;
+        box-shadow: none !important;
+    }
+
     .timeline li {
         opacity: 1;
     }
@@ -1810,6 +1980,18 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 600px) {
+    body .access-kgk {
+        padding-bottom: 40px;
+    }
+
+    .report-middle .report-main {
+        width: 280px;
+    }
+
+    .report-middle {
+        height: calc(100vh - 28rem);
+    }
+
     .scroll-image-block {
         width: 100%;
     }
@@ -1968,6 +2150,16 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 500px) {
+    footer {
+        position: relative;
+    }
+
+    .top-heading,
+    section:has(.timeline-image-bg) {
+        position: relative;
+        z-index: 2;
+    }
+
     button.tablinks {
         padding: 5px 10px;
     }
@@ -1985,6 +2177,10 @@ input.checkbox-custom[type=checkbox]:before {
 
     body .timeline-slider {
         right: 25px;
+        z-index: 1;
+        visibility: visible;
+        opacity: 1;
+        display: block !important;
     }
 
     body .shadow-image {

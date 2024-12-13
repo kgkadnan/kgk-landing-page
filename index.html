@@ -109,8 +109,8 @@
     <!-- header -->
 
     <!-- home section -->
-    <section class="overflow-hidden w-full flex justify-center pt-[80px] bg-[#FCFDFD]">
-        <div class="relative w-full" style="height: calc(100vh - 80px);">
+    <section class="overflow-hidden w-full flex justify-center pt-[80px] bg-[#FCFDFD] home-banner">
+        <div class="relative w-full home-full">
             <div class="flex justify-between relative xl:px-[112px] lg:px-[32px] home-area">
                 <!-- KGK Inventory Locations -->
                 <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
@@ -174,9 +174,9 @@
                 <!-- phone skeleton -->
                 <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="600">
                     <div class="phone-skeleton w-[460px] h-[1200px] bg-no-repeat bg-contain z-10 flex justify-center"
-                        style="background-image: url(static/images/phone-skeleton.png); z-index: 10 !important; transform: translateY(calc(-950px + 100vh));">
+                        style="background-image: url(static/images/phone-skeleton.png); z-index: 10 !important;">
                         <div class="slideanimate transition absolute transform -translate-x-1/2 w-[370px] h-[700px] overflow-hidden transition-transform duration-700 ease-in-out z-0 flex flex-col items-center"
-                            style="z-index: -1; transform: translateY(385px);">
+                            style="z-index: -1;">
                             <div class="slide-animation">
                                 <ul class="list-none p-0 transition-transform duration-700 ease-in-out"
                                     id="imageSlider">
@@ -290,6 +290,8 @@
             </div>
             <button class="videoplay cursor-pointer">
                 <img src="static/images/play.png" class="playbtn" alt=""
+                    style="color: transparent; box-shadow: var(--popups-shadow);display: none;" />
+                <img src="static/images/pause.png" class="Pausebtn" alt=""
                     style="color: transparent; box-shadow: var(--popups-shadow);" />
             </button>
         </div>
