@@ -3096,224 +3096,30 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (width: 540px),
-(height: 720px) {
-    body .access-kgk img {
-        height: 61px;
+@media (max-width:500px) {
+    body .home-area .kgk-inventory {
+        gap: 0;
+        margin: 0;
     }
 
     body .access-kgk p {
         font-size: 20px;
-        margin-bottom: 5px;
-    }
-
-    .phone-skeleton {
-        height: 395px;
-        width: 276px;
-    }
-
-    .firt-fold {
-        transform: scale(.8);
-        margin-top: -2rem;
-    }
-
-    .slideanimate {
-        transform: translateY(5.2rem);
-        width: calc(100% - 3.5rem);
-    }
-}
-
-@media (width: 480px),
-(height: 800px) {
-    body .access-kgk {
-        padding-bottom: 40px;
-    }
-
-    .phone-skeleton {
-        height: 440px;
-    }
-
-    body .home-area .kgk-inventory {
-        gap: 0;
-    }
-
-    body .stones-inventory {
-        margin: 4px 0;
-    }
-}
-
-@media (width: 430px),
-(height: 932px) {
-    .phone-skeleton {
-        transform: scale(1.2) translateY(-9px);
-    }
-}
-
-@media (width: 414px),
-(height: 736px) {
-    .phone-skeleton {
-        transform: translateY(5rem);
-    }
-
-    .slideanimate {
-        transform: translateY(6.5rem);
-    }
-
-    body .access-kgk img {
-        height: 55px;
-    }
-
-    body .access-kgk p {
-        font-size: 18px;
-        margin-bottom: 3px;
-    }
-
-    body .mobile-heading {
-        margin-bottom: 5px;
-    }
-
-    body .access-kgk {
-        padding-bottom: 30px;
-    }
-
-    body .home-area .kgk-inventory {
-        gap: 0;
         margin: 0;
-    }
-
-    body .stones-inventory {
-        margin: 0;
-    }
-}
-
-@media (width: 412px),
-(height: 915px) {
-    .phone-skeleton {
-        transform: scale(1.2) translateY(0);
-    }
-}
-
-@media (width: 390px),
-(height: 844px) {
-    .phone-skeleton {
-        transform: translateY(1rem);
-    }
-}
-
-@media (width: 375px),
-(height: 812px) {
-    .phone-skeleton {
-        transform: scale(1.5) translateY(-1rem);
-    }
-}
-
-@media (width: 375px),
-(height: 667px) {
-    body .mobile-heading {
-        margin-bottom: 0px;
-        font-size: 26px;
-    }
-
-    body .access-kgk p {
-        font-size: 18px;
-        margin-bottom: 2px;
     }
 
     body .access-kgk img {
         height: 60px;
-    }
-
-    .phone-skeleton {
-        width: 230px;
-        height: 316px;
-        transform: scale(1) translateY(0rem);
-    }
-
-    .slideanimate {
-        transform: translateY(4.5rem);
-        width: calc(100% - 3rem);
-    }
-
-    body .home-area .kgk-inventory {
-        margin: 0;
-        gap: 0px;
-    }
-
-    body .stones-inventory {
-        margin: 5px 0;
-    }
-}
-
-@media (width: 360px),
-(height: 740px) {
-    body .mobile-heading {
-        margin-bottom: 0px;
-        font-size: 26px;
-    }
-
-    body .access-kgk p {
-        font-size: 18px;
-        margin-bottom: 2px;
-    }
-
-    body .access-kgk img {
-        height: 60px;
-    }
-
-    .phone-skeleton {
-        width: 230px;
-        height: 294px;
-        transform: scale(1.2) translateY(-9px);
-    }
-
-    .slideanimate {
-        transform: translateY(4.5rem);
-        width: calc(100% - 3rem);
-    }
-
-    body .home-area .kgk-inventory {
-        margin: 0;
-        gap: 0px;
-    }
-
-    body .stones-inventory {
-        margin: 5px 0;
     }
 
     body .access-kgk {
         padding-bottom: 35px;
     }
 
-    .firt-fold {
-        transform: scale(.8) translateY(1rem);
-    }
-}
-
-@media (width: 320px),
-(height: 568px) {
-    body .access-kgk img {
-        height: 50px;
-    }
-
-    body .access-kgk p {
-        font-size: 16px;
-        margin: 4px 0;
-    }
-
-    body .mobile-heading {
-        font-size: 22px;
-        margin: 0;
-    }
-
-    body .access-kgk {
-        padding-bottom: 28px;
-    }
-
     .phone-skeleton {
-        transform: scale(.7) translateY(11rem);
+        height: 398px;
     }
 
-    .firt-fold {
-        transform: scale(.6) translateY(-5rem);
+    body .stones-inventory {
+        margin: 0;
     }
 }
