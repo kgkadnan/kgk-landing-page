@@ -76,6 +76,7 @@ pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
+
 small {
   font-size: 80%;
 }
@@ -3382,17 +3383,6 @@ input:-webkit-autofill:focus {
   animation: worldMapPulse 2s infinite;
 }
 
-@keyframes shimmer {
-
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: -200% 0;
-  }
-}
-
 .animate-shimmer {
   animation: shimmer 2s linear infinite;
 }
@@ -3401,6 +3391,17 @@ input:-webkit-autofill:focus {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -200% 0;
   }
 }
 

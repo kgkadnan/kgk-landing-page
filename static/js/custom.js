@@ -1,3 +1,13 @@
+// {{{{{{{{1}}}}}}}} for menubar
+document.addEventListener("DOMContentLoaded", function () {
+  const homeburg = document.querySelector(".homeburg");
+  if (homeburg) {
+    homeburg.addEventListener("click", function () {
+      document.querySelector(".main-menu").classList.toggle("active");
+    });
+  }
+});
+
 // for sticky Header
 let lastScrollTop = 0;
 window.addEventListener("scroll", function () {
@@ -13,15 +23,6 @@ window.addEventListener("scroll", function () {
 });
 
 // {{{{{{{{3}}}}}}}} for menubar
-document.addEventListener("DOMContentLoaded", function () {
-  const homeburg = document.querySelector(".homeburg");
-  if (homeburg) {
-    homeburg.addEventListener("click", function () {
-      document.querySelector(".main-menu").classList.toggle("active");
-    });
-  }
-});
-// {{{{{{{1}}}}}}} for lazer video effect
 const videoRef = document.querySelector("video");
 const progressDots = document.querySelectorAll(".dot");
 const steps = document.querySelectorAll(".step");
@@ -53,12 +54,34 @@ const handlePlayPause = () => {
     isPlaying = true;
     playPauseButtonToggle.querySelector(".playbtn").style.display = "none";
     playPauseButtonToggle.querySelector(".Pausebtn").style.display = "block";
+    playPauseButtonToggle.querySelector(".restartbtn").style.display = "none";
   } else {
     videoRef.pause();
     isPlaying = false;
     playPauseButtonToggle.querySelector(".playbtn").style.display = "block";
     playPauseButtonToggle.querySelector(".Pausebtn").style.display = "none";
+    playPauseButtonToggle.querySelector(".restartbtn").style.display = "none";
   }
+};
+
+// Handle Restart
+const handleRestart = () => {
+  videoRef.currentTime = 0;
+  videoRef.play();
+  isPlaying = true;
+
+  // Reset Progress and Classes
+  steps.forEach((step) => step.classList.remove("active"));
+  progressDots.forEach((dot) => dot.classList.remove("active"));
+  laserImages.forEach((laserImage) => laserImage.classList.remove("active"));
+
+  playPauseButtonToggle.querySelector(".playbtn").style.display = "none";
+  playPauseButtonToggle.querySelector(".Pausebtn").style.display = "block";
+  playPauseButtonToggle.querySelector(".restartbtn").style.display = "none";
+
+  // Activate the first step and laser image
+  if (steps[0]) steps[0].classList.add("active");
+  if (laserImages[0]) laserImages[0].classList.add("active");
 };
 
 // Handle Dot Click
@@ -79,7 +102,7 @@ const handleDotClick = (event) => {
   }
 };
 
-// Update progress bar inside dots
+// Update Dot Progress
 const updateDotProgress = () => {
   const currentTime = videoRef.currentTime;
 
@@ -104,7 +127,7 @@ const updateDotProgress = () => {
   });
 };
 
-// Update progress bar
+// Update Progress Bar
 const updateProgressBar = () => {
   const currentTime = videoRef.currentTime;
   const totalDuration = videoRef.duration;
@@ -173,32 +196,37 @@ const updateProgressBar = () => {
   });
 
   updateDotProgress();
+};
 
-  if (currentTime >= totalDuration) {
+// Handle Video End Event
+const handleVideoEnd = () => {
+  isPlaying = false;
+
+  // Show Restart Button
+  playPauseButtonToggle.querySelector(".restartbtn").style.display = "block";
+  playPauseButtonToggle.querySelector(".Pausebtn").style.display = "none";
+  playPauseButtonToggle.querySelector(".playbtn").style.display = "none";
+
+  // Activate the last step and dot
+  if (steps.length > 0) {
     steps.forEach((step) => step.classList.remove("active"));
-    steps[0].classList.add("active");
+    steps[steps.length - 1].classList.add("active");
+  }
 
-    laserImages[0].classList.add("active");
-    laserImages[0].classList.add("dummy-class");
+  if (progressDots.length > 0) {
+    progressDots.forEach((dot) => dot.classList.remove("active"));
+    const lastDot = progressDots[progressDots.length - 1];
+    lastDot.classList.add("active");
 
-    if (laserImages[1]) {
-      laserImages[1].classList.add("next-dummy-class");
+    const progressBar = lastDot.querySelector(".progress-bar-line");
+    if (progressBar) {
+      progressBar.style.width = "100%";
     }
   }
 };
 
-// Play/pause button click handler
-const handlePlayPauseButtonClick = () => {
-  handlePlayPause();
-};
-
-const observerOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5,
-};
-
-const videoObserver = new IntersectionObserver((entries) => {
+// Intersection Observer for play/pause based on visibility
+const handleIntersection = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       if (videoRef.paused) {
@@ -212,24 +240,35 @@ const videoObserver = new IntersectionObserver((entries) => {
       }
     }
   });
-}, observerOptions);
+};
 
-// Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   if (videoRef) {
+    // Create and observe video element when it is valid
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+    observer.observe(videoRef);
+
     videoRef.addEventListener("click", handlePlayPause);
     videoRef.addEventListener("timeupdate", updateProgressBar);
-    videoObserver.observe(videoRef);
+    videoRef.addEventListener("ended", handleVideoEnd);
   }
 
   if (playPauseButtonToggle) {
-    playPauseButtonToggle.addEventListener("click", handlePlayPauseButtonClick);
+    playPauseButtonToggle.addEventListener("click", (event) => {
+      if (event.target.classList.contains("restartbtn")) {
+        handleRestart();
+      } else {
+        handlePlayPause();
+      }
+    });
   }
 
   progressDots.forEach((dot) => {
     dot.addEventListener("click", handleDotClick);
   });
 });
+
+
 
 // {{{{{{{2}}}}}}} for glob video
 const videoElement = document.querySelector(".video-globe");
@@ -368,27 +407,6 @@ function openTab(evt, cityName) {
 }
 // <!-- tabination js -->
 
-// {{{{{{{8}}}}}}} menu active
-document.addEventListener("DOMContentLoaded", function () {
-  const homeburg = document.querySelector(".homeburg");
-  const menuOverlay = document.querySelector(".menu-overlay");
-  const navbar = document.querySelector(".navbar");
-
-  if (homeburg && menuOverlay && navbar) {
-    homeburg.addEventListener("click", function () {
-      this.classList.toggle("active");
-      menuOverlay.classList.toggle("active");
-      navbar.classList.toggle("active");
-    });
-
-    menuOverlay.addEventListener("click", function () {
-      this.classList.remove("active");
-      homeburg.classList.remove("active");
-      navbar.classList.remove("active");
-    });
-  }
-});
-
 // menu active link
 var currentPath = window.location.pathname;
 var menuLinks = document.querySelectorAll(".menu-link");
@@ -405,13 +423,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".copyPaste").forEach((copyButton) => {
     const tooltip = copyButton.nextElementSibling;
     const svg = tooltip.querySelector("svg");
-    const textElement = copyButton.previousElementSibling.querySelector(".copyedText");
+    const textElement =
+      copyButton.previousElementSibling.querySelector(".copyedText");
 
     const toggleTooltip = () => {
       const isVisible = tooltip.classList.contains("visible");
-      tooltip.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
-      tooltip.style.transform = isVisible ? 'translateX(100%)' : 'translateY(0)';
-      tooltip.style.opacity = isVisible ? '0' : '1';
+      tooltip.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+      tooltip.style.transform = isVisible
+        ? "translateX(100%)"
+        : "translateY(0)";
+      tooltip.style.opacity = isVisible ? "0" : "1";
       tooltip.classList.toggle("visible", !isVisible);
       setTimeout(() => tooltip.classList.toggle("hidden", isVisible), 300);
     };
@@ -435,7 +456,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 
 // world map location
 document.querySelectorAll(".kgk-locate").forEach((element) => {
@@ -483,40 +503,48 @@ showHideIcons.forEach((icon, index) => {
 
 /// for top head animation text H1tag
 document.addEventListener("DOMContentLoaded", () => {
-  const textElement = document.querySelector(".typing-text");
-  const lines = textElement.querySelectorAll(".line");
-  let delay = 0;
-  lines.forEach((line, lineIndex) => {
-    const text = line.textContent;
-    line.textContent = "";
+  const observer = new MutationObserver(() => {
+    const textElement = document.querySelector(".typing-text");
+    if (textElement) {
+      observer.disconnect(); // Stop observing after the element is found
 
-    setTimeout(() => {
-      line.style.opacity = 1;
-    }, delay + lineIndex * 10);
+      const lines = textElement.querySelectorAll(".line");
+      let delay = 0;
+      lines.forEach((line, lineIndex) => {
+        const text = line.textContent;
+        line.textContent = "";
 
-    const letters = text.split("");
-    letters.forEach((letter, index) => {
-      const letterSpan = document.createElement("span");
-      letterSpan.textContent = letter;
-      line.appendChild(letterSpan);
+        setTimeout(() => {
+          line.style.opacity = 1;
+        }, delay + lineIndex * 10);
 
-      setTimeout(() => {
-        letterSpan.style.opacity = 1;
-      }, delay + lineIndex * 10 + index * 40);
-    });
+        const letters = text.split("");
+        letters.forEach((letter, index) => {
+          const letterSpan = document.createElement("span");
+          letterSpan.textContent = letter;
+          line.appendChild(letterSpan);
 
-    delay += text.length * 40;
+          setTimeout(() => {
+            letterSpan.style.opacity = 1;
+          }, delay + lineIndex * 10 + index * 40);
+        });
+
+        delay += text.length * 40;
+      });
+    }
   });
+
+  // Start observing for added child nodes
+  observer.observe(document.body, { childList: true, subtree: true });
 });
 
 // for top head animation text P tag
 document.addEventListener("DOMContentLoaded", () => {
   const paragraphElement = document.querySelector(".ptag");
+  if (!paragraphElement) return;
   const text = paragraphElement.textContent;
   paragraphElement.textContent = "";
-
   let delay = 0;
-
   const letters = text.split("");
   letters.forEach((letter, index) => {
     const letterSpan = document.createElement("span");

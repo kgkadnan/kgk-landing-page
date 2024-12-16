@@ -93,7 +93,7 @@
                             Login
                         </a>
                         <a href="register.html"
-                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
+                            class="inline-flex h-12 animate-shimmer items-center justify-center rounded-[8px] text-white border-[3px] border-solid border-transparent border-image-[linear-gradient(90deg, grey, white, grey) 2]' bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)] focus:ring-offset-slate-50 !rounded-[8px] w-[120px] h-[44px] text-[16px]">
                             Register
                         </a>
                     </div>
@@ -110,139 +110,131 @@
     <!-- home section -->
     <section class="overflow-hidden w-full flex justify-center pt-[80px] bg-[#FCFDFD] home-banner">
         <div class="relative w-full home-full">
-            <div class="flex justify-between relative xl:px-[112px] lg:px-[32px] home-area">
-                <!-- KGK Inventory Locations -->
-                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
-                    class="mt-4 space-mobile flex flex-col gap-4 w-[250px] kgk-inventory">
-                    <p class="head-p text-[32px] font-semiBold text-neutral900 leading-[36px]">
-                        KGK Inventory Locations
-                    </p>
-                    <div class="country-lights flex gap-4 flex-wrap">
-                        <div class="w-fit flex justify-center flex-col items-center">
-                            <div class="w-[44px] h-[44px]">
-                                <img alt="U.S." loading="lazy" width="44" height="28" decoding="async" data-nimg="1"
-                                    style="color: transparent;" src="static/images/usa-svg.png" />
-                            </div>
-                            <p class="text-[20px] text-neutral900">U.S.</p>
-                        </div>
-                        <div class="w-fit flex justify-center flex-col items-center">
-                            <div class="w-[44px] h-[44px]">
-                                <img alt="INDIA" loading="lazy" width="44" height="44" decoding="async" data-nimg="1"
-                                    style="color: transparent;" src="static/images/india-svg.png" />
-                            </div>
-                            <p class="text-[20px] text-neutral900">INDIA</p>
-                        </div>
-                        <div class="w-fit flex justify-center flex-col items-center">
-                            <div class="w-[44px] h-[44px]">
-                                <img alt="BELGIUM" loading="lazy" width="44" height="38" decoding="async" data-nimg="1"
-                                    style="color: transparent;" src="static/images/belgium-svg.png" />
-                            </div>
-                            <p class="text-[20px] text-neutral900">BELGIUM</p>
-                        </div>
-                        <div class="w-fit flex justify-center flex-col items-center">
-                            <div class="w-[44px] h-[44px]">
-                                <img alt="UAE" loading="lazy" width="44" height="36" decoding="async" data-nimg="1"
-                                    style="color: transparent;" src="static/images/dubai-svg.png" />
-                            </div>
-                            <p class="text-[20px] text-neutral900">UAE</p>
-                        </div>
-                        <div class="w-fit flex justify-center flex-col items-center">
-                            <div class="w-[44px] h-[44px]">
-                                <img alt="HONG KONG" loading="lazy" width="45" height="33" decoding="async"
-                                    data-nimg="1" style="color: transparent;" src="static/images/hongkong.png" />
-                            </div>
-                            <p class="text-[20px] text-neutral900">HONG KONG</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- KGK Inventory Locations -->
+            <div class="flex relative xl:px-[112px] lg:px-[32px] home-area">
 
-                <!-- Stones in Inventory this is use in mobile only -->
-                <div style="z-index: 2;" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="400"
-                    class="text-neutral900 w-[250px] stones-inventory stones-inventory-mobile">
-                    <div class="flex flex-col text-neutral900">
-                        <span class="text-[48px] font-semiBold w-fit"
-                            style="background: linear-gradient(90deg, #dbf2fc, #e8e8ff, #fff4e3); padding: 4px 8px; border-radius: 4px; background-color: transparent;">50K+</span>
-                        <p class="text-[20px] text-neutral900 pl-2">
-                            Stones in Inventory
+                <div class="firt-fold flex justify-between relative">
+                    <!-- KGK Inventory Locations -->
+                    <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                        class="mt-4 space-mobile flex flex-col gap-4 w-[250px] kgk-inventory">
+                        <p class="head-p text-[32px] font-semiBold text-neutral900 leading-[36px]">
+                            KGK Inventory Locations
                         </p>
-                    </div>
-                </div>
-                <!-- Stones in Inventory this is use in mobile only -->
-
-                <!-- phone skeleton -->
-                <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="600">
-                    <div class="phone-skeleton w-[460px] h-[1200px] bg-no-repeat bg-contain z-10 flex justify-center"
-                        style="background-image: url(static/images/phone-skeleton.png); z-index: 10 !important;">
-                        <div class="slideanimate transition absolute transform -translate-x-1/2 w-[370px] h-[700px] overflow-hidden transition-transform duration-700 ease-in-out z-0 flex flex-col items-center"
-                            style="z-index: -1;">
-                            <div class="slide-animation">
-                                <ul class="list-none p-0 transition-transform duration-700 ease-in-out"
-                                    id="imageSlider">
-                                    <li>
-                                        <img src="static/images/usa.png" alt="Slide 1"
-                                            class="w-full mx-auto py-[6px]" />
-                                    </li>
-                                    <li>
-                                        <img src="static/images/india.png" alt="Slide 2"
-                                            class="w-full mx-auto py-[6px]" />
-                                    </li>
-                                    <li>
-                                        <img src="static/images/belgium.png" alt="Slide 3"
-                                            class="w-full mx-auto py-[6px]" />
-                                    </li>
-                                    <li>
-                                        <img src="static/images/hongkong-1.png" alt="Slide 4"
-                                            class="w-full mx-auto py-[6px]" />
-                                    </li>
-                                    <li>
-                                        <img src="static/images/dubai.png" alt="Slide 5"
-                                            class="w-full mx-auto py-[6px]" />
-                                    </li>
-                                </ul>
+                        <div class="country-lights flex gap-4 flex-wrap">
+                            <div class="w-fit flex justify-center flex-col items-center">
+                                <div class="w-[44px] h-[44px]">
+                                    <img alt="U.S." loading="lazy" width="44" height="28" decoding="async" data-nimg="1"
+                                        style="color: transparent;" src="static/images/usa-svg.png" />
+                                </div>
+                                <p class="text-[20px] text-neutral900">U.S.</p>
+                            </div>
+                            <div class="w-fit flex justify-center flex-col items-center">
+                                <div class="w-[44px] h-[44px]">
+                                    <img alt="INDIA" loading="lazy" width="44" height="44" decoding="async"
+                                        data-nimg="1" style="color: transparent;" src="static/images/india-svg.png" />
+                                </div>
+                                <p class="text-[20px] text-neutral900">INDIA</p>
+                            </div>
+                            <div class="w-fit flex justify-center flex-col items-center">
+                                <div class="w-[44px] h-[44px]">
+                                    <img alt="BELGIUM" loading="lazy" width="44" height="38" decoding="async"
+                                        data-nimg="1" style="color: transparent;" src="static/images/belgium-svg.png" />
+                                </div>
+                                <p class="text-[20px] text-neutral900">BELGIUM</p>
+                            </div>
+                            <div class="w-fit flex justify-center flex-col items-center">
+                                <div class="w-[44px] h-[44px]">
+                                    <img alt="UAE" loading="lazy" width="44" height="36" decoding="async" data-nimg="1"
+                                        style="color: transparent;" src="static/images/dubai-svg.png" />
+                                </div>
+                                <p class="text-[20px] text-neutral900">UAE</p>
+                            </div>
+                            <div class="w-fit flex justify-center flex-col items-center">
+                                <div class="w-[44px] h-[44px]">
+                                    <img alt="HONG KONG" loading="lazy" width="45" height="33" decoding="async"
+                                        data-nimg="1" style="color: transparent;" src="static/images/hongkong.png" />
+                                </div>
+                                <p class="text-[20px] text-neutral900">HONG KONG</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- phone skeleton -->
+                    <!-- KGK Inventory Locations -->
 
-                <!-- Stones in Inventory -->
-                <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0"
-                    class="text-neutral900 w-[250px] stones-inventory">
-                    <div class="flex flex-col text-neutral900">
-                        <span class="text-[48px] font-semiBold w-fit"
-                            style="background: linear-gradient(90deg, #dbf2fc, #e8e8ff, #fff4e3); padding: 4px 8px; border-radius: 4px; background-color: transparent;">50K+</span>
-                        <p class="text-[20px] text-neutral900 pl-2">
-                            Stones in Inventory
-                        </p>
+                    <!-- Stones in Inventory this is use in mobile only -->
+                    <div style="z-index: 2;" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="400"
+                        class="text-neutral900 w-[250px] stones-inventory stones-inventory-mobile">
+                        <div class="flex flex-col text-neutral900">
+                            <span class="text-[48px] font-semiBold w-fit"
+                                style="background: linear-gradient(90deg, #dbf2fc, #e8e8ff, #fff4e3); padding: 4px 8px; border-radius: 4px; background-color: transparent;">50K+</span>
+                            <p class="text-[20px] text-neutral900 pl-2">
+                                Stones in Inventory
+                            </p>
+                        </div>
                     </div>
+                    <!-- Stones in Inventory this is use in mobile only -->
                 </div>
-                <!-- Stones in Inventory -->
-            </div>
 
-            <!-- Access KGK’s Global Diamond Inventory -->
-            <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="1200"
-                class="access-kgk xl:h-[240px] lg:h-[180px] absolute bottom-0 w-full text-center bg-white flex justify-center shadow-lg"
-                style="z-index: 10; box-shadow: 0 4px 20px rgba(44, 110, 110, 0.38);">
-                <div class="bg-white pt-5 h-full relative flex flex-col justify-center items-center">
-                    <h1
-                        class="mobile-heading-hide xl:text-[52px] lg:text-[42px] text-neutral900 font-black leading-[48px] text-[35px]">
-                        Access KGK’s Global Diamond Inventory
-                    </h1>
-                    <h1 class="mobile-heading text-neutral900 font-black leading-[48px] text-[35px]">
-                        A Trusted Brand for Businesses Globally
-                    </h1>
-                    <p class="xl:text-[36px] lg:text-[28px] text-neutral900 mb-[20px] font-semiBold">
-                        Create a Guest Account
-                    </p>
-                    <a href="register.html">
-                        <img alt="explore now" loading="lazy" width="276" height="92" decoding="async" data-nimg="1"
-                            class="cursor-pointer lg:w-[224px]" style="color: transparent;"
-                            src="static/images/explore.png" />
-                    </a>
+                <div class="phone-section">
+                    <!-- phone skeleton -->
+                    <div data-aos="fade-up" data-aos-delay="800">
+                        <div class="phone-skeleton bg-no-repeat bg-contain z-10 flex justify-center"
+                            style="background-image: url(static/images/phone-skeleton.png); z-index: 10 !important;">
+                            <div class="slideanimate transition absolute transform -translate-x-1/2 w-[370px] h-[700px] overflow-hidden transition-transform duration-700 ease-in-out z-0 flex flex-col items-center"
+                                style="z-index: -1;">
+                                <div class="slide-animation">
+                                    <ul class="list-none p-0 transition-transform duration-700 ease-in-out"
+                                        id="imageSlider">
+                                        <li>
+                                            <img src="static/images/usa.png" alt="Slide 1"
+                                                class="w-full mx-auto py-[6px]" />
+                                        </li>
+                                        <li>
+                                            <img src="static/images/india.png" alt="Slide 2"
+                                                class="w-full mx-auto py-[6px]" />
+                                        </li>
+                                        <li>
+                                            <img src="static/images/belgium.png" alt="Slide 3"
+                                                class="w-full mx-auto py-[6px]" />
+                                        </li>
+                                        <li>
+                                            <img src="static/images/hongkong-1.png" alt="Slide 4"
+                                                class="w-full mx-auto py-[6px]" />
+                                        </li>
+                                        <li>
+                                            <img src="static/images/dubai.png" alt="Slide 5"
+                                                class="w-full mx-auto py-[6px]" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- phone skeleton -->
+
+                    <!-- Access KGK’s Global Diamond Inventory -->
+                    <div data-aos="fade-up" data-aos-delay="600"
+                        class="access-kgk xl:h-[240px] lg:h-[180px] absolute bottom-0 w-full text-center bg-white flex justify-center shadow-lg"
+                        style="z-index: 10; box-shadow: 0 4px 20px rgba(44, 110, 110, 0.38);">
+                        <div class="bg-white pt-5 h-full relative flex flex-col justify-center items-center">
+                            <h1
+                                class="mobile-heading-hide xl:text-[52px] lg:text-[42px] text-neutral900 font-black leading-[48px] text-[35px]">
+                                Access KGK’s Global Diamond Inventory
+                            </h1>
+                            <h1 class="mobile-heading text-neutral900 font-black leading-[48px] text-[35px]">
+                                A Trusted Brand for Businesses Globally
+                            </h1>
+                            <p class="xl:text-[36px] lg:text-[28px] text-neutral900 mb-[20px] font-semiBold">
+                                Create a Guest Account
+                            </p>
+                            <a href="register.html">
+                                <img alt="explore now" loading="lazy" width="276" height="92" decoding="async"
+                                    data-nimg="1" class="cursor-pointer lg:w-[224px]" style="color: transparent;"
+                                    src="static/images/explore.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Access KGK’s Global Diamond Inventory -->
                 </div>
             </div>
-            <!-- Access KGK’s Global Diamond Inventory -->
         </div>
     </section>
     <!-- home section -->
@@ -271,13 +263,11 @@
 
     <!-- video steps -->
     <section class="steps-lazer relative flex flex-col items-center justify-center w-full h-full">
-        <div>
-            <video id="video" class="w-full h-full object-cover cursor-pointer" autoplay preload="auto" muted
-                playsinline>
-                <source src="static/videos/traceability.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </div>
+        <video id="video" class="w-full h-full object-cover cursor-pointer" autoplay preload="auto" muted
+            playsinline>
+            <source src="static/videos/traceability.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
         <div class="controls bottom-14 absolute flex gap-4">
             <div class="progress-bar flex justify-between gap-4 flex items-center h-[38px] border-[white] rounded-[8px] border-[1px] min-w-[150px]"
                 style="box-shadow: var(--popups-shadow);">
@@ -302,6 +292,8 @@
                     style="color: transparent; box-shadow: var(--popups-shadow);display: none;" />
                 <img src="static/images/pause.png" class="Pausebtn" alt=""
                     style="color: transparent; box-shadow: var(--popups-shadow);" />
+                <img src="static/images/restart.png" class="restartbtn" alt=""
+                    style="color: transparent; box-shadow: var(--popups-shadow);display: none" />
             </button>
         </div>
         <div

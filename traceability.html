@@ -93,7 +93,7 @@
                             Login
                         </a>
                         <a href="register.html"
-                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
+                            class="inline-flex h-12 animate-shimmer items-center justify-center rounded-[8px] text-white border-[3px] border-solid border-transparent border-image-[linear-gradient(90deg, grey, white, grey) 2]' bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)] focus:ring-offset-slate-50 !rounded-[8px] w-[120px] h-[44px] text-[16px]">
                             Register
                         </a>
                     </div>
@@ -138,13 +138,11 @@
 
     <!-- video steps -->
     <section class="steps-lazer relative flex flex-col items-center justify-center w-full h-full">
-        <div>
-            <video id="video" class="w-full h-full object-cover cursor-pointer" autoplay preload="auto" muted
-                playsinline>
-                <source src="static/videos/traceability.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </div>
+        <video id="video" class="w-full h-full object-cover cursor-pointer" autoplay preload="auto" muted
+            playsinline>
+            <source src="static/videos/traceability.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
         <div class="controls bottom-14 absolute flex gap-4">
             <div class="progress-bar flex justify-between gap-4 flex items-center h-[38px] border-[white] rounded-[8px] border-[1px] min-w-[150px]"
                 style="box-shadow: var(--popups-shadow);">
@@ -169,6 +167,8 @@
                     style="color: transparent; box-shadow: var(--popups-shadow);display: none;" />
                 <img src="static/images/pause.png" class="Pausebtn" alt=""
                     style="color: transparent; box-shadow: var(--popups-shadow);" />
+                <img src="static/images/restart.png" class="restartbtn" alt=""
+                    style="color: transparent; box-shadow: var(--popups-shadow);display: none" />
             </button>
         </div>
         <div
