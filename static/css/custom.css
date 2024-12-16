@@ -1293,7 +1293,8 @@ input.checkbox-custom[type=checkbox]:before {
 .slide-image img {
     width: 100%;
 }
-.shadow-image{
+
+.shadow-image {
     transition: none !important;
 }
 
@@ -2879,7 +2880,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 
     .phone-skeleton {
-        transform: scale(3.5) translateY(-31px);
+        transform: scale(2) translateY(-78px);
     }
 
     body .access-kgk p {
@@ -3056,6 +3057,45 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
+@media (width: 750px),
+(height: 1334px) {
+    :root {
+        --height: 24rem;
+    }
+
+    body .mobile-heading {
+        font-size: 4rem;
+    }
+
+    body .access-kgk p {
+        font-size: 2rem;
+        margin: 10px 0 15px;
+    }
+
+    .access-kgk {
+        padding-bottom: 50px;
+    }
+
+    .phone-skeleton {
+        transform: scale(1.4) translateY(-35px);
+    }
+
+    .firt-fold {
+        transform: scale(1.5) translateY(47px);
+    }
+}
+
+@media (width: 640px),
+(height: 1136px) {
+    .phone-skeleton {
+        transform: scale(1.2) translateY(-18px);
+    }
+
+    .firt-fold {
+        transform: scale(1.5) translateY(32px);
+    }
+}
+
 @media (width: 540px),
 (height: 720px) {
     body .access-kgk img {
@@ -3083,6 +3123,25 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
+@media (width: 480px),
+(height: 800px) {
+    body .access-kgk {
+        padding-bottom: 40px;
+    }
+
+    .phone-skeleton {
+        height: 440px;
+    }
+
+    body .home-area .kgk-inventory {
+        gap: 0;
+    }
+
+    body .stones-inventory {
+        margin: 4px 0;
+    }
+}
+
 @media (width: 430px),
 (height: 932px) {
     .phone-skeleton {
@@ -3091,20 +3150,53 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (width: 414px),
-(height: 896px) {
+(height: 736px) {
     .phone-skeleton {
-        transform: scale(1.1) translateY(-9px);
+        transform: translateY(5rem);
     }
 
     .slideanimate {
         transform: translateY(6.5rem);
+    }
+
+    body .access-kgk img {
+        height: 55px;
+    }
+
+    body .access-kgk p {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+
+    body .mobile-heading {
+        margin-bottom: 5px;
+    }
+
+    body .access-kgk {
+        padding-bottom: 30px;
+    }
+
+    body .home-area .kgk-inventory {
+        gap: 0;
+        margin: 0;
+    }
+
+    body .stones-inventory {
+        margin: 0;
     }
 }
 
 @media (width: 412px),
 (height: 915px) {
     .phone-skeleton {
-        transform: scale(1.2) translateY(-9px);
+        transform: scale(1.2) translateY(0);
+    }
+}
+
+@media (width: 390px),
+(height: 844px) {
+    .phone-skeleton {
+        transform: translateY(1rem);
     }
 }
 
@@ -3170,8 +3262,8 @@ input.checkbox-custom[type=checkbox]:before {
 
     .phone-skeleton {
         width: 230px;
-        height: 316px;
-        transform: scale(1.3) translateY(-16px);
+        height: 294px;
+        transform: scale(1.2) translateY(-9px);
     }
 
     .slideanimate {
@@ -3186,6 +3278,14 @@ input.checkbox-custom[type=checkbox]:before {
 
     body .stones-inventory {
         margin: 5px 0;
+    }
+
+    body .access-kgk {
+        padding-bottom: 35px;
+    }
+
+    .firt-fold {
+        transform: scale(.8) translateY(1rem);
     }
 }
 
