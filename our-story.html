@@ -14,8 +14,7 @@
 
 <body class="main-body">
     <!-- header -->
-    <header
-        class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0 space-mobile">
+    <header class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0">
         <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
             <!-- Navigation Section -->
             <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
@@ -137,9 +136,9 @@
     <!-- heading animation section -->
 
     <!-- image zoom section -->
-    <section class="relative z-10" style="clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%); overflow: hidden;">
-        <div class="w-full timeline-animate-zoom timeline-image- data-aos=" fade-up" data-aos-easing="ease-in-back"
-            data-aos-delay="200" bg">
+    <section class="imaze-zoom relative z-10"
+        style="clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%); overflow: hidden;">
+        <div class="w-full timeline-animate-zoom timeline-image-mock">
             <img alt="Timeline banner" loading="lazy" width="1280" height="912" decoding="async" data-nimg="1"
                 class="w-full h-[105vh] asset" style="color: transparent; z-index: 1;object-fit: cover;"
                 src="static/images/timeline-banner.png" />
@@ -842,7 +841,8 @@
                                             data-nimg="1" src="static/images/mail.png" />
                                     </div>
 
-                                    <p id="copyedText" class="text-neutral600 text-lRegular copyedText">ajay.ghiya@kgkmail.com</p>
+                                    <p id="copyedText" class="text-neutral600 text-lRegular copyedText">
+                                        ajay.ghiya@kgkmail.com</p>
                                 </a>
                                 <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
                                     class="cursor-pointer copyPaste" src="static/images/contact_us/copy.svg">
@@ -910,12 +910,13 @@
 
             function isElementInViewport(el) {
                 var rect = el.getBoundingClientRect();
+                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                var windowWidth = window.innerWidth || document.documentElement.clientWidth;
                 return (
                     rect.top >= 0 &&
                     rect.left >= 0 &&
-                    rect.bottom <=
-                    (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    rect.bottom <= windowHeight &&
+                    rect.right <= windowWidth
                 );
             }
 
@@ -929,7 +930,12 @@
                     if (isElementInViewport(items[i])) {
                         items[i].classList.add("in-view");
                         var year = items[i].getAttribute("data-year");
-                        currentYearDisplay.textContent = "" + year; // Update the year display
+
+                        if (currentYearDisplay) {
+                            currentYearDisplay.textContent = year;
+                            console.log("Current Year: " + year);
+                        }
+
                         currentIndex = i;
                         isItemInView = true;
                         break;
@@ -954,15 +960,26 @@
                     var itemOffsetTop = targetItem.offsetTop;
                     var scrollPosition = itemOffsetTop - (window.innerHeight - itemHeight) / 2;
 
-                    window.scrollTo({
-                        top: scrollPosition,
-                        behavior: "smooth",
-                    });
+                    if ('scrollBehavior' in document.documentElement.style) {
+                        window.scrollTo({
+                            top: scrollPosition,
+                            behavior: "smooth"
+                        });
+                    } else {
+                        window.scrollTo(0, scrollPosition);
+                    }
                 }
             }
 
             if (prevBtn) {
                 prevBtn.addEventListener("click", function () {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                        updateInView();
+                    }
+                });
+                prevBtn.addEventListener("touchend", function () {
                     if (currentIndex > 0) {
                         currentIndex--;
                         updateSlider();
@@ -979,9 +996,24 @@
                         updateInView();
                     }
                 });
+                nextBtn.addEventListener("touchend", function () {
+                    if (currentIndex < items.length - 1) {
+                        currentIndex++;
+                        updateSlider();
+                        updateInView();
+                    }
+                });
             }
-            window.addEventListener("scroll", updateInView);
-            window.addEventListener("resize", updateInView);
+
+            function debounce(fn, delay) {
+                let timeout;
+                return function () {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(fn, delay);
+                };
+            }
+            window.addEventListener("scroll", debounce(updateInView, 100));
+            window.addEventListener("resize", debounce(updateInView, 100));
             window.addEventListener("load", updateInView);
             updateInView();
         })();

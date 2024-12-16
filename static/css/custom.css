@@ -417,6 +417,8 @@ body .this-mobile {
     -webkit-transform: translateY(300px);
     -ms-transform: translateY(300px);
     transform: translateY(300px);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* for sticky header */
@@ -1241,7 +1243,12 @@ input.checkbox-custom[type=checkbox]:before {
     width: 100%;
 }
 
-.iti.iti--allow-dropdown input {
+.iti__search-input {
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 36px !important;
     border-radius: 4px;
     -webkit-box-shadow: inset 1px 1px 4px rgba(0, 0, 0, .2);
     box-shadow: inset 1px 1px 4px rgba(0, 0, 0, .2);
@@ -1249,12 +1256,8 @@ input.checkbox-custom[type=checkbox]:before {
     margin-bottom: 10px;
 }
 
-.iti__search-input {
-    background-image: url(../images/search.png);
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-    padding-right: 36px !important;
+.iti--fullscreen-popup .iti__dropdown-content {
+    padding: 10px;
 }
 
 /* responsive media query */
@@ -1284,6 +1287,20 @@ input.checkbox-custom[type=checkbox]:before {
     .set-full {
         width: 100%;
     }
+
+    .timeline-image-mock img {
+        height: 100%;
+    }
+
+    .timeline-heading {
+        top: auto;
+    }
+
+    .imaze-zoom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1293,6 +1310,10 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 1023px) {
+    .main-menu {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
     .top-heading,
     footer {
@@ -1610,7 +1631,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 
     .video-container {
-        padding: 10px;
+        padding: 10px !important;
     }
 
     .video-globe {
@@ -1842,6 +1863,14 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 991px) {
+    .top-heading-panel .ptag {
+        width: 100%;
+    }
+
+    .mini-heading .h1title {
+        line-height: normal !important;
+    }
+
     .stones-inventory-mobile {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2419,6 +2448,30 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 600px) {
+
+    .video-control-play img,
+    .video-control-pause img {
+        width: auto;
+        height: 25px;
+    }
+
+    .video-globe {
+        border-radius: 6px !important;
+    }
+
+    .timeline-image-mock {
+        height: 100%;
+        min-height: 400px;
+    }
+
+    .timeline-image-mock img {
+        height: 400px;
+    }
+
+    .imaze-zoom {
+        min-height: 400px;
+    }
+
     body .access-kgk {
         padding-bottom: 55px;
     }
@@ -2642,9 +2695,6 @@ input.checkbox-custom[type=checkbox]:before {
     body .timeline-slider {
         right: 25px;
         z-index: 1;
-        visibility: visible;
-        opacity: 1;
-        display: block !important;
     }
 
     body .shadow-image {
@@ -2671,6 +2721,7 @@ input.checkbox-custom[type=checkbox]:before {
     body .timeline-image,
     body .shadow-image {
         width: 270px;
+        height: 190px;
     }
 
     body .timeline-text {
