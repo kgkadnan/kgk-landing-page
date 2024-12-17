@@ -1369,6 +1369,21 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
+@media (max-width: 1550px) {
+    .firt-fold {
+        zoom: .7;
+    }
+
+    body .access-kgk {
+        zoom: .7;
+        transform: none;
+    }
+
+    .phone-skeleton {
+        zoom: .9;
+    }
+}
+
 @media (max-width: 1379px) {
     .towards-heading {
         line-height: normal;
@@ -2547,7 +2562,17 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 600px) {
+    .firt-fold {
+        zoom: 1;
+    }
 
+    body .access-kgk {
+        zoom: 1;
+    }
+
+    .phone-skeleton {
+        zoom: 1;
+    }
     .video-control-play img,
     .video-control-pause img {
         width: auto;
