@@ -1332,6 +1332,42 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
+@media (max-width: 1600px) {
+    .firt-fold {
+        transform: translateY(2rem);
+    }
+
+    body .access-kgk {
+        height: auto;
+        padding: 0;
+    }
+
+    .phone-skeleton {
+        transform: scale(.8) translateY(1rem);
+    }
+
+    .slideanimate {
+        width: calc(100% - 5.5rem);
+    }
+
+    body .home-area .kgk-inventory,
+    body .stones-inventory {
+        margin-top: 1rem;
+    }
+
+    body .access-kgk p {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    .access-kgk {
+        padding-top: 2rem;
+    }
+
+    .phone-skeleton {
+        transform: scale(1) translateY(0rem);
+    }
+}
 
 @media (max-width: 1379px) {
     .towards-heading {
@@ -2732,7 +2768,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 1368px) {
+@media (max-width: 500px) and (height: 1368px) {
     :root {
         --height: 460px;
     }
@@ -2766,7 +2802,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 1366px) {
+@media (max-width: 500px) and (height: 1366px) {
     .firt-fold {
         margin-top: 2rem;
     }
@@ -2786,7 +2822,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 1280px) {
+@media (max-width: 500px) and (height: 1280px) {
     :root {
         --height: 460px;
     }
@@ -2820,7 +2856,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 1194px) {
+@media (max-width: 500px) and (height: 1194px) {
     .phone-skeleton {
         transform: scale(1.4) translateY(-35px);
     }
@@ -2830,7 +2866,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 1180px) {
+@media (max-width: 500px) and (height: 1180px) {
     .phone-skeleton {
         transform: scale(1.4) translateY(-35px);
     }
@@ -2840,7 +2876,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 1080px) {
+@media (max-width: 500px) and (height: 1080px) {
     .phone-skeleton {
         transform: scale(1.4) translateY(0px);
     }
@@ -2850,27 +2886,28 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 1024px) {
+@media (max-width: 500px) and (height: 1024px) {
     .phone-skeleton {
         transform: scale(1.4) translateY(-35px);
     }
 }
 
-@media (height: 932px) {
+@media (max-width: 500px) and (height: 932px) {
     .phone-skeleton {
         transform: scale(1.2) translateY(0);
     }
 }
 
-@media (max-height: 920px) {
+@media (max-width: 500px) and (max-height: 920px) {
     body .access-kgk p {
         font-size: 20px;
         margin-bottom: 10px;
     }
-    
+
     body .access-kgk {
         padding-top: 0;
     }
+
     .phone-skeleton {
         transform: scale(1) translateY(0.5rem);
     }
@@ -2886,42 +2923,45 @@ input.checkbox-custom[type=checkbox]:before {
     body .stones-inventory {
         margin: 4px 0;
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
 }
 
-@media (max-height: 915px),
-(height: 926px),
-(height: 914px) {
+@media (max-width: 500px) and (max-height: 915px),
+(max-width: 500px) and (height: 926px),
+(max-width: 500px) and (height: 914px) {
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
 }
 
-@media (height: 896px) {
+@media (max-width: 500px) and (height: 896px) {
     .phone-skeleton {
         width: 330px;
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
 }
 
-@media (height: 882px) {
+@media (max-width: 500px) and (height: 882px) {
     .phone-skeleton {
         transform: scale(1) translateY(-1.5rem);
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
 }
 
-@media (max-height: 880px) {
+@media (max-width: 500px) and (max-height: 880px) {
     .phone-skeleton {
         transform: scale(1.2) translateY(1rem);
     }
@@ -2937,17 +2977,18 @@ input.checkbox-custom[type=checkbox]:before {
 
     body .access-kgk img {
         height: 60px;
+        width: auto;
     }
-    
+
 }
 
-@media (max-height: 850px) {
+@media (max-width: 500px) and (max-height: 850px) {
     .phone-skeleton {
         transform: scale(1) translateY(20px);
     }
 }
 
-@media (max-height: 820px) {
+@media (max-width: 500px) and (max-height: 820px) {
     body .home-area .kgk-inventory {
         margin: 0;
     }
@@ -2962,21 +3003,23 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (max-height: 800px) {
+@media (max-width: 500px) and (max-height: 800px) {
     .phone-skeleton {
         transform: scale(1) translateY(1.5rem);
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
+
     .firt-fold {
         zoom: .9;
         margin-top: -12px;
     }
 }
 
-@media (max-height: 770px) {
+@media (max-width: 500px) and (max-height: 770px) {
     .slideanimate {
         width: calc(100% - 3.5rem);
     }
@@ -2984,54 +3027,29 @@ input.checkbox-custom[type=checkbox]:before {
     .phone-skeleton {
         transform: scale(.95) translateY(2rem);
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
 }
 
-@media (max-width: 1600px),
-(max-height: 900px) {
-
-    body .home-area .kgk-inventory,
-    body .stones-inventory {
-        margin-top: 1rem;
-    }
-
-    body .access-kgk p {
-        margin-top: -8px;
-        font-size: 20px;
-    }
-
-    .access-kgk {
-        padding-top: 2rem;
-    }
-}
-
-@media (max-height: 750px) {
+@media (max-width: 500px) and (max-height: 750px) {
     .kgk-inventory p.head-p {
         font-size: 20px;
     }
 
-    body .country-lights img {
-        width: 28px;
-        margin: auto;
-    }
-
-    body .country-lights p {
-        margin-top: -10px;
-    }
-
     .firt-fold {
-        margin-top: -10px;
+        margin-top: -35px;
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
 }
 
-@media (max-height: 740px) {
+@media (max-width: 500px) and (max-height: 740px) {
     .access-kgk {
         padding-top: 0;
     }
@@ -3050,23 +3068,30 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (max-height: 720px) {
+@media (max-width: 500px) and (max-height: 720px) {
+    .firt-fold {
+        margin-top: 11px;
+    }
+
     .firt-fold {
         transform: scale(.9) translateY(-10px);
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
     }
+
     .firt-fold {
         transform: scale(.9) translateY(-27px);
     }
 }
 
-@media (max-height: 700px) {
+@media (max-width: 500px) and (max-height: 700px) {
     .phone-skeleton {
         transform: scale(.8) translateY(3.5rem);
     }
+
     body .access-kgk p {
         margin-top: -8px;
         font-size: 20px;
