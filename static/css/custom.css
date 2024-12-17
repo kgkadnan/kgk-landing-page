@@ -1299,6 +1299,40 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 /* responsive media query */
+@media (max-width: 1700px) {
+    .mobile-heading-hide {
+        font-size: 40px;
+        line-height: normal;
+    }
+
+    body .access-kgk p {
+        margin: 7px 0;
+        font-size: 24px;
+    }
+
+    body .access-kgk img {
+        width: auto;
+    }
+
+    :root {
+        --height: 180px;
+    }
+
+    body .access-kgk {
+        margin: 0;
+        padding-bottom: 0px;
+    }
+
+    .slideanimate {
+        width: calc(100% - 5.5rem);
+    }
+
+    .phone-skeleton {
+        transform: scale(.95) translateY(1.5rem);
+    }
+}
+
+
 @media (max-width: 1379px) {
     .towards-heading {
         line-height: normal;
@@ -2502,14 +2536,13 @@ input.checkbox-custom[type=checkbox]:before {
     }
 
     body .access-kgk {
-        padding-bottom: 55px;
         height: auto;
     }
 
     .phone-skeleton {
         width: 320px;
         height: 468px;
-        margin-bottom: -8px;
+        margin-bottom: -20px;
     }
 
     .slideanimate {
@@ -2829,47 +2862,21 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (height: 915px),
-(height: 926px),
-(height: 914px) {
-    .phone-skeleton {
-        transform: scale(1.2) translateY(0);
+@media (max-height: 920px) {
+    body .access-kgk p {
+        font-size: 20px;
+        margin-bottom: 10px;
     }
-}
-
-@media (height: 896px) {
-    .phone-skeleton {
-        width: 330px;
-    }
-}
-
-@media (height: 882px) {
-    .phone-skeleton {
-        width: 329px;
-    }
-}
-
-/* @media (height: 844px),
-(height: 851px),
-(height: 866px) {
-    .phone-skeleton {
-        transform: translateY(1rem);
-    }
-} */
-
-/* @media (height: 812px) {
-    .phone-skeleton {
-        transform: scale(.9) translateY(1rem);
-    }
-} */
-
-@media (max-height: 900px) {
+    
     body .access-kgk {
-        padding-bottom: 40px;
+        padding-top: 0;
+    }
+    .phone-skeleton {
+        transform: scale(1) translateY(0.5rem);
     }
 
-    .phone-skeleton {
-        height: 440px;
+    body .access-kgk {
+        padding-bottom: 55px;
     }
 
     body .home-area .kgk-inventory {
@@ -2879,12 +2886,44 @@ input.checkbox-custom[type=checkbox]:before {
     body .stones-inventory {
         margin: 4px 0;
     }
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
 }
 
-@media (max-height: 780px),
-(max-height: 760px) {
+@media (max-height: 915px),
+(height: 926px),
+(height: 914px) {
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+}
+
+@media (height: 896px) {
     .phone-skeleton {
-        transform: scale(.9) translateY(2rem);
+        width: 330px;
+    }
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+}
+
+@media (height: 882px) {
+    .phone-skeleton {
+        transform: scale(1) translateY(-1.5rem);
+    }
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 880px) {
+    .phone-skeleton {
+        transform: scale(1.2) translateY(1rem);
     }
 
     body .home-area .kgk-inventory {
@@ -2899,92 +2938,140 @@ input.checkbox-custom[type=checkbox]:before {
     body .access-kgk img {
         height: 60px;
     }
+    
 }
 
-/* @media (height: 740px) {
-    body .access-kgk {
-        padding-bottom: 45px;
+@media (max-height: 850px) {
+    .phone-skeleton {
+        transform: scale(1) translateY(20px);
     }
+}
 
-    body .mobile-heading {
-        margin-bottom: 0px;
-        font-size: 26px;
+@media (max-height: 820px) {
+    body .home-area .kgk-inventory {
+        margin: 0;
     }
 
     body .access-kgk p {
-        font-size: 18px;
-        margin: 6px 0;
+        margin-top: -8px;
+        font-size: 20px;
     }
 
     body .access-kgk img {
         height: 60px;
     }
+}
 
+@media (max-height: 800px) {
     .phone-skeleton {
-        width: 265px;
-        height: 340px;
-        transform: scale(1.2) translateY(-9px);
+        transform: scale(1) translateY(1.5rem);
     }
-
-    .slideanimate {
-        transform: translateY(5rem);
-        width: calc(100% - 3rem);
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
     }
-
-    body .home-area .kgk-inventory {
-        margin: 0;
-        gap: 0px;
-    }
-
-    body .stones-inventory {
-        margin: 5px 0;
-    }
-
-    body .access-kgk {
-        padding-bottom: 35px;
-    }
-
     .firt-fold {
-        transform: scale(.8) translateY(1rem);
+        zoom: .9;
+        margin-top: -12px;
     }
-} */
+}
 
-@media (max-height: 720px) {
+@media (max-height: 770px) {
     .slideanimate {
         width: calc(100% - 3.5rem);
     }
 
     .phone-skeleton {
-        transform: scale(.8) translateY(3rem);
+        transform: scale(.95) translateY(2rem);
+    }
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1600px),
+(max-height: 900px) {
+
+    body .home-area .kgk-inventory,
+    body .stones-inventory {
+        margin-top: 1rem;
+    }
+
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+
+    .access-kgk {
+        padding-top: 2rem;
+    }
+}
+
+@media (max-height: 750px) {
+    .kgk-inventory p.head-p {
+        font-size: 20px;
+    }
+
+    body .country-lights img {
+        width: 28px;
+        margin: auto;
+    }
+
+    body .country-lights p {
+        margin-top: -10px;
+    }
+
+    .firt-fold {
+        margin-top: -10px;
+    }
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 740px) {
+    .access-kgk {
+        padding-top: 0;
+    }
+
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+
+    .phone-skeleton {
+        transform: scale(.9) translateY(2.5rem);
+    }
+
+    body .access-kgk p {
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-height: 720px) {
+    .firt-fold {
+        transform: scale(.9) translateY(-10px);
+    }
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
+    }
+    .firt-fold {
+        transform: scale(.9) translateY(-27px);
     }
 }
 
 @media (max-height: 700px) {
-    body .access-kgk img {
-        height: 50px;
-    }
-
-    body .access-kgk p {
-        font-size: 16px;
-        margin: 4px 0;
-    }
-
-    body .mobile-heading {
-        font-size: 22px;
-        margin: 0;
-    }
-
-    body .access-kgk {
-        padding-bottom: 28px;
-    }
-
     .phone-skeleton {
-        transform: scale(.9) translateY(6rem);
+        transform: scale(.8) translateY(3.5rem);
+    }
+    body .access-kgk p {
+        margin-top: -8px;
+        font-size: 20px;
     }
 
-    .firt-fold {
-        transform: scale(.9) translateY(0);
-    }
 }
 
 @media (max-width: 500px) {
