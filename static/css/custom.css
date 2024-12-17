@@ -2699,6 +2699,372 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
+@media (height: 1368px) {
+    :root {
+        --height: 460px;
+    }
+
+    body .mobile-heading {
+        font-size: 4rem;
+    }
+
+    body .access-kgk p {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+
+    body .access-kgk img {
+        height: 7rem;
+    }
+
+    .phone-skeleton {
+        height: 610px;
+        width: 565px;
+    }
+
+    .slideanimate {
+        transform: translateY(11rem);
+        width: calc(100% - 6rem);
+    }
+
+    .firt-fold {
+        transform: scale(1.5);
+        margin-top: 45px;
+    }
+}
+
+@media (height: 1366px) {
+    .firt-fold {
+        margin-top: 2rem;
+    }
+
+    .phone-skeleton {
+        transform: scale(1.5) translateY(-31px);
+    }
+
+    body .access-kgk p {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    body .access-kgk img {
+        height: 86px;
+        width: auto;
+    }
+}
+
+@media (height: 1280px) {
+    :root {
+        --height: 460px;
+    }
+
+    body .mobile-heading {
+        font-size: 4rem;
+    }
+
+    body .access-kgk p {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+
+    body .access-kgk img {
+        height: 7rem;
+    }
+
+    .phone-skeleton {
+        height: 590px;
+        width: 565px;
+    }
+
+    .slideanimate {
+        transform: translateY(11rem);
+        width: calc(100% - 6rem);
+    }
+
+    .firt-fold {
+        transform: scale(1.2);
+        margin-top: 20px;
+    }
+}
+
+@media (height: 1194px) {
+    .phone-skeleton {
+        transform: scale(1.4) translateY(-35px);
+    }
+
+    .firt-fold {
+        transform: scale(1.5) translateY(3rem);
+    }
+}
+
+@media (height: 1180px) {
+    .phone-skeleton {
+        transform: scale(1.4) translateY(-35px);
+    }
+
+    .firt-fold {
+        transform: scale(1.5) translateY(3rem);
+    }
+}
+
+@media (height: 1080px) {
+    .phone-skeleton {
+        transform: scale(1.4) translateY(0px);
+    }
+
+    .firt-fold {
+        transform: scale(1.5) translateY(3rem);
+    }
+}
+
+@media (height: 1024px) {
+    .phone-skeleton {
+        transform: scale(1.4) translateY(-35px);
+    }
+}
+
+@media (height: 932px) {
+    .phone-skeleton {
+        transform: scale(1.2) translateY(0);
+    }
+}
+
+@media (height: 915px),
+(height: 926px),(height: 914px) {
+    .phone-skeleton {
+        transform: scale(1.2) translateY(0);
+    }
+}
+
+@media (height: 896px) {
+    .phone-skeleton {
+        width: 330px;
+    }
+}
+
+@media (height: 882px) {
+    .phone-skeleton {
+        width: 329px;
+    }
+}
+
+@media (height: 844px),(height: 851px) {
+    .phone-skeleton {
+        transform: translateY(1rem);
+    }
+}
+
+@media (height: 812px) {
+    .phone-skeleton {
+        transform: scale(.9) translateY(1rem);
+    }
+}
+
+@media (height: 800px) {
+    body .access-kgk {
+        padding-bottom: 40px;
+    }
+
+    .phone-skeleton {
+        height: 440px;
+    }
+
+    body .home-area .kgk-inventory {
+        gap: 0;
+    }
+
+    body .stones-inventory {
+        margin: 4px 0;
+    }
+}
+
+@media (height: 780px) {
+    .phone-skeleton {
+        transform: scale(.8) translateY(2rem);
+    }
+}
+
+@media (height: 720px) {
+    body .access-kgk img {
+        height: 61px;
+    }
+
+    body .access-kgk p {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .phone-skeleton {
+        height: 395px;
+        width: 276px;
+    }
+
+    .firt-fold {
+        transform: scale(.8);
+        margin-top: -2rem;
+    }
+
+    .slideanimate {
+        transform: translateY(5.2rem);
+        width: calc(100% - 3.5rem);
+    }
+}
+
+@media (height: 740px) {
+    body .access-kgk {
+        padding-bottom: 45px;
+    }
+
+    body .mobile-heading {
+        margin-bottom: 0px;
+        font-size: 26px;
+    }
+
+    body .access-kgk p {
+        font-size: 18px;
+        margin: 6px 0;
+    }
+
+    body .access-kgk img {
+        height: 60px;
+    }
+
+    .phone-skeleton {
+        width: 265px;
+        height: 340px;
+        transform: scale(1.2) translateY(-9px);
+    }
+
+    .slideanimate {
+        transform: translateY(5rem);
+        width: calc(100% - 3rem);
+    }
+
+    body .home-area .kgk-inventory {
+        margin: 0;
+        gap: 0px;
+    }
+
+    body .stones-inventory {
+        margin: 5px 0;
+    }
+
+    body .access-kgk {
+        padding-bottom: 35px;
+    }
+
+    .firt-fold {
+        transform: scale(.8) translateY(1rem);
+    }
+}
+
+@media (height: 736px) {
+    .phone-skeleton {
+        transform: translateY(5rem);
+    }
+
+    .slideanimate {
+        transform: translateY(6.5rem);
+    }
+
+    body .access-kgk img {
+        height: 55px;
+    }
+
+    body .access-kgk p {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+
+    body .mobile-heading {
+        margin-bottom: 5px;
+    }
+
+    body .access-kgk {
+        padding-bottom: 30px;
+    }
+
+    body .home-area .kgk-inventory {
+        gap: 0;
+        margin: 0;
+    }
+
+    body .stones-inventory {
+        margin: 0;
+    }
+}
+
+@media (height: 600px),
+(height: 667px) {
+    body .mobile-heading {
+        margin-bottom: 0px;
+        font-size: 26px;
+    }
+
+    body .access-kgk p {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    body .access-kgk img {
+        height: 60px;
+    }
+
+    .phone-skeleton {
+        width: 230px;
+        height: 316px;
+        transform: scale(1.2) translateY(0rem);
+    }
+
+    .slideanimate {
+        transform: translateY(4.5rem);
+        width: calc(100% - 3rem);
+    }
+
+    body .home-area .kgk-inventory {
+        margin: 0;
+        gap: 0px;
+    }
+
+    body .stones-inventory {
+        margin: 5px 0;
+    }
+}
+
+@media (height: 667px) {
+    .phone-skeleton {
+        transform: scale(1) translateY(0rem);
+    }
+}
+
+@media (height: 568px) {
+    body .access-kgk img {
+        height: 50px;
+    }
+
+    body .access-kgk p {
+        font-size: 16px;
+        margin: 4px 0;
+    }
+
+    body .mobile-heading {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    body .access-kgk {
+        padding-bottom: 28px;
+    }
+
+    .phone-skeleton {
+        transform: scale(.7) translateY(11rem);
+    }
+
+    .firt-fold {
+        transform: scale(.6) translateY(-5rem);
+    }
+}
+
 @media (max-width: 500px) {
     .circular-scroll-content {
         grid-template-columns: 1fr;
@@ -2778,348 +3144,5 @@ input.checkbox-custom[type=checkbox]:before {
 
     .text-headingM {
         font-size: 16px;
-    }
-}
-
-@media (width: 2560px),
-(height: 1440px) {
-    p.head-p {
-        font-size: 3rem;
-        line-height: normal;
-        white-space: nowrap;
-        margin: 20px 0;
-    }
-
-    .kgk-inventory {
-        width: auto;
-    }
-
-    .stones-inventory span {
-        font-size: 5rem;
-    }
-
-    .stones-inventory p {
-        font-size: 2rem;
-        white-space: nowrap;
-    }
-
-    :root {
-        --height: 26rem;
-    }
-
-    .mobile-heading-hide {
-        font-size: 5rem;
-    }
-
-    .access-kgk p {
-        margin: 25px 0;
-        font-size: 4rem;
-    }
-
-    .access-kgk img {
-        width: auto;
-    }
-
-    .phone-skeleton {
-        transform: scale(1.7) translateY(-4rem);
-    }
-}
-
-@media (width: 1600px),
-(height: 2560px) {
-    .firt-fold {
-        margin-top: 2rem;
-    }
-
-    .phone-skeleton {
-        transform: scale(2.5) translateY(-92px);
-    }
-
-    .mobile-heading-hide {
-        font-size: 7rem;
-        line-height: normal;
-    }
-
-    :root {
-        --height: 45rem;
-    }
-
-    .access-kgk p {
-        font-size: 4rem;
-    }
-
-    .access-kgk img {
-        width: auto;
-        height: 11rem;
-    }
-
-    .kgk-inventory .head-p {
-        margin-bottom: 1rem;
-        font-size: 3rem;
-        white-space: nowrap;
-    }
-
-    .stones-inventory-mobile span,
-    .stones-inventory-mobile p {
-        transform: scale(2);
-    }
-
-    .stones-inventory-mobile p {
-        margin-top: 4rem;
-    }
-
-    .country-lights {
-        transform: scale(2) translate(57px, 53px);
-    }
-}
-
-@media (width: 1200px),
-(height: 1920px) {
-    .firt-fold {
-        margin-top: 2rem;
-    }
-
-    .phone-skeleton {
-        transform: scale(2) translateY(-78px);
-    }
-
-    body .access-kgk p {
-        font-size: 2rem;
-        margin: 10px 0;
-    }
-
-    body .access-kgk img {
-        height: 86px;
-        width: auto;
-    }
-}
-
-@media (width: 1024px),
-(height: 600px) {
-    body .mobile-heading {
-        margin-bottom: 0px;
-        font-size: 26px;
-    }
-
-    body .access-kgk p {
-        font-size: 18px;
-        margin-bottom: 2px;
-    }
-
-    body .access-kgk img {
-        height: 60px;
-    }
-
-    .phone-skeleton {
-        width: 230px;
-        height: 316px;
-    }
-
-    .slideanimate {
-        transform: translateY(4.5rem);
-        width: calc(100% - 3rem);
-    }
-
-    body .home-area .kgk-inventory {
-        margin: 0;
-        gap: 0px;
-    }
-
-    body .stones-inventory {
-        margin: 5px 0;
-    }
-}
-
-@media (width: 1025px),
-(height: 1366px) {
-    .firt-fold {
-        margin-top: 2rem;
-    }
-
-    .phone-skeleton {
-        transform: scale(3.5) translateY(-31px);
-    }
-
-    body .access-kgk p {
-        font-size: 2rem;
-        margin: 10px 0;
-    }
-
-    body .access-kgk img {
-        height: 86px;
-        width: auto;
-    }
-}
-
-@media (width: 912px),
-(height: 1368px) {
-    :root {
-        --height: 460px;
-    }
-
-    body .mobile-heading {
-        font-size: 4rem;
-    }
-
-    body .access-kgk p {
-        font-size: 2.5rem;
-        margin: 1rem 0;
-    }
-
-    body .access-kgk img {
-        height: 7rem;
-    }
-
-    .phone-skeleton {
-        height: 610px;
-        width: 565px;
-    }
-
-    .slideanimate {
-        transform: translateY(11rem);
-        width: calc(100% - 6rem);
-    }
-
-    .firt-fold {
-        transform: scale(1.5);
-        margin-top: 45px;
-    }
-}
-
-@media (width: 853px),
-(height: 1280px) {
-    :root {
-        --height: 460px;
-    }
-
-    body .mobile-heading {
-        font-size: 4rem;
-    }
-
-    body .access-kgk p {
-        font-size: 2.5rem;
-        margin: 1rem 0;
-    }
-
-    body .access-kgk img {
-        height: 7rem;
-    }
-
-    .phone-skeleton {
-        height: 610px;
-        width: 565px;
-    }
-
-    .slideanimate {
-        transform: translateY(11rem);
-        width: calc(100% - 6rem);
-    }
-
-    .firt-fold {
-        transform: scale(1.2);
-        margin-top: 20px;
-    }
-}
-
-@media (width: 834px),
-(height: 1194px) {
-    .phone-skeleton {
-        transform: scale(1.4) translateY(-42px);
-    }
-
-    .firt-fold {
-        transform: scale(1.5) translateY(3rem);
-    }
-}
-
-@media (width: 820px),
-(height: 1120px) {
-    .phone-skeleton {
-        transform: scale(1.5) translateY(-48px);
-    }
-
-    .firt-fold {
-        transform: scale(1.5) translateY(32px);
-    }
-}
-
-@media (width: 812px),
-(height: 1080px) {
-    .phone-skeleton {
-        transform: scale(1.4) translateY(-42px);
-    }
-}
-
-@media (width: 768px),
-(height: 1024px) {
-    .phone-skeleton {
-        transform: scale(1.4) translateY(-42px);
-    }
-}
-
-@media (width: 750px),
-(height: 1334px) {
-    :root {
-        --height: 24rem;
-    }
-
-    body .mobile-heading {
-        font-size: 4rem;
-    }
-
-    body .access-kgk p {
-        font-size: 2rem;
-        margin: 10px 0 15px;
-    }
-
-    .access-kgk {
-        padding-bottom: 50px;
-    }
-
-    .phone-skeleton {
-        transform: scale(1.4) translateY(-35px);
-    }
-
-    .firt-fold {
-        transform: scale(1.5) translateY(47px);
-    }
-}
-
-@media (width: 640px),
-(height: 1136px) {
-    .phone-skeleton {
-        transform: scale(1.2) translateY(-18px);
-    }
-
-    .firt-fold {
-        transform: scale(1.5) translateY(32px);
-    }
-}
-
-@media (max-width:500px) {
-    body .home-area .kgk-inventory {
-        gap: 0;
-        margin: 0;
-    }
-
-    body .access-kgk p {
-        font-size: 20px;
-        margin: 0;
-    }
-
-    body .access-kgk img {
-        height: 60px;
-    }
-
-    body .access-kgk {
-        padding-bottom: 35px;
-    }
-
-    .phone-skeleton {
-        height: 398px;
-    }
-
-    body .stones-inventory {
-        margin: 0;
     }
 }
