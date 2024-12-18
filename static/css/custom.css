@@ -1347,14 +1347,14 @@ input.checkbox-custom[type=checkbox]:before {
 
 
 /* responsive media query */
-@media (max-width: 1500px) {
+@media (max-width: 1500px) and (max-height: 900px){
     .access-kgk {
         opacity: 1 !important;
     }
 
     .phone-section,
     .firt-fold {
-        zoom: .9;
+        zoom: .7;
     }
 }
 
@@ -2395,6 +2395,12 @@ input.checkbox-custom[type=checkbox]:before {
 
     body .not-mobile {
         display: none;
+    }
+}
+
+@media (max-width: 768px) and (height: 1024px) {
+    .phone-section, .firt-fold {
+        zoom: .9;
     }
 }
 
