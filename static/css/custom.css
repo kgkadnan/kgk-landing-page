@@ -453,21 +453,21 @@ body .this-mobile {
 .access-kgk {
     position: initial !important;
     -webkit-transform: none !important;
-        -ms-transform: none !important;
-            transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
     height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 20px;
-    gap: 10px;
+    gap: 0px;
 }
 
 .big-heading {
@@ -478,6 +478,7 @@ body .this-mobile {
 .tile-pera {
     font-size: 36px;
     line-height: normal;
+    margin: 12px 0;
 }
 
 /* for sticky header */
@@ -1345,9 +1346,16 @@ input.checkbox-custom[type=checkbox]:before {
     transition: none !important;
 }
 
+.kgk-inventory {
+    gap: 0;
+}
+
+.kgk-inventory .head-p {
+    margin-bottom: 15px;
+}
 
 /* responsive media query */
-@media (max-width: 1500px) and (max-height: 900px){
+@media (max-width: 1500px) and (max-height: 900px) {
     .access-kgk {
         opacity: 1 !important;
     }
@@ -1423,6 +1431,10 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 1100px) {
+    .stones-inventory {
+        margin-top: 2rem;
+    }
+
     .access-kgk {
         padding-bottom: 50px;
     }
@@ -2399,7 +2411,9 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (max-width: 768px) and (height: 1024px) {
-    .phone-section, .firt-fold {
+
+    .phone-section,
+    .firt-fold {
         zoom: .9;
     }
 }
@@ -2517,14 +2531,14 @@ input.checkbox-custom[type=checkbox]:before {
     .firt-fold {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         text-align: center;
         gap: 2rem;
         zoom: .8;
@@ -2534,11 +2548,11 @@ input.checkbox-custom[type=checkbox]:before {
         width: 100%;
         text-align: center;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     .stones-inventory {
@@ -2547,18 +2561,18 @@ input.checkbox-custom[type=checkbox]:before {
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     .stones-inventory-data {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         gap: 10px;
     }
 
@@ -2569,8 +2583,8 @@ input.checkbox-custom[type=checkbox]:before {
 
     .home-area {
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         gap: 1rem;
     }
 }
@@ -2886,8 +2900,8 @@ input.checkbox-custom[type=checkbox]:before {
 @media (max-width: 390px) {
     .country-lights {
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     .firt-fold {
@@ -2917,7 +2931,7 @@ input.checkbox-custom[type=checkbox]:before {
     .phone-skeleton {
         opacity: 1 !important;
         -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-                transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
     }
 }
