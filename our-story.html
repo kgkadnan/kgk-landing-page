@@ -908,6 +908,7 @@
                 "2001", "2005", "2014", "2017", "2019", "2021", "2023"
             ];
 
+            var initialScroll = true; 
             function isElementInViewport(el) {
                 var rect = el.getBoundingClientRect();
                 var windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -935,8 +936,7 @@
                             currentYearDisplay.textContent = year;
                             console.log("Current Year: " + year);
                         }
-
-                        currentIndex = i;
+                        currentIndex = i;  
                         isItemInView = true;
                         break;
                     }
@@ -947,7 +947,6 @@
                 } else {
                     timelineSlider.classList.remove("visible");
                 }
-
                 if (currentIndex === items.length - 1) {
                     timelineSlider.classList.remove("visible");
                 }
@@ -990,18 +989,27 @@
 
             if (nextBtn) {
                 nextBtn.addEventListener("click", function () {
-                    if (currentIndex < items.length - 1) {
+                    if (initialScroll) {
+                        initialScroll = false; 
+                        currentIndex = 0; 
+                        updateSlider();
+                    } else if (currentIndex < items.length - 1) {
                         currentIndex++;
                         updateSlider();
-                        updateInView();
                     }
+                    updateInView();
                 });
+
                 nextBtn.addEventListener("touchend", function () {
-                    if (currentIndex < items.length - 1) {
+                    if (initialScroll) {
+                        initialScroll = false;
+                        currentIndex = 0;
+                        updateSlider();
+                    } else if (currentIndex < items.length - 1) {
                         currentIndex++;
                         updateSlider();
-                        updateInView();
                     }
+                    updateInView();
                 });
             }
 
@@ -1012,9 +1020,14 @@
                     timeout = setTimeout(fn, delay);
                 };
             }
+
             window.addEventListener("scroll", debounce(updateInView, 100));
             window.addEventListener("resize", debounce(updateInView, 100));
-            window.addEventListener("load", updateInView);
+            window.addEventListener("load", function () {
+                updateInView();  
+                currentIndex = 0;  
+                initialScroll = true;  
+            });
             updateInView();
         })();
     </script>
