@@ -894,142 +894,138 @@
     <script>
         // {{{{{{{{7}}}}}}}} timeline js
         (function () {
-            "use strict";
-            var items = document.querySelectorAll(".timeline li");
-            var currentYearDisplay = document.getElementById("current-year");
-            var prevBtn = document.querySelector(".prev-btn");
-            var nextBtn = document.querySelector(".next-btn");
-            var currentIndex = 0;
-            var timelineSlider = document.querySelector(".timeline-slider");
+    "use strict";
+    var items = document.querySelectorAll(".timeline li");
+    var currentYearDisplay = document.getElementById("current-year");
+    var prevBtn = document.querySelector(".prev-btn");
+    var nextBtn = document.querySelector(".next-btn");
+    var currentIndex = 0;
+    var timelineSlider = document.querySelector(".timeline-slider");
 
-            // Year data
-            var years = [
-                "1905", "1962", "1975", "1986", "1997", "2000",
-                "2001", "2005", "2014", "2017", "2019", "2021", "2023"
-            ];
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
-            var initialScroll = true; 
-            function isElementInViewport(el) {
-                var rect = el.getBoundingClientRect();
-                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-                var windowWidth = window.innerWidth || document.documentElement.clientWidth;
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= windowHeight &&
-                    rect.right <= windowWidth
-                );
-            }
+    function updateInView() {
+        let isItemInView = false;
+        items.forEach(function (item) {
+            item.classList.remove("in-view");
+        });
 
-            function updateInView() {
-                let isItemInView = false;
-                items.forEach(function (item) {
-                    item.classList.remove("in-view");
-                });
+        for (var i = 0; i < items.length; i++) {
+            if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+                var year = items[i].getAttribute("data-year");
 
-                for (var i = 0; i < items.length; i++) {
-                    if (isElementInViewport(items[i])) {
-                        items[i].classList.add("in-view");
-                        var year = items[i].getAttribute("data-year");
-
-                        if (currentYearDisplay) {
-                            currentYearDisplay.textContent = year;
-                            console.log("Current Year: " + year);
-                        }
-                        currentIndex = i;  
-                        isItemInView = true;
-                        break;
-                    }
+                if (currentYearDisplay) {
+                    currentYearDisplay.textContent = year;
                 }
 
-                if (isItemInView) {
-                    timelineSlider.classList.add("visible");
-                } else {
-                    timelineSlider.classList.remove("visible");
-                }
-                if (currentIndex === items.length - 1) {
-                    timelineSlider.classList.remove("visible");
-                }
+                currentIndex = i;
+                isItemInView = true;
+                break;
             }
+        }
 
-            function updateSlider() {
-                if (currentIndex >= 0 && currentIndex < items.length) {
-                    var targetItem = items[currentIndex];
-                    var itemHeight = targetItem.offsetHeight;
-                    var itemOffsetTop = targetItem.offsetTop;
-                    var scrollPosition = itemOffsetTop - (window.innerHeight - itemHeight) / 2;
+        if (isItemInView) {
+            timelineSlider.classList.add("visible");
+        } else {
+            timelineSlider.classList.remove("visible");
+        }
 
-                    if ('scrollBehavior' in document.documentElement.style) {
-                        window.scrollTo({
-                            top: scrollPosition,
-                            behavior: "smooth"
-                        });
-                    } else {
-                        window.scrollTo(0, scrollPosition);
-                    }
-                }
-            }
+        if (currentIndex === items.length - 1) {
+            timelineSlider.classList.remove("visible");
+        }
+    }
 
-            if (prevBtn) {
-                prevBtn.addEventListener("click", function () {
-                    if (currentIndex > 0) {
-                        currentIndex--;
-                        updateSlider();
-                        updateInView();
-                    }
+    function updateSlider() {
+        if (currentIndex >= 0 && currentIndex < items.length) {
+            var targetItem = items[currentIndex];
+            var itemHeight = targetItem.offsetHeight;
+            var itemOffsetTop = targetItem.offsetTop;
+            var scrollPosition = itemOffsetTop - (window.innerHeight - itemHeight) / 2;
+
+            if ('scrollBehavior' in document.documentElement.style) {
+                window.scrollTo({
+                    top: scrollPosition,
+                    behavior: "smooth"
                 });
-                prevBtn.addEventListener("touchend", function () {
-                    if (currentIndex > 0) {
-                        currentIndex--;
-                        updateSlider();
-                        updateInView();
-                    }
-                });
+            } else {
+                window.scrollTo(0, scrollPosition);
             }
 
-            if (nextBtn) {
-                nextBtn.addEventListener("click", function () {
-                    if (initialScroll) {
-                        initialScroll = false; 
-                        currentIndex = 0; 
-                        updateSlider();
-                    } else if (currentIndex < items.length - 1) {
-                        currentIndex++;
-                        updateSlider();
-                    }
-                    updateInView();
-                });
-
-                nextBtn.addEventListener("touchend", function () {
-                    if (initialScroll) {
-                        initialScroll = false;
-                        currentIndex = 0;
-                        updateSlider();
-                    } else if (currentIndex < items.length - 1) {
-                        currentIndex++;
-                        updateSlider();
-                    }
-                    updateInView();
-                });
-            }
-
-            function debounce(fn, delay) {
-                let timeout;
-                return function () {
-                    clearTimeout(timeout);
-                    timeout = setTimeout(fn, delay);
-                };
-            }
-
-            window.addEventListener("scroll", debounce(updateInView, 100));
-            window.addEventListener("resize", debounce(updateInView, 100));
-            window.addEventListener("load", function () {
-                updateInView();  
-                currentIndex = 0;  
-                initialScroll = true;  
+            // Add the "in-view" class only to the current item
+            items.forEach(function (item) {
+                item.classList.remove("in-view");
             });
-            updateInView();
-        })();
+            targetItem.classList.add("in-view");
+        }
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+                updateInView();
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+                updateSlider();
+                updateInView();
+            }
+        });
+    }
+
+    function debounce(fn, delay) {
+        let timeout;
+        return function () {
+            clearTimeout(timeout);
+            timeout = setTimeout(fn, delay);
+        };
+    }
+
+    function throttle(fn, limit) {
+        let lastCall = 0;
+        return function () {
+            const now = Date.now();
+            if (now - lastCall >= limit) {
+                lastCall = now;
+                fn();
+            }
+        };
+    }
+
+    const debouncedUpdateInView = debounce(updateInView, 100);
+    const throttledUpdateInView = throttle(updateInView, 50);
+
+    window.addEventListener("scroll", function () {
+        throttledUpdateInView(); // Ensure frequent updates during fast scrolling
+        debouncedUpdateInView(); // Handle final adjustment after scrolling stops
+    });
+
+    window.addEventListener("resize", debounce(updateInView, 100));
+    window.addEventListener("load", updateInView);
+
+    // Initialize the first item on load
+    window.addEventListener("load", function () {
+        currentIndex = 0;
+        updateSlider();
+        updateInView();
+    });
+})();
+
     </script>
 </body>
 
