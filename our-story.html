@@ -901,6 +901,7 @@
     var nextBtn = document.querySelector(".next-btn");
     var currentIndex = 0;
     var timelineSlider = document.querySelector(".timeline-slider");
+    var isUserInteracting = false; // Tracks if a button click is in progress
 
     function isElementInViewport(el) {
         var rect = el.getBoundingClientRect();
@@ -912,7 +913,9 @@
         );
     }
 
-    function updateInView() {
+    function updateInView(skipScroll = false) {
+        if (isUserInteracting) return; // Prevents updates during button interactions
+
         let isItemInView = false;
         items.forEach(function (item) {
             item.classList.remove("in-view");
@@ -924,7 +927,7 @@
                 var year = items[i].getAttribute("data-year");
 
                 if (currentYearDisplay) {
-                    currentYearDisplay.textContent = year;
+                    currentYearDisplay.textContent = year; // Update year display
                 }
 
                 currentIndex = i;
@@ -942,6 +945,10 @@
         if (currentIndex === items.length - 1) {
             timelineSlider.classList.remove("visible");
         }
+
+        if (!skipScroll) {
+            updateSlider();
+        }
     }
 
     function updateSlider() {
@@ -951,29 +958,38 @@
             var itemOffsetTop = targetItem.offsetTop;
             var scrollPosition = itemOffsetTop - (window.innerHeight - itemHeight) / 2;
 
-            if ('scrollBehavior' in document.documentElement.style) {
+            if ("scrollBehavior" in document.documentElement.style) {
                 window.scrollTo({
                     top: scrollPosition,
-                    behavior: "smooth"
+                    behavior: "smooth",
                 });
             } else {
                 window.scrollTo(0, scrollPosition);
             }
 
-            // Add the "in-view" class only to the current item
+            // Update in-view and current year explicitly
             items.forEach(function (item) {
                 item.classList.remove("in-view");
             });
             targetItem.classList.add("in-view");
+
+            var year = targetItem.getAttribute("data-year");
+            if (currentYearDisplay) {
+                currentYearDisplay.textContent = year; // Update year display
+            }
         }
     }
 
     if (prevBtn) {
         prevBtn.addEventListener("click", function () {
             if (currentIndex > 0) {
+                isUserInteracting = true;
                 currentIndex--;
                 updateSlider();
-                updateInView();
+                setTimeout(() => {
+                    updateInView(true);
+                    isUserInteracting = false;
+                }, 500); // Wait for scroll to settle
             }
         });
     }
@@ -981,9 +997,13 @@
     if (nextBtn) {
         nextBtn.addEventListener("click", function () {
             if (currentIndex < items.length - 1) {
+                isUserInteracting = true;
                 currentIndex++;
                 updateSlider();
-                updateInView();
+                setTimeout(() => {
+                    updateInView(true);
+                    isUserInteracting = false;
+                }, 500); // Wait for scroll to settle
             }
         });
     }
@@ -1007,22 +1027,22 @@
         };
     }
 
-    const debouncedUpdateInView = debounce(updateInView, 100);
-    const throttledUpdateInView = throttle(updateInView, 50);
+    const debouncedUpdateInView = debounce(() => updateInView(true), 100);
+    const throttledUpdateInView = throttle(() => updateInView(true), 50);
 
     window.addEventListener("scroll", function () {
-        throttledUpdateInView(); // Ensure frequent updates during fast scrolling
-        debouncedUpdateInView(); // Handle final adjustment after scrolling stops
+        if (!isUserInteracting) {
+            throttledUpdateInView();
+            debouncedUpdateInView();
+        }
     });
 
     window.addEventListener("resize", debounce(updateInView, 100));
-    window.addEventListener("load", updateInView);
 
-    // Initialize the first item on load
+    // Initialize the first item on load without scrolling
     window.addEventListener("load", function () {
         currentIndex = 0;
-        updateSlider();
-        updateInView();
+        updateInView(true); // Skip scrolling on load
     });
 })();
 
