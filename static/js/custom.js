@@ -245,7 +245,9 @@ const handleIntersection = (entries) => {
 document.addEventListener("DOMContentLoaded", () => {
   if (videoRef) {
     // Create and observe video element when it is valid
-    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5,
+    });
     observer.observe(videoRef);
 
     videoRef.addEventListener("click", handlePlayPause);
@@ -267,8 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.addEventListener("click", handleDotClick);
   });
 });
-
-
 
 // {{{{{{{2}}}}}}} for glob video
 const videoElement = document.querySelector(".video-globe");
@@ -603,4 +603,123 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(textElement);
   });
+});
+
+// oneSignal Notification
+document.addEventListener("DOMContentLoaded", () => {
+  // Ensure OneSignal is initialized only once
+  if (!window.OneSignal || !window.OneSignal.isPushNotificationsEnabled) {
+    // Dynamically add the OneSignal SDK script only if not already present
+    if (
+      !document.querySelector(
+        "script[src='https://cdn.onesignal.com/sdks/OneSignalSDK.js']"
+      )
+    ) {
+      const script = document.createElement("script");
+      script.src = "https://cdn.onesignal.com/sdks/OneSignalSDK.js";
+      script.async = true;
+
+      // On script load, initialize OneSignal
+      script.onload = () => {
+        window.OneSignal = window.OneSignal || [];
+        window.OneSignal.push(() => {
+          console.log("OneSignal initialized");
+
+          // Initialize OneSignal with your App ID and configuration
+          window.OneSignal.init({
+            appId: "378b2db1-01ba-4f45-b8cf-9500ea88056b", // Replace with your OneSignal App ID
+            safari_web_id:
+              "web.onesignal.auto.017f9378-7499-4b97-8d47-e55f2bb151c0", // Replace with your Safari Web ID if needed
+          });
+        });
+
+        // Request notification permission if not granted
+        window.OneSignal.push(() => {
+          window.OneSignal.getNotificationPermission().then((permission) => {
+            console.log("Browser notification permission:", permission);
+
+            if (permission === "default") {
+              // Request browser notification permission
+              window.OneSignal.registerForPushNotifications();
+            }
+          });
+        });
+      };
+
+      // Add the script to the document's <head>
+      document.head.appendChild(script);
+    } else {
+      console.log("OneSignal script is already loaded.");
+    }
+  } else {
+    console.log("OneSignal is already initialized.");
+  }
+});
+
+// tree nation
+document.addEventListener("DOMContentLoaded", () => {
+  // Delay the execution to ensure all elements are available
+  setTimeout(() => {
+    if (window.TreeNationOffsetWebsite) {
+      // Select the Tree Nation widget container
+      const element = document.querySelector("#tree-nation-offset-website");
+
+      // Render the widget if the container is empty
+      if (!element || !element.hasChildNodes()) {
+        window
+          .TreeNationOffsetWebsite({
+            code: "0f021e268485267a", // Replace with your Tree Nation code
+            lang: "en",
+            theme: "light",
+          })
+          .render("#tree-nation-offset-website");
+      }
+    } else {
+      console.log(
+        "Tree Nation widget not loaded: Mobile screen detected or widget not available."
+      );
+    }
+  }, 1000);
+
+  // Dynamically add the Tree Nation script
+  const script = document.createElement("script");
+  script.src =
+    "https://widgets.tree-nation.com/js/widgets/v1/widgets.min.js?v=1.0";
+  script.async = true;
+  document.head.appendChild(script);
+});
+
+// cookie bot
+document.addEventListener("DOMContentLoaded", () => {
+  // Dynamically add the CookieBot script
+  const script = document.createElement("script");
+  script.src = "https://consent.cookiebot.com/uc.js";
+  script.async = true;
+  script.dataset.cbid = "86ce1cb4-4338-418c-acca-d54a1b81cccc"; // Replace with your CookieBot Domain Group ID
+  script.dataset.blockingmode = "auto"; // Specify the blocking mode if needed
+  document.head.appendChild(script);
+
+  // Implement custom GTAG consent functionality
+  const cookieConsentScript = document.createElement("script");
+  cookieConsentScript.id = "cookie-consent";
+  cookieConsentScript.dataset.cookieconsent = "ignore";
+  cookieConsentScript.textContent = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+      ad_personalization: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      analytics_storage: "denied",
+      functionality_storage: "denied",
+      personalization_storage: "denied",
+      security_storage: "granted",
+      wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", false);
+  `;
+  document.head.appendChild(cookieConsentScript);
 });

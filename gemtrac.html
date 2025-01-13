@@ -1,850 +1,1376 @@
 <!DOCTYPE html>
 <html lang="en" class="v2primary">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KGK - Traceability Gem trac</title>
 
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="static/css/style.css" rel="stylesheet" />
     <link href="static/css/custom.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="main-body">
+  <body class="main-body">
     <!-- header -->
-    <header class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0">
-        <div class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]">
-            <!-- Navigation Section -->
-            <nav aria-label="Main" class="gap-5 relative z-10 flex items-center justify-between main-menu w-full">
-                <a href="index.html" class="header-logo flex gap-5 mr-6">
-                    <img src="static/images/kgklogo-svg.png" alt="KGK logo" class="cursor-pointer" loading="lazy"
-                        width="36" height="48" decoding="async" />
+    <header
+      class="top-0 header fixed w-full z-[99999] transition-transform duration-300 bg-neutral0 translate-y-0"
+    >
+      <div
+        class="flex justify-between h-[80px] items-center xl:px-[112px] lg:px-[32px] border-b border-[#F2F4F7]"
+      >
+        <!-- Navigation Section -->
+        <nav
+          aria-label="Main"
+          class="gap-5 relative z-10 flex items-center justify-between main-menu w-full"
+        >
+          <a href="index.html" class="header-logo flex gap-5 mr-6">
+            <img
+              src="static/images/kgklogo-svg.png"
+              alt="KGK logo"
+              class="cursor-pointer"
+              loading="lazy"
+              width="36"
+              height="48"
+              decoding="async"
+            />
+          </a>
+          <div class="first-li flex w-full justify-between">
+            <ul class="flex list-none items-center space-x-4">
+              <!-- Home -->
+              <li class="menu-item">
+                <a
+                  href="index.html"
+                  class="menu-link inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
+                >
+                  Home
                 </a>
-                <div class="first-li flex w-full justify-between">
-                    <ul class="flex list-none items-center space-x-4">
-                        <!-- Home -->
-                        <li class="menu-item">
-                            <a href="index.html"
-                                class="menu-link inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none">
-                                Home
-                            </a>
-                        </li>
+              </li>
 
-                        <div class="relative inline-block text-left margin-0 menu-li menu-item">
-                            <button type="button"
-                                class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
-                                id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown()">
-                                <span class="menu-link">About Us</span>
-                                <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
-                                    aria-hidden="true" data-slot="icon">
-                                    <path fill-rule="evenodd"
-                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
+              <div
+                class="relative inline-block text-left margin-0 menu-li menu-item"
+              >
+                <button
+                  type="button"
+                  class="btndropdown inline-flex items-center px-4 py-2 text-[16px] font-normal text-neutral900 rounded-[8px] bg-neutral0 transition-colors hover:bg-neutral50 hover:text-neutral900 focus:outline-none"
+                  id="menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  onclick="toggleDropdown()"
+                >
+                  <span class="menu-link">About Us</span>
+                  <svg
+                    class="-mr-1 size-5 text-gray-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
 
-                            <div id="dropdown-menu"
-                                class="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden"
-                                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
-                                style="min-width: 150px;">
-                                <div class="flex flex-col !rounded-[8px] border-[1px] border-neutral200" role="none">
-                                    <li class="menu-item">
-                                        <a href="our-story.html"
-                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
-                                            Our Story
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="leadership.html"
-                                            class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900">
-                                            Leadership
-                                        </a>
-                                    </li>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Other Links -->
-                        <li class="menu-item">
-                            <a href="traceability.html"
-                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
-                                Traceability
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="sustainability.html"
-                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
-                                Sustainability
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="contact-us.html"
-                                class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false">
-                                Contact Us
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Buttons Section -->
-                    <div class="flex gap-4 auth-btns">
-                        <button
-                            class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">
-                            Login
-                        </button>
-                        <button
-                            class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]">
-                            Register
-                        </button>
-                    </div>
+                <div
+                  id="dropdown-menu"
+                  class="absolute left-0 z-10 mt-2 w-40 origin-top-right rounded bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="menu-button"
+                  tabindex="-1"
+                  style="min-width: 150px"
+                >
+                  <div
+                    class="flex flex-col !rounded-[8px] border-[1px] border-neutral200"
+                    role="none"
+                  >
+                    <li class="menu-item">
+                      <a
+                        href="our-story.html"
+                        class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900"
+                      >
+                        Our Story
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a
+                        href="leadership.html"
+                        class="menu-link block px-4 py-2 text-neutral700 transition-colors hover:bg-neutral50 hover:text-neutral900"
+                      >
+                        Leadership
+                      </a>
+                    </li>
+                  </div>
                 </div>
-                <div class="homeburg">
-                    <img src="static/images/menu.png" class="menu-sign" width="25" height="25" alt="" />
-                    <img src="static/images/close.png" class="close-sign" width="25" height="25" alt="" />
-                </div>
-            </nav>
-        </div>
+              </div>
+
+              <!-- Other Links -->
+              <li class="menu-item">
+                <a
+                  href="traceability.html"
+                  class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false"
+                >
+                  Traceability
+                </a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="sustainability.html"
+                  class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false"
+                >
+                  Sustainability
+                </a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="contact-us.html"
+                  class="menu-link group inline-flex h-11 w-max items-center justify-center rounded-[8px] bg-neutral0 px-4 py-2 text-[16px] transition-colors hover:bg-neutral50 hover:text-neutral900 focus:bg-neutral0 focus:text-neutral700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-neutral50 data-[state=open]:bg-neutral50 false"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+            <!-- Buttons Section -->
+            <div class="flex gap-4 auth-btns">
+              <button
+                class="w-[80px] h-[44px] px-4 py-2 text-[16px] text-primaryMain bg-neutral0 border border-primaryMain rounded-[8px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100"
+              >
+                Login
+              </button>
+              <button
+                class="w-[120px] h-[44px] px-6 text-[16px] text-white bg-[linear-gradient(110deg,#2d3d3d,45%,#3a4a4a,55%,#2d3d3d)] rounded-[8px] hover:bg-[linear-gradient(110deg,#4e5e5e,45%,#5a6a6a,55%,#4e5e5e)]"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+          <div class="homeburg">
+            <img
+              src="static/images/menu.png"
+              class="menu-sign"
+              width="25"
+              height="25"
+              alt=""
+            />
+            <img
+              src="static/images/close.png"
+              class="close-sign"
+              width="25"
+              height="25"
+              alt=""
+            />
+          </div>
+        </nav>
+      </div>
     </header>
     <!-- header -->
 
     <!-- heading animation section -->
     <section class="flex flex-col gap-4 top-heading mini-heading">
-        <div
-            class="-[320px] pt-[160px] pb-[80px] flex justify-center xl:px-[112px] lg:px-[32px] bg-animated-gradient bg-[length:200%_200%] bg-no-repeat animate-gradient blur-bottom">
-            <div class="flex items-center justify-center">
-                <div
-                    class="top-heading-panel space-mobile flex flex-wrap flex-col gap-14 flex-wrap justify-between items-center max">
-                    <div class="text-neutral900 text-[96px] font-bold text-center leading-[80px] aos-init aos-animate">
-                        <h1 class="h1title typing-text">
-                            <div class="line">The GemTrac Platform</div>
-                        </h1>
-                    </div>
-                    <div class="flex flex-col gap-3 items-center aos-init aos-animate">
-                        <p
-                            class="text-neutral800 text-lRegular w-[1020px] text-center show-more-full set-full typing-text ptag">
-                            GemTrac by KGK is a cutting-edge traceability solution designed to follow each diamond's
-                            journey with unmatched accuracy and transparency. From the moment it is sourced to its final
-                            certification, every step is meticulously documented to ensure ethical sourcing, quality
-                            assurance, and consumer trust. With GemTrac, buyers can have complete confidence in the
-                            origin and authenticity of their diamonds, backed by a system that delivers detailed
-                            insights through an easy-to-use digital interface. Our goal is to set new standards for
-                            transparency in the diamond industry, ensuring every stone has a story worth telling.
-                        </p>
-                        <div class="readMoreLess">
-                            <div class="readmore">read more</div>
-                            <div class="readless">read less</div>
-                        </div>
-                    </div>
-                </div>
+      <div
+        class="-[320px] pt-[160px] pb-[80px] flex justify-center xl:px-[112px] lg:px-[32px] bg-animated-gradient bg-[length:200%_200%] bg-no-repeat animate-gradient blur-bottom"
+      >
+        <div class="flex items-center justify-center">
+          <div
+            class="top-heading-panel space-mobile flex flex-wrap flex-col gap-14 flex-wrap justify-between items-center max"
+          >
+            <div
+              class="text-neutral900 text-[96px] font-bold text-center leading-[80px] aos-init aos-animate"
+            >
+              <h1 class="h1title typing-text">
+                <div class="line">The GemTrac Platform</div>
+              </h1>
             </div>
+            <div class="flex flex-col gap-3 items-center aos-init aos-animate">
+              <p
+                class="text-neutral800 text-lRegular w-[1020px] text-center show-more-full set-full typing-text ptag"
+              >
+                GemTrac by KGK is a cutting-edge traceability solution designed
+                to follow each diamond's journey with unmatched accuracy and
+                transparency. From the moment it is sourced to its final
+                certification, every step is meticulously documented to ensure
+                ethical sourcing, quality assurance, and consumer trust. With
+                GemTrac, buyers can have complete confidence in the origin and
+                authenticity of their diamonds, backed by a system that delivers
+                detailed insights through an easy-to-use digital interface. Our
+                goal is to set new standards for transparency in the diamond
+                industry, ensuring every stone has a story worth telling.
+              </p>
+              <div class="readMoreLess">
+                <div class="readmore">read more</div>
+                <div class="readless">read less</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- heading animation section -->
 
-    <section class="xl:px-[112px] lg:px-[32px] bg-neutral25 flex flex-col  items-center justify-center">
-        <div class="flex flex-col gap-2 text-center w-[950px] py-[40px] justify-center heading-full">
-            <div class="flex flex-col gap-2 items-center">
-                <p class="xl:text-[36px] text-[30px] text-neutral900 font-black p-title">Experience the Journey of a
-                    GemTrac
-                    Diamond</p>
-                <p class="xl:text-[16px] lg:text-[14px] text-neutral800 show-more-full">With GemTrac, KGK provides a
-                    complete and
-                    transparent journey for each diamond, tracking every step from the mine to the market. Our advanced
-                    traceability program ensures that every diamond is accounted for at each stage, from sourcing to
-                    certification, offering unparalleled assurance of its authenticity and ethical journey. Here’s an
-                    example of how a diamond’s journey unfolds through the GemTrac platform:</p>
-                <div class="readMoreLess">
-                    <div class="readmore">read more</div>
-                    <div class="readless">read less</div>
-                </div>
-            </div>
+    <section
+      class="xl:px-[112px] lg:px-[32px] bg-neutral25 flex flex-col items-center justify-center"
+    >
+      <div
+        class="flex flex-col gap-2 text-center w-[950px] py-[40px] justify-center heading-full"
+      >
+        <div class="flex flex-col gap-2 items-center">
+          <p
+            class="xl:text-[36px] text-[30px] text-neutral900 font-black p-title"
+          >
+            Experience the Journey of a GemTrac Diamond
+          </p>
+          <p
+            class="xl:text-[16px] lg:text-[14px] text-neutral800 show-more-full"
+          >
+            With GemTrac, KGK provides a complete and transparent journey for
+            each diamond, tracking every step from the mine to the market. Our
+            advanced traceability program ensures that every diamond is
+            accounted for at each stage, from sourcing to certification,
+            offering unparalleled assurance of its authenticity and ethical
+            journey. Here’s an example of how a diamond’s journey unfolds
+            through the GemTrac platform:
+          </p>
+          <div class="readMoreLess">
+            <div class="readmore">read more</div>
+            <div class="readless">read less</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section
-        class="href-tab xl:px-[112px] lg:px-[56px] border-[1px]  rounded-t-[8px] border-solid border-neutral200 bg-neutral0 flex flex-col  items-center justify-center">
-        <div class="flex items-center w-full">
-            <div class="flex overflow-x-auto no-scrollbar">
-                <a href="#origin"
-                    class="linkActive active flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600">origin</a>
-                <a href="#architecture"
-                    class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600">Architecture</a>
-                <a href="#lasercutting"
-                    class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600">Laser
-                    Cutting</a>
-                <a href="#crafting"
-                    class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600">Crafting</a>
-                <a href="#grooming"
-                    class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600">Grooming</a>
-                <a href="#certification"
-                    class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600">Certification</a>
-            </div>
+      class="href-tab xl:px-[112px] lg:px-[56px] border-[1px] rounded-t-[8px] border-solid border-neutral200 bg-neutral0 flex flex-col items-center justify-center"
+    >
+      <div class="flex items-center w-full">
+        <div class="flex overflow-x-auto no-scrollbar">
+          <a
+            href="#origin"
+            class="linkActive active flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600"
+            >origin</a
+          >
+          <a
+            href="#architecture"
+            class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600"
+            >Architecture</a
+          >
+          <a
+            href="#lasercutting"
+            class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600"
+            >Laser Cutting</a
+          >
+          <a
+            href="#crafting"
+            class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600"
+            >Crafting</a
+          >
+          <a
+            href="#grooming"
+            class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600"
+            >Grooming</a
+          >
+          <a
+            href="#certification"
+            class="linkActive flex-shrink-0 px-[12px] py-[8px] text-center text-mMedium font-medium capitalize cursor-pointer whitespace-nowrap text-neutral600"
+            >Certification</a
+          >
         </div>
+      </div>
     </section>
 
-    <section class="href-panel border-b-[1px] border-solid border-neutral200 bg-neutral25"
-        style="box-shadow: rgba(16, 24, 40, 0.12) 0px 1px 2px 0px;">
-        <div class="flex flex-col items-center xl:px-[112px] lg:px-[50px] pt-[10px]">
-            <div class="w-full flex flex-col gap-[8px] relative">
-                <div class="border-animate"></div>
-                <div id="origin" class="flex  pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel">
-                    <div class="flex flex-col w-[528px] w-full-auto link-heading">
-                        <div class="flex gap-2 items-center">
-                            <img alt="trace steps" loading="lazy" width="48" height="48" decoding="async" data-nimg="1"
-                                class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
-                                src="static/images/step-1.png" style="z-index: 0;">
-                            <p
-                                class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set">
-                                Origin</p>
-                        </div>
-                        <div class="flex gap-2">
-                            <div class="flex flex-col gap-2 lg:w-[450px]   xl:w-full w-full href-image-full">
-                                <div class="flex flex-col gap-2">
-                                    <p class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title">
-                                        TANZANIA /
-                                        AFRICA</p>
-                                    <p class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900">The origin of
-                                        a diamond is delivered to the manufacturer by a miner or rough trader via a
-                                        Kimberley Process Certificate. On receipt of the rough parcel, an opening photo
-                                        is taken and encrypted on a secure cloud server.</p>
-                                </div>
-                                <div class="flex flex-col gap-2 pt-4  ">
-                                    <div class="flex flex-col">
-                                        <p class="xl:text-[14px] lg:text-[12px] text-neutral700 font-regular">Chosen by
-                                        </p>
-                                        <p class="xl:text-[16px] lg:text-[14px] text-primaryMain font-medium md-title">
-                                            MR DINESH
-                                            KOTHARI</p>
-                                    </div>
-                                    <p class="xl:text-[16px] lg:text-[14px] text-neutral900 font-medium">Each rough
-                                        diamond is analyzed by a rough assortment expert with years of experience and
-                                        assigned an Unique Identification (UID). The real time information with the
-                                        rough diamond video is also encrypted on a secure cloud server.</p>
-                                </div>
-                            </div>
-                        </div>
+    <section
+      class="href-panel border-b-[1px] border-solid border-neutral200 bg-neutral25"
+      style="box-shadow: rgba(16, 24, 40, 0.12) 0px 1px 2px 0px"
+    >
+      <div
+        class="flex flex-col items-center xl:px-[112px] lg:px-[50px] pt-[10px]"
+      >
+        <div class="w-full flex flex-col gap-[8px] relative">
+          <div class="border-animate"></div>
+          <div
+            id="origin"
+            class="flex pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel"
+          >
+            <div class="flex flex-col w-[528px] w-full-auto link-heading">
+              <div class="flex gap-2 items-center">
+                <img
+                  alt="trace steps"
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                  decoding="async"
+                  data-nimg="1"
+                  class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
+                  src="static/images/step-1.png"
+                  style="z-index: 0"
+                />
+                <p
+                  class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set"
+                >
+                  Origin
+                </p>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-2 lg:w-[450px] xl:w-full w-full href-image-full"
+                >
+                  <div class="flex flex-col gap-2">
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title"
+                    >
+                      TANZANIA / AFRICA
+                    </p>
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900"
+                    >
+                      The origin of a diamond is delivered to the manufacturer
+                      by a miner or rough trader via a Kimberley Process
+                      Certificate. On receipt of the rough parcel, an opening
+                      photo is taken and encrypted on a secure cloud server.
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-2 pt-4">
+                    <div class="flex flex-col">
+                      <p
+                        class="xl:text-[14px] lg:text-[12px] text-neutral700 font-regular"
+                      >
+                        Chosen by
+                      </p>
+                      <p
+                        class="xl:text-[16px] lg:text-[14px] text-primaryMain font-medium md-title"
+                      >
+                        MR DINESH KOTHARI
+                      </p>
                     </div>
-                    <div class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull">
-                        <img alt="images" loading="lazy" width="605" height="415" decoding="async" data-nimg="1"
-                            class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image "
-                            src="static/images/traceability/map.jpeg">
-                    </div>
+                    <p
+                      class="xl:text-[16px] lg:text-[14px] text-neutral900 font-medium"
+                    >
+                      Each rough diamond is analyzed by a rough assortment
+                      expert with years of experience and assigned an Unique
+                      Identification (UID). The real time information with the
+                      rough diamond video is also encrypted on a secure cloud
+                      server.
+                    </p>
+                  </div>
                 </div>
-                <div id="architecture"
-                    class="flex  pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel">
-                    <div class="flex flex-col w-[528px] w-full-auto link-heading">
-                        <div class="flex gap-2 items-center">
-                            <img alt="trace steps" loading="lazy" width="48" height="48" decoding="async" data-nimg="1"
-                                class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
-                                src="static/images/step-2.png" style="z-index: 0;">
-                            <p
-                                class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set">
-                                Architected by</p>
-                        </div>
-                        <div class="flex gap-2">
-                            <div class="flex flex-col gap-2 lg:w-[450px]   xl:w-full w-full href-image-full">
-                                <div class="flex flex-col gap-2">
-                                    <p class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title">
-                                        MANOHER
-                                        PEDNEKAR</p>
-                                    <p class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900">The
-                                        impurities of the UID assigned rough diamond are plotted with the help of
-                                        advanced technology. An expert plans the best possible polished diamond that can
-                                        be cut from the rough and is recorded on a secure cloud server.</p>
-                                </div>
-                                <div class="flex  flex-wrap gap-28 grid-grid">
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">Round</p>
-                                                <p class="text-[12px] text-neutral600">Shape</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">EX-EX-EX</p>
-                                                <p class="text-[12px] text-neutral600">Cut</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">1.2</p>
-                                                <p class="text-[12px] text-neutral600">Carat</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">VS2</p>
-                                                <p class="text-[12px] text-neutral600">Clarity</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">D</p>
-                                                <p class="text-[12px] text-neutral600">Color</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull">
-                        <img alt="images" loading="lazy" width="605" height="414" decoding="async" data-nimg="1"
-                            class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image "
-                            src="static/images/traceability/diamond.jpeg">
-                    </div>
-                </div>
-                <div id="lasercutting"
-                    class="flex  pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel">
-                    <div class="flex flex-col w-[528px] w-full-auto link-heading">
-                        <div class="flex gap-2 items-center">
-                            <img alt="trace steps" loading="lazy" width="48" height="48" decoding="async" data-nimg="1"
-                                class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
-                                src="static/images/step-3.png" style="z-index: 0;">
-                            <p
-                                class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set">
-                                Laser Cut by</p>
-                        </div>
-                        <div class="flex gap-2">
-                            <div class="flex flex-col gap-2 lg:w-[450px]   xl:w-full w-full href-image-full">
-                                <div class="flex flex-col gap-2">
-                                    <p class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title">TIMIR
-                                        DESAI
-                                    </p>
-                                    <p class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900">A precise and
-                                        powerful laser beam is set on the planned markings on the diamond by an expert.
-                                        The laser divides the rough diamond into two and are forwarded to the faceting
-                                        department.</p>
-                                </div>
-                                <div class="flex  flex-wrap gap-28 grid-grid">
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">Round</p>
-                                                <p class="text-[12px] text-neutral600">Shape</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">EX-EX-EX</p>
-                                                <p class="text-[12px] text-neutral600">Cut</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">1.2</p>
-                                                <p class="text-[12px] text-neutral600">Carat</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">VS2</p>
-                                                <p class="text-[12px] text-neutral600">Clarity</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">D</p>
-                                                <p class="text-[12px] text-neutral600">Color</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] true hrefImageFull">
-                        <img alt="images" loading="lazy" width="474" height="632" decoding="async" data-nimg="1"
-                            class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[5px] href-image"
-                            src="static/images/traceability/ls.gif">
-                    </div>
-                </div>
-                <div id="crafting" class="flex  pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel">
-                    <div class="flex flex-col w-[528px] w-full-auto link-heading">
-                        <div class="flex gap-2 items-center">
-                            <img alt="trace steps" loading="lazy" width="48" height="48" decoding="async" data-nimg="1"
-                                class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
-                                src="static/images/step-4.png" style="z-index: 0;">
-                            <p
-                                class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set">
-                                Crafted by</p>
-                        </div>
-                        <div class="flex gap-2">
-                            <div class="flex flex-col gap-2 lg:w-[450px]   xl:w-full w-full href-image-full">
-                                <div class="flex flex-col gap-2">
-                                    <p class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title">
-                                        SHAILESH D
-                                        GONDALIYA</p>
-                                    <p class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900">An Artisan
-                                        facets the rough diamond on a polishing metal wheel rotating at 3600 RPMs. Based
-                                        on the planning, the Artisan gives life to the uneven piece of carbon;
-                                        information of which is then embedded on a secure cloud server.</p>
-                                </div>
-                                <div class="flex  flex-wrap gap-28 grid-grid">
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">Round</p>
-                                                <p class="text-[12px] text-neutral600">Shape</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">EX-EX-EX</p>
-                                                <p class="text-[12px] text-neutral600">Cut</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">1.2</p>
-                                                <p class="text-[12px] text-neutral600">Carat</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">VS2</p>
-                                                <p class="text-[12px] text-neutral600">Clarity</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">D</p>
-                                                <p class="text-[12px] text-neutral600">Color</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px]  hrefImageFull">
-                        <img alt="images" loading="lazy" width="720" height="530" decoding="async" data-nimg="1"
-                            class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[5px] href-image"
-                            src="static/images/traceability/pol.gif">
-                    </div>
-                </div>
-                <div id="grooming" class="flex  pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel">
-                    <div class="flex flex-col w-[528px] w-full-auto link-heading">
-                        <div class="flex gap-2 items-center">
-                            <img alt="trace steps" loading="lazy" width="48" height="48" decoding="async" data-nimg="1"
-                                class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
-                                src="static/images/step-4.png" style="z-index: 0;">
-                            <p
-                                class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set">
-                                Groomed by</p>
-                        </div>
-                        <div class="flex gap-2">
-                            <div class="flex flex-col gap-2 lg:w-[450px]   xl:w-full w-full href-image-full">
-                                <div class="flex flex-col gap-2">
-                                    <p class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title">
-                                        KANTILAL
-                                        PRAJAPATI</p>
-                                    <p class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900">An
-                                        experienced diamond grader evaluates 50 parameters beyond the 4Cs in a polished
-                                        diamond to assign a grade. Any faceting issues are sent back for correction.
-                                        Below are the final grades given by the Quality Check Artisan.</p>
-                                </div>
-                                <div class="flex  flex-wrap gap-28 grid-grid">
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">Round</p>
-                                                <p class="text-[12px] text-neutral600">Shape</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">EX-EX-EX</p>
-                                                <p class="text-[12px] text-neutral600">Cut</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">1.2</p>
-                                                <p class="text-[12px] text-neutral600">Carat</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">VS2</p>
-                                                <p class="text-[12px] text-neutral600">Clarity</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">D</p>
-                                                <p class="text-[12px] text-neutral600">Color</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull">
-                        <img alt="images" loading="lazy" width="605" height="415" decoding="async" data-nimg="1"
-                            class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image "
-                            src="static/images/traceability/micro.jpeg">
-                    </div>
-                </div>
-                <div id="certification"
-                    class="relative certification flex  pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel"
-                    style="background-color: #fff; z-index: 2;">
-                    <div class="flex flex-col w-[528px] w-full-auto link-heading">
-                        <div class="flex gap-2 items-center">
-                            <img alt="trace steps" loading="lazy" width="48" height="48" decoding="async" data-nimg="1"
-                                class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
-                                src="static/images/step-4.png" style="z-index: 0;">
-                            <p
-                                class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set">
-                                Certified by</p>
-                        </div>
-                        <div class="flex gap-2">
-                            <div class="flex flex-col gap-2 lg:w-[450px]   xl:w-full w-full href-image-full">
-                                <div class="flex flex-col gap-2">
-                                    <p class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title">CGL
-                                    </p>
-                                    <p class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900">Diamonds are
-                                        polished and graded around the world by different institutes. The laboratories
-                                        use high magnification instruments and various tests to determine the diamond
-                                        quality or any treatment. Authentication gives you the confidence and peace of
-                                        mind in purchasing.</p>
-                                </div>
-                                <div class="flex  flex-wrap gap-28 grid-grid">
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">Round</p>
-                                                <p class="text-[12px] text-neutral600">Shape</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">EX-EX-EX</p>
-                                                <p class="text-[12px] text-neutral600">Cut</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">1.2</p>
-                                                <p class="text-[12px] text-neutral600">Carat</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-6 grid-flex">
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">VS2</p>
-                                                <p class="text-[12px] text-neutral600">Clarity</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">D</p>
-                                                <p class="text-[12px] text-neutral600">Color</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start">
-                                            <div
-                                                class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full">
-                                            </div>
-                                            <div class="flex flex-col">
-                                                <p class="text-primaryMain text-headingM font-semiBold">DMO8645</p>
-                                                <p class="text-[12px] text-neutral600">Report No</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull">
-                        <img alt="images" loading="lazy" width="605" height="415" decoding="async" data-nimg="1"
-                            class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image "
-                            src="static/images/traceability/hrd.jpeg">
-                    </div>
-                </div>
+              </div>
             </div>
+            <div
+              class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull"
+            >
+              <img
+                alt="images"
+                loading="lazy"
+                width="605"
+                height="415"
+                decoding="async"
+                data-nimg="1"
+                class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image"
+                src="static/images/traceability/map.jpeg"
+              />
+            </div>
+          </div>
+          <div
+            id="architecture"
+            class="flex pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel"
+          >
+            <div class="flex flex-col w-[528px] w-full-auto link-heading">
+              <div class="flex gap-2 items-center">
+                <img
+                  alt="trace steps"
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                  decoding="async"
+                  data-nimg="1"
+                  class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
+                  src="static/images/step-2.png"
+                  style="z-index: 0"
+                />
+                <p
+                  class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set"
+                >
+                  Architected by
+                </p>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-2 lg:w-[450px] xl:w-full w-full href-image-full"
+                >
+                  <div class="flex flex-col gap-2">
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title"
+                    >
+                      MANOHER PEDNEKAR
+                    </p>
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900"
+                    >
+                      The impurities of the UID assigned rough diamond are
+                      plotted with the help of advanced technology. An expert
+                      plans the best possible polished diamond that can be cut
+                      from the rough and is recorded on a secure cloud server.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-28 grid-grid">
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            Round
+                          </p>
+                          <p class="text-[12px] text-neutral600">Shape</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            EX-EX-EX
+                          </p>
+                          <p class="text-[12px] text-neutral600">Cut</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            1.2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Carat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            VS2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Clarity</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            D
+                          </p>
+                          <p class="text-[12px] text-neutral600">Color</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull"
+            >
+              <img
+                alt="images"
+                loading="lazy"
+                width="605"
+                height="414"
+                decoding="async"
+                data-nimg="1"
+                class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image"
+                src="static/images/traceability/diamond.jpeg"
+              />
+            </div>
+          </div>
+          <div
+            id="lasercutting"
+            class="flex pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel"
+          >
+            <div class="flex flex-col w-[528px] w-full-auto link-heading">
+              <div class="flex gap-2 items-center">
+                <img
+                  alt="trace steps"
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                  decoding="async"
+                  data-nimg="1"
+                  class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
+                  src="static/images/step-3.png"
+                  style="z-index: 0"
+                />
+                <p
+                  class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set"
+                >
+                  Laser Cut by
+                </p>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-2 lg:w-[450px] xl:w-full w-full href-image-full"
+                >
+                  <div class="flex flex-col gap-2">
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title"
+                    >
+                      TIMIR DESAI
+                    </p>
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900"
+                    >
+                      A precise and powerful laser beam is set on the planned
+                      markings on the diamond by an expert. The laser divides
+                      the rough diamond into two and are forwarded to the
+                      faceting department.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-28 grid-grid">
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            Round
+                          </p>
+                          <p class="text-[12px] text-neutral600">Shape</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            EX-EX-EX
+                          </p>
+                          <p class="text-[12px] text-neutral600">Cut</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            1.2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Carat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            VS2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Clarity</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            D
+                          </p>
+                          <p class="text-[12px] text-neutral600">Color</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] true hrefImageFull"
+            >
+              <img
+                alt="images"
+                loading="lazy"
+                width="474"
+                height="632"
+                decoding="async"
+                data-nimg="1"
+                class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[5px] href-image"
+                src="static/images/traceability/ls.gif"
+              />
+            </div>
+          </div>
+          <div
+            id="crafting"
+            class="flex pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel"
+          >
+            <div class="flex flex-col w-[528px] w-full-auto link-heading">
+              <div class="flex gap-2 items-center">
+                <img
+                  alt="trace steps"
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                  decoding="async"
+                  data-nimg="1"
+                  class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
+                  src="static/images/step-4.png"
+                  style="z-index: 0"
+                />
+                <p
+                  class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set"
+                >
+                  Crafted by
+                </p>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-2 lg:w-[450px] xl:w-full w-full href-image-full"
+                >
+                  <div class="flex flex-col gap-2">
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title"
+                    >
+                      SHAILESH D GONDALIYA
+                    </p>
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900"
+                    >
+                      An Artisan facets the rough diamond on a polishing metal
+                      wheel rotating at 3600 RPMs. Based on the planning, the
+                      Artisan gives life to the uneven piece of carbon;
+                      information of which is then embedded on a secure cloud
+                      server.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-28 grid-grid">
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            Round
+                          </p>
+                          <p class="text-[12px] text-neutral600">Shape</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            EX-EX-EX
+                          </p>
+                          <p class="text-[12px] text-neutral600">Cut</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            1.2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Carat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            VS2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Clarity</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            D
+                          </p>
+                          <p class="text-[12px] text-neutral600">Color</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] hrefImageFull"
+            >
+              <img
+                alt="images"
+                loading="lazy"
+                width="720"
+                height="530"
+                decoding="async"
+                data-nimg="1"
+                class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[5px] href-image"
+                src="static/images/traceability/pol.gif"
+              />
+            </div>
+          </div>
+          <div
+            id="grooming"
+            class="flex pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel"
+          >
+            <div class="flex flex-col w-[528px] w-full-auto link-heading">
+              <div class="flex gap-2 items-center">
+                <img
+                  alt="trace steps"
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                  decoding="async"
+                  data-nimg="1"
+                  class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
+                  src="static/images/step-4.png"
+                  style="z-index: 0"
+                />
+                <p
+                  class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set"
+                >
+                  Groomed by
+                </p>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-2 lg:w-[450px] xl:w-full w-full href-image-full"
+                >
+                  <div class="flex flex-col gap-2">
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title"
+                    >
+                      KANTILAL PRAJAPATI
+                    </p>
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900"
+                    >
+                      An experienced diamond grader evaluates 50 parameters
+                      beyond the 4Cs in a polished diamond to assign a grade.
+                      Any faceting issues are sent back for correction. Below
+                      are the final grades given by the Quality Check Artisan.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-28 grid-grid">
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            Round
+                          </p>
+                          <p class="text-[12px] text-neutral600">Shape</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            EX-EX-EX
+                          </p>
+                          <p class="text-[12px] text-neutral600">Cut</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            1.2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Carat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            VS2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Clarity</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            D
+                          </p>
+                          <p class="text-[12px] text-neutral600">Color</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull"
+            >
+              <img
+                alt="images"
+                loading="lazy"
+                width="605"
+                height="415"
+                decoding="async"
+                data-nimg="1"
+                class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image"
+                src="static/images/traceability/micro.jpeg"
+              />
+            </div>
+          </div>
+          <div
+            id="certification"
+            class="relative certification flex pb-[15px] items-start justify-between min-h-[420px] gap-4 link-panel"
+            style="background-color: #fff; z-index: 2"
+          >
+            <div class="flex flex-col w-[528px] w-full-auto link-heading">
+              <div class="flex gap-2 items-center">
+                <img
+                  alt="trace steps"
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                  decoding="async"
+                  data-nimg="1"
+                  class="xl:w-[40px] xl:h-[40px] lg:w-[32px] lg:h-[32px] flex items-center"
+                  src="static/images/step-4.png"
+                  style="z-index: 0"
+                />
+                <p
+                  class="lg:text-[24px] xl:text-[28px] text-primaryMain font-medium flex items-center md-title mt-set"
+                >
+                  Certified by
+                </p>
+              </div>
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-2 lg:w-[450px] xl:w-full w-full href-image-full"
+                >
+                  <div class="flex flex-col gap-2">
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] text-primaryMain font-medium md-title"
+                    >
+                      CGL
+                    </p>
+                    <p
+                      class="lg:text-[14px] xl:text-[16px] font-regular text-neutral-900"
+                    >
+                      Diamonds are polished and graded around the world by
+                      different institutes. The laboratories use high
+                      magnification instruments and various tests to determine
+                      the diamond quality or any treatment. Authentication gives
+                      you the confidence and peace of mind in purchasing.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-28 grid-grid">
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            Round
+                          </p>
+                          <p class="text-[12px] text-neutral600">Shape</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            EX-EX-EX
+                          </p>
+                          <p class="text-[12px] text-neutral600">Cut</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            1.2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Carat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-6 grid-flex">
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            VS2
+                          </p>
+                          <p class="text-[12px] text-neutral600">Clarity</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            D
+                          </p>
+                          <p class="text-[12px] text-neutral600">Color</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div
+                          class="w-[2px] h-full bg-gradient-to-b from-[#FFAD05] via-[#168B85] to-[#5995ED] mr-2 rounded-full"
+                        ></div>
+                        <div class="flex flex-col">
+                          <p
+                            class="text-primaryMain text-headingM font-semiBold"
+                          >
+                            DMO8645
+                          </p>
+                          <p class="text-[12px] text-neutral600">Report No</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:h-[397px] xl:h-[420px] lg:w-[580px] xl:w-[605px] false hrefImageFull"
+            >
+              <img
+                alt="images"
+                loading="lazy"
+                width="605"
+                height="415"
+                decoding="async"
+                data-nimg="1"
+                class="lg:h-[397px] xl:h-[420px] object-fill lg:w-[580px] xl:w-[605px] rounded-[8px] href-image"
+                src="static/images/traceability/hrd.jpeg"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="py-4 xl:px-[112px] lg:px-[32px] ml-5">
-        <a href="traceability.html"
-            class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[97px] h-[40px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100">&lt;-
-            Back</a>
+      <a
+        href="traceability.html"
+        class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:none focus-visible:none focus-visible:none disabled:pointer-events-none disabled:opacity-50 border-solid border-neutral200 border-[1px] bg-neutral0 text-neutral900 rounded-[8px] w-[97px] h-[40px] hover:bg-neutral50 focus:bg-neutral50 active:bg-neutral100"
+        >&lt;- Back</a
+      >
     </section>
 
     <!-- footer -->
-    <footer style="z-index: 100;">
-        <div
-            class="space-mobile registered-yet flex w-full xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] justify-between items-center py-4">
-            <div class="flex flex-col gap-2">
-                <p class="text-neutral900 text-[30px] font-bold">Haven't registered yet?</p>
-                <p class="text-neutral700 text-headingS">Elevate Your Diamond Buying Experience with KGK
-                    Diamonds!</p>
-            </div>
-            <div class="mb-[-30px]">
-                <a href="register.html">
-                    <img alt="register now" loading="lazy" width="276" height="92" decoding="async" data-nimg="1"
-                        class="cursor-pointer" src="static/images/register-now.278c05b2.png" />
-                </a>
-            </div>
+    <footer style="z-index: 100">
+      <div
+        class="space-mobile registered-yet flex w-full xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] justify-between items-center py-4"
+      >
+        <div class="flex flex-col gap-2">
+          <p class="text-neutral900 text-[30px] font-bold">
+            Haven't registered yet?
+          </p>
+          <p class="text-neutral700 text-headingS">
+            Elevate Your Diamond Buying Experience with KGK Diamonds!
+          </p>
         </div>
-
-        <div class="globe-mobile">
-            <img alt="KGK Globe presence" width="250" height="258" src="static/images/globe-mobile.png" />
+        <div class="mb-[-30px]">
+          <a href="register.html">
+            <img
+              alt="register now"
+              loading="lazy"
+              width="276"
+              height="92"
+              decoding="async"
+              data-nimg="1"
+              class="cursor-pointer"
+              src="static/images/register-now.278c05b2.png"
+            />
+          </a>
         </div>
+      </div>
 
-        <div class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main">
-            <div class="footer-glob w-[30%] flex flex-col gap-8">
-                <img alt="KGK Globe presence" loading="lazy" width="250" height="258" decoding="async" data-nimg="1"
-                    src="static/images/newletter-globe.png" />
-            </div>
-            <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
-                <img alt="KGK logo" loading="lazy" width="36" height="48" decoding="async" data-nimg="1"
-                    class="ml-2 h-[48px] w-[36px]" src="static/images/kgklogo-svg.png" />
-                <div class="flex justify-end relative -top-14 h-1">
-                    <div class="badgew">
-                        <div class="badgew__front">
-                            <div class="badgew__icon">
-                                <img src="static/images/offset-website.svg"
-                                    alt="Tree-Nation - CO2 neutral website badge" />
-                            </div>
-                            <div class="badgew__text">
-                                <h1 class="offset-badge__title">
-                                    <span class="offset-badge__title--blue">Net Zero</span><br />
-                                    Website
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="badgew__back">
-                            <a href="https://tree-nation.com/profile/impact/kgk-diamonds-i-pvt-ltd#co2"
-                                id="forest-link-website" class="forest-link" target="_blank">
-                                <h2 class="forest-link__title">
-                                    Visit our Forest
-                                    <span class="forest-link__tree-nation">on tree-nation.com</span>
-                                </h2>
-                            </a>
-                        </div>
-                    </div>
+      <div class="globe-mobile">
+        <img
+          alt="KGK Globe presence"
+          width="250"
+          height="258"
+          src="static/images/globe-mobile.png"
+        />
+      </div>
+
+      <div
+        class="flex xl:pr-[112px] lg:pr-[32px] justify-between gap-4 bg-[white] footer-main"
+      >
+        <div class="footer-glob w-[30%] flex flex-col gap-8">
+          <img
+            alt="KGK Globe presence"
+            loading="lazy"
+            width="250"
+            height="258"
+            decoding="async"
+            data-nimg="1"
+            src="static/images/newletter-globe.png"
+          />
+        </div>
+        <div class="lg-full w-[70%] py-4 flex flex-col justify-center gap-2">
+          <img
+            alt="KGK logo"
+            loading="lazy"
+            width="36"
+            height="48"
+            decoding="async"
+            data-nimg="1"
+            class="ml-2 h-[48px] w-[36px]"
+            src="static/images/kgklogo-svg.png"
+          />
+          <div class="flex justify-end relative -top-14 h-1">
+            <div
+              className="flex justify-end mr-14"
+              id="tree-nation-offset-website"
+            ></div>
+          </div>
+          <div class="flex justify-between footer-li">
+            <div class="flex gap-4 flex-col">
+              <p class="text-[#667085] text-mMedium font-semiBold pl-2">
+                Company
+              </p>
+              <div class="flex flex-col gap-0">
+                <div class="flex">
+                  <a
+                    href="our-story.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    About us
+                  </a>
                 </div>
-                <div class="flex justify-between footer-li">
-                    <div class="flex gap-4 flex-col">
-                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Company</p>
-                        <div class="flex flex-col gap-0">
-                            <div class="flex">
-                                <a href="our-story.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    About us
-                                </a>
-                            </div>
-                            <div class="flex">
-                                <a href="leadership.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Leadership
-                                </a>
-                            </div>
-                            <div class="flex">
-                                <a href="sustainability.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Sustainability
-                                </a>
-                            </div>
-                            <div class="flex">
-                                <a href="traceability.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Traceability
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 flex-col">
-                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Resources</p>
-                        <div class="flex flex-col gap-0">
-                            <div class="flex">
-                                <a href="blog.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Blog
-                                </a>
-                            </div>
-                            <p class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2">Legal</p>
-                            <div class="flex this-mobile mt-2">
-                                <a href="terms-and-conditions.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Terms &amp; Conditions
-                                </a>
-                            </div>
-                            <div class="flex this-mobile">
-                                <a href="privacy-policy.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Privacy Policy
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 flex-col not-mobile">
-                        <p class="text-[#667085] text-mMedium font-semiBold pl-2">Legal</p>
-                        <div class="flex flex-col gap-0">
-                            <div class="flex">
-                                <a href="terms-and-conditions.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Terms &amp; Conditions
-                                </a>
-                            </div>
-                            <div class="flex">
-                                <a href="privacy-policy.html"
-                                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center">
-                                    Privacy Policy
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-[45%] flex flex-col gap-4">
-                        <p class="text-[#667085] text-mMedium font-semiBold">Contact us</p>
-                        <div class="flex flex-col gap-2">
-                            <p class="text-[#475467] text-lRegular">DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse,
-                                Bandra Kurla Complex, Bandra East, Mumbai - 400051</p>
-                            <a href="tel:+91-9892421286" class="flex gap-1 items-center">
-                                <div class="flex items-center">
-                                    <img alt="Phone" loading="lazy" width="24" height="24" decoding="async"
-                                        data-nimg="1" src="static/images/phone.png" />
-                                </div>
-
-                                <img alt="Phone" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
-                                    src="static/images/india-1.png" />
-                                <p class="text-neutral600 text-lRegular">+91-9892421286</p>
-                            </a>
-                            <div class="flex gap-1 items-center">
-                                <a href="mailto:ajay.ghiya@kgkmail.com" class="flex gap-1 items-center">
-                                    <div class="flex items-center">
-                                        <img alt="Mail" loading="lazy" width="24" height="24" decoding="async"
-                                            data-nimg="1" src="static/images/mail.png" />
-                                    </div>
-
-                                    <p id="copyedText" class="text-neutral600 text-lRegular copyedText">
-                                        ajay.ghiya@kgkmail.com</p>
-                                </a>
-                                <img alt="Copy" loading="lazy" width="18" height="18" decoding="async" data-nimg="1"
-                                    class="cursor-pointer copyPaste" src="static/images/contact_us/copy.svg">
-                                <span id="tooltip" class="tooltip hidden">Copied successfully
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="h-4 w-4  text-neutral0">
-                                        <path d="M18 6 6 18"></path>
-                                        <path d="m6 6 12 12"></path>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex">
+                  <a
+                    href="leadership.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Leadership
+                  </a>
                 </div>
+                <div class="flex">
+                  <a
+                    href="sustainability.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Sustainability
+                  </a>
+                </div>
+                <div class="flex">
+                  <a
+                    href="traceability.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Traceability
+                  </a>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12">
-            <p class="text-neutral500">
-                Copyright © 2024 KGK Diamonds. All rights reserved.
-            </p>
-            <div class="flex gap-8">
-                <a href="https://www.linkedin.com/company/kgk-group/mycompany/" target="_blank">
-                    <img alt="Linkedin" loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
-                        src="static/images/linkedin.png" />
+            <div class="flex gap-4 flex-col">
+              <p class="text-[#667085] text-mMedium font-semiBold pl-2">
+                Resources
+              </p>
+              <div class="flex flex-col gap-0">
+                <div class="flex">
+                  <a
+                    href="blog.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Blog
+                  </a>
+                </div>
+                <p
+                  class="text-[#667085] text-mMedium font-semiBold pl-2 this-mobile mt-2"
+                >
+                  Legal
+                </p>
+                <div class="flex this-mobile mt-2">
+                  <a
+                    href="terms-and-conditions.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Terms &amp; Conditions
+                  </a>
+                </div>
+                <div class="flex this-mobile">
+                  <a
+                    href="privacy-policy.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Privacy Policy
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4 flex-col not-mobile">
+              <p class="text-[#667085] text-mMedium font-semiBold pl-2">
+                Legal
+              </p>
+              <div class="flex flex-col gap-0">
+                <div class="flex">
+                  <a
+                    href="terms-and-conditions.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Terms &amp; Conditions
+                  </a>
+                </div>
+                <div class="flex">
+                  <a
+                    href="privacy-policy.html"
+                    class="text-[#475467] hover:text-neutral900 hover:bg-neutral50 px-[8px] rounded-[8px] h-[38px] text-lMedium flex items-center"
+                  >
+                    Privacy Policy
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-[45%] flex flex-col gap-4">
+              <p class="text-[#667085] text-mMedium font-semiBold">
+                Contact us
+              </p>
+              <div class="flex flex-col gap-2">
+                <p class="text-[#475467] text-lRegular">
+                  DE-4011, D Tower 4th Floor, Bharat Diamonds Bourse, Bandra
+                  Kurla Complex, Bandra East, Mumbai - 400051
+                </p>
+                <a href="tel:+91-9892421286" class="flex gap-1 items-center">
+                  <div class="flex items-center">
+                    <img
+                      alt="Phone"
+                      loading="lazy"
+                      width="24"
+                      height="24"
+                      decoding="async"
+                      data-nimg="1"
+                      src="static/images/phone.png"
+                    />
+                  </div>
+
+                  <img
+                    alt="Phone"
+                    loading="lazy"
+                    width="24"
+                    height="24"
+                    decoding="async"
+                    data-nimg="1"
+                    src="static/images/india-1.png"
+                  />
+                  <p class="text-neutral600 text-lRegular">+91-9892421286</p>
                 </a>
+                <div class="flex gap-1 items-center">
+                  <a
+                    href="mailto:ajay.ghiya@kgkmail.com"
+                    class="flex gap-1 items-center"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        alt="Mail"
+                        loading="lazy"
+                        width="24"
+                        height="24"
+                        decoding="async"
+                        data-nimg="1"
+                        src="static/images/mail.png"
+                      />
+                    </div>
 
-                <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank"> <img alt="Instagram"
-                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
-                        src="static/images/insta.png" /></a>
-
-                <a href="https://www.facebook.com/KGKgroup.officialpage/" target="_blank"><img alt="Facebook"
-                        loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
-                        src="static/images/facebook.png" /></a>
-                <a href="https://x.com/kgk_group" target="_blank"> <img alt="Twitter" loading="lazy" width="24"
-                        height="24" decoding="async" data-nimg="1" src="static/images/twitter.png" /></a>
+                    <p
+                      id="copyedText"
+                      class="text-neutral600 text-lRegular copyedText"
+                    >
+                      ajay.ghiya@kgkmail.com
+                    </p>
+                  </a>
+                  <img
+                    alt="Copy"
+                    loading="lazy"
+                    width="18"
+                    height="18"
+                    decoding="async"
+                    data-nimg="1"
+                    class="cursor-pointer copyPaste"
+                    src="static/images/contact_us/copy.svg"
+                  />
+                  <span id="tooltip" class="tooltip hidden"
+                    >Copied successfully
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4 text-neutral0"
+                    >
+                      <path d="M18 6 6 18"></path>
+                      <path d="m6 6 12 12"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div
+        class="copyright-area space-mobile xl:px-[112px] lg:px-[32px] bg-[#F9FAFB] flex justify-between py-12"
+      >
+        <p class="text-neutral500">
+          Copyright © 2024 KGK Diamonds. All rights reserved.
+        </p>
+        <div class="flex gap-8">
+          <a
+            href="https://www.linkedin.com/company/kgk-group/mycompany/"
+            target="_blank"
+          >
+            <img
+              alt="Linkedin"
+              loading="lazy"
+              width="24"
+              height="24"
+              decoding="async"
+              data-nimg="1"
+              src="static/images/linkedin.png"
+            />
+          </a>
+
+          <a href="https://www.instagram.com/kgk_group/?hl=en" target="_blank">
+            <img
+              alt="Instagram"
+              loading="lazy"
+              width="24"
+              height="24"
+              decoding="async"
+              data-nimg="1"
+              src="static/images/insta.png"
+          /></a>
+
+          <a
+            href="https://www.facebook.com/KGKgroup.officialpage/"
+            target="_blank"
+            ><img
+              alt="Facebook"
+              loading="lazy"
+              width="24"
+              height="24"
+              decoding="async"
+              data-nimg="1"
+              src="static/images/facebook.png"
+          /></a>
+          <a href="https://x.com/kgk_group" target="_blank">
+            <img
+              alt="Twitter"
+              loading="lazy"
+              width="24"
+              height="24"
+              decoding="async"
+              data-nimg="1"
+              src="static/images/twitter.png"
+          /></a>
+        </div>
+      </div>
     </footer>
     <!-- footer -->
 
@@ -852,32 +1378,35 @@
     <script src="static/js/custom.js"></script>
 
     <script>
-        AOS.init();
+      AOS.init();
 
-        document.querySelectorAll('.linkActive').forEach(link => {
-            link.addEventListener('click', function () {
-                document.querySelectorAll('.linkActive').forEach(sibling => sibling.classList.remove('active'));
-                this.classList.add('active');
-            });
+      document.querySelectorAll(".linkActive").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".linkActive")
+            .forEach((sibling) => sibling.classList.remove("active"));
+          this.classList.add("active");
         });
-
+      });
     </script>
 
     <script>
-        document.querySelectorAll(".readMoreLess").forEach(function (element) {
-            element.addEventListener("click", function (e) {
-                this.classList.toggle("active");
-                var showMoreFull = this.previousElementSibling;
-                if (showMoreFull && showMoreFull.classList.contains("show-more-full")) {
-                    showMoreFull.classList.toggle("active");
-                }
+      document.querySelectorAll(".readMoreLess").forEach(function (element) {
+        element.addEventListener("click", function (e) {
+          this.classList.toggle("active");
+          var showMoreFull = this.previousElementSibling;
+          if (
+            showMoreFull &&
+            showMoreFull.classList.contains("show-more-full")
+          ) {
+            showMoreFull.classList.toggle("active");
+          }
 
-                var readMore = this.querySelector(".readmore");
-                var readLess = this.querySelector(".readless");
-                e.preventDefault();
-            });
+          var readMore = this.querySelector(".readmore");
+          var readLess = this.querySelector(".readless");
+          e.preventDefault();
         });
+      });
     </script>
-</body>
-
+  </body>
 </html>
