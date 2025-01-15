@@ -605,56 +605,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// oneSignal Notification
-document.addEventListener("DOMContentLoaded", () => {
-  // Ensure OneSignal is initialized only once
-  if (!window.OneSignal || !window.OneSignal.isPushNotificationsEnabled) {
-    // Dynamically add the OneSignal SDK script only if not already present
-    if (
-      !document.querySelector(
-        "script[src='https://cdn.onesignal.com/sdks/OneSignalSDK.js']"
-      )
-    ) {
-      const script = document.createElement("script");
-      script.src = "https://cdn.onesignal.com/sdks/OneSignalSDK.js";
-      script.async = true;
 
-      // On script load, initialize OneSignal
-      script.onload = () => {
-        window.OneSignal = window.OneSignal || [];
-        window.OneSignal.push(() => {
-          console.log("OneSignal initialized");
-
-          // Initialize OneSignal with your App ID and configuration
-          window.OneSignal.init({
-            appId: "378b2db1-01ba-4f45-b8cf-9500ea88056b", // Replace with your OneSignal App ID
-            safari_web_id:
-              "web.onesignal.auto.017f9378-7499-4b97-8d47-e55f2bb151c0", // Replace with your Safari Web ID if needed
-          });
-        });
-
-        // Request notification permission if not granted
-        window.OneSignal.push(() => {
-          window.OneSignal.getNotificationPermission().then((permission) => {
-            console.log("Browser notification permission:", permission);
-
-            if (permission === "default") {
-              // Request browser notification permission
-              window.OneSignal.registerForPushNotifications();
-            }
-          });
-        });
-      };
-
-      // Add the script to the document's <head>
-      document.head.appendChild(script);
-    } else {
-      console.log("OneSignal script is already loaded.");
-    }
-  } else {
-    console.log("OneSignal is already initialized.");
-  }
-});
 
 // tree nation
 document.addEventListener("DOMContentLoaded", () => {
