@@ -1373,7 +1373,7 @@ input.checkbox-custom[type=checkbox]:before {
 
     .phone-section,
     .firt-fold {
-        zoom: 1;
+        zoom: 1 !important;
     }
 }
 
