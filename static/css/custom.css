@@ -1366,6 +1366,17 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
+@media (width: 1440px) and (height: 810px) {
+    .access-kgk {
+        opacity: 1 !important;
+    }
+
+    .phone-section,
+    .firt-fold {
+        zoom: 1;
+    }
+}
+
 @media (max-width: 1379px) {
     .towards-heading {
         line-height: normal;
