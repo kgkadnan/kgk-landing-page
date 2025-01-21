@@ -1366,7 +1366,7 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (width: 1440px) and (height: 810px) {
+@media (width: 1380px) and (height: 810px) {
     .access-kgk {
         opacity: 1 !important;
     }
