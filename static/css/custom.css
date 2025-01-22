@@ -1356,7 +1356,7 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 @media (min-width: 1370px) and (max-width: 1440px) and 
-       (min-height: 800px) and (max-height: 820px) {
+       (min-height: 760px) and (max-height: 820px) {
     .access-kgk {
         opacity: 1 !important;
     }
