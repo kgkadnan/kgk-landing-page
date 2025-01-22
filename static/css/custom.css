@@ -262,6 +262,7 @@ html {
 
 .firt-fold {
     width: 100%;
+    padding-top: 70px;
 }
 
 .phone-section {
@@ -1375,8 +1376,6 @@ input.checkbox-custom[type=checkbox]:before {
     .phone-section,
     .firt-fold {
         zoom: .7;
-        /* new change */
-        padding-top: 70px; 
     }
 }
 
@@ -1457,6 +1456,7 @@ input.checkbox-custom[type=checkbox]:before {
 
     .firt-fold {
         zoom: .7;
+        padding-top: 0px !important;
     }
 }
 
@@ -2558,6 +2558,8 @@ input.checkbox-custom[type=checkbox]:before {
         text-align: center;
         gap: 2rem;
         zoom: .8;
+        padding-top: 0px !important;
+       
     }
 
     .kgk-inventory {
