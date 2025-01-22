@@ -1363,6 +1363,7 @@ input.checkbox-custom[type=checkbox]:before {
     .phone-section,
     .firt-fold {
         zoom: 1 !important;
+        padding-top: 70px !important;
     }
 }
 /* responsive media query */
