@@ -1375,6 +1375,8 @@ input.checkbox-custom[type=checkbox]:before {
     .phone-section,
     .firt-fold {
         zoom: .7;
+        /* new change */
+        padding-top: 70px; 
     }
 }
 
