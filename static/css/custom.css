@@ -2997,3 +2997,9 @@ input.checkbox-custom[type="checkbox"]:before {
     height: calc(100vh - 120px);
   }
 }
+
+@media only screen and (max-width: 412px) and (min-device-width: 412px) and (max-device-width: 412px) and (min-device-height: 915px) and (max-device-height: 915px) and (orientation: portrait) {
+  .home-full {
+    height: calc(100vh - 100px);
+  }
+}
