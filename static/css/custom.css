@@ -2976,3 +2976,24 @@ input.checkbox-custom[type="checkbox"]:before {
     transform: translateY(0);
   }
 }
+
+@media only screen and (max-width: 390px) and (orientation: portrait) and (min-device-width: 390px) and (max-device-width: 390px) and (min-device-height: 844px) and (max-device-height: 844px) {
+  .big-heading {
+    font-size: 20px !important;
+  }
+  .first-fold {
+    gap: 0rem !important;
+  }
+  .home-area {
+    gap: 0.5rem !important;
+  }
+  .tile-pera {
+    font-size: 20px;
+  }
+  .slideanimate {
+    transform: translateY(6rem);
+  }
+  .home-full {
+    height: calc(100vh - 120px);
+  }
+}

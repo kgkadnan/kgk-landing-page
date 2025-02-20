@@ -5715,6 +5715,18 @@ input:-webkit-autofill:focus {
   font-size: 32px;
 }
 
+@media only screen and (max-width: 390px) and (orientation: portrait) and (min-device-width: 390px) and (max-device-width: 390px) and (min-device-height: 844px) and (max-device-height: 844px) {
+  .text-\[32px\] {
+    font-size: 20px !important;
+  }
+  .text-\[20px\] {
+    font-size: 10px !important;
+  }
+  .mt-4 {
+    margin-top: 0px;
+  }
+}
+
 .text-\[36px\] {
   font-size: 36px;
 }
