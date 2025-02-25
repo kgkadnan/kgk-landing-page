@@ -1255,7 +1255,7 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 .home-full {
-    height: calc(100vh - 80px);
+    height: calc(100svh - 80px);
 }
 
 .header-logo img {
