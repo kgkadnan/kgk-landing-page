@@ -5700,7 +5700,7 @@ input:-webkit-autofill:focus {
 }
 
 .text-\[20px\] {
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 .text-\[28px\] {
@@ -5712,7 +5712,7 @@ input:-webkit-autofill:focus {
 }
 
 .text-\[32px\] {
-  font-size: 2rem;
+  font-size: 32px;
 }
 
 .text-\[36px\] {
@@ -8427,7 +8427,7 @@ input:-webkit-autofill:focus {
   }
 
   .xl\:text-\[20px\] {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   .xl\:text-\[28px\] {
