@@ -1298,8 +1298,8 @@ input.checkbox-custom[type=checkbox]:before {
 }
 
 .phone-skeleton {
-    height: 395px;
-    width: 450px;
+    height: calc(395px * var(--zoom));
+    width: calc(450px * var(--zoom));
 }
 
 .home-full {
