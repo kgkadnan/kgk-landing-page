@@ -3043,7 +3043,7 @@ input.checkbox-custom[type=checkbox]:before {
         margin-bottom: 8px;
     }
     .access-kgk .lg\:w-\[224px\] {
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
 }
 
