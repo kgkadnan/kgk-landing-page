@@ -3042,6 +3042,9 @@ input.checkbox-custom[type=checkbox]:before {
     .kgk-inventory .head-p {
         margin-bottom: 8px;
     }
+    .access-kgk .lg\:w-\[224px\] {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 540px) and (height: 720px) {
