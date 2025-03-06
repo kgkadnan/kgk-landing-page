@@ -1511,6 +1511,9 @@ input.checkbox-custom[type=checkbox]:before {
         -ms-transform: translateY(8.5rem);
         transform: translateY(8.5rem);
     }
+    .access-kgk .lg\:w-\[224px\] {
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -3078,6 +3081,19 @@ input.checkbox-custom[type=checkbox]:before {
         /* zoom: .65; */
         --zoom: 0.65;
 
+    }
+}
+
+@media (max-width: 375px) {
+    .phone-skeleton {
+        height: 265px;
+        width: 303px;
+    }
+    
+    .slideanimate {
+        -webkit-transform: translateY(6.1rem);
+        -ms-transform: translateY(6.1rem);
+        transform: translateY(6.1rem);
     }
 }
 
