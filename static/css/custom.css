@@ -2000,7 +2000,7 @@ input.checkbox-custom[type=checkbox]:before {
         -o-transition: all 0.2s;
         transition: all 0.2s;
         opacity: 0;
-        padding-bottom: 45px;
+        padding-bottom: 60px;
         visibility: hidden;
         overflow-x: hidden;
     }
