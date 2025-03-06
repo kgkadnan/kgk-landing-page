@@ -3045,6 +3045,9 @@ input.checkbox-custom[type=checkbox]:before {
     .access-kgk .lg\:w-\[224px\] {
         margin-bottom: 0;
     }
+    .home-full {
+        height: calc(100vh - 80px);
+    }
 }
 
 @media (max-width: 540px) and (height: 720px) {

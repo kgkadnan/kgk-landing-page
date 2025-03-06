@@ -11,14 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
 // for sticky Header
 let lastScrollTop = 0;
 window.addEventListener("scroll", function () {
+  if (window.innerWidth <= 1200) return;
+
   let currentScrollTop = window.scrollY;
   const header = document.querySelector("header");
   if (!header) return;
+
   if (currentScrollTop < lastScrollTop) {
     header.classList.remove("active");
   } else {
     header.classList.add("active");
   }
+
   lastScrollTop = currentScrollTop;
 });
 
@@ -604,8 +608,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(textElement);
   });
 });
-
-
 
 // tree nation
 document.addEventListener("DOMContentLoaded", () => {
