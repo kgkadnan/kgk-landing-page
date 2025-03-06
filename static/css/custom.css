@@ -3050,13 +3050,16 @@ input.checkbox-custom[type=checkbox]:before {
     }
 }
 
-@media (max-width: 540px) and (height: 720px) {
+@media (max-width: 540px) and (max-height: 720px) {
 
     .phone-section,
     .firt-fold {
         /* zoom: .61; */
         --zoom: 0.61;
 
+    }
+    .home-full {
+        height: calc(100vh - 40px);
     }
 }
 
